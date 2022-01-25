@@ -1,0 +1,213 @@
+@import "mixins"
+
+.header
+  width: 100%
+  padding: 20px 0 0
+  position: absolute
+  display: flex
+  color: $white
+  z-index: 100
+  top: 0
+  transition: top .5s ease
+
+  .menu
+    display: none
+
+  &__mobile
+    display: none
+
+  &__select
+    position: relative
+    display: flex
+    align-items: center
+    cursor: pointer
+
+    a:hover:after
+      display: none
+
+    &:hover
+      &>.header__selectMenu
+        display: block
+
+    &:after
+      content: ''
+      width: 16px
+      height: 16px
+      background:
+        image: url(../images/icons/arrowDropDown.png)
+
+  &__selectMenu
+    position: absolute
+    top: 25px
+    left: 0
+    background: $dark_light
+    padding: 16px
+    width: max-content
+    display: none
+
+    ul
+      display: flex
+      flex-direction: column
+
+      li
+        padding-bottom: 8px
+        border-bottom: 1px solid $dark
+        margin-bottom: 8px
+
+        &:last-of-type
+          padding-bottom: 5px
+          border-bottom: none
+          margin-bottom: 0
+
+        a
+          display: block
+          font-size: 13px
+          line-height: 16px
+          font-weight: 700
+          text-transform: uppercase
+          color: $white
+          letter-spacing: .5px
+
+  &__logo
+    margin-right: auto
+
+  &__search
+    margin-right: 40px
+    cursor: pointer
+    display: flex
+    justify-content: center
+    align-items: center
+
+    svg
+      transition: .2s ease
+      color: $white
+
+  &__lang
+    font-size: 13px
+    line-height: 16px
+    letter-spacing: .5px
+    text-transform: uppercase
+    font-weight: 700
+    cursor: pointer
+
+  &__desktop
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    &>ul
+      display: flex
+      align-items: center
+
+      &>li
+        margin-right: 40px
+
+        &>a
+          position: relative
+          font-size: 13px
+          line-height: 16px
+          letter-spacing: .5px
+          text-transform: uppercase
+          font-weight: 700
+          padding: 3px 0
+          cursor: pointer
+
+
+          &:after
+            content: ''
+            display: block
+            height: 2px
+            width: 0
+            background: $white
+            position: absolute
+            bottom: 0
+            left: 0
+            transition: .2s ease
+
+          &:hover:after
+            width: 100%
+
+  @include desktop
+    padding: 0
+
+    &__desktop
+      display: none
+
+    &__mobile
+      padding: 16px 20px 16px 16px
+      display: flex
+      align-items: center
+      transition: .2s ease
+
+    &.open
+      .header__mobile
+        background: #A8A8A8
+
+      .header__search
+        svg
+          color: $dark
+
+  @include mobile
+    position: fixed
+    top: unset
+    bottom: 0
+    background-color: #A8A8A8
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15)
+
+    &__mobile
+      padding: 14px 20px 13px 16px
+
+    &__search
+      display: none
+
+    .trigger
+      &>div
+        background: $dark
+
+  &.open
+    .menu
+      display: flex
+
+    .trigger
+      &>div
+        width: 19.5px
+        background: $dark
+
+      .trigger__top
+        top: 5px
+        left: 5.5px
+        transform: rotate(45deg)
+        transform-origin: top left
+
+      .trigger__middle
+        right: 24px
+        opacity: 0
+
+      .trigger__bottom
+        top: 18px
+        left: 5.5px
+        transform: rotate(-45deg)
+        transform-origin: bottom left
+
+.trigger
+  width: 24px
+  height: 24px
+  position: relative
+  cursor: pointer
+
+  &>div
+    position: absolute
+    width: 18px
+    height: 2px
+    background: $white
+    left: 3px
+    transition: .1s ease
+
+  &__top
+    top: 6px
+
+  &__middle
+    top: 11px
+
+  &__bottom
+    top: 16px

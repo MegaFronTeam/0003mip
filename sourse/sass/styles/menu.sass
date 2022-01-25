@@ -1,0 +1,89 @@
+@import "mixins"
+
+.menu
+  position: fixed
+  background: #D4D4D4
+  color: $dark
+  width: 100vw
+  height: 100vh
+  display: flex
+  top: 0
+  left: 0
+  z-index: -1
+  padding: 100px 48px 0
+
+  @include mobile
+    padding: 24px
+
+  &>ul
+    &>li
+      margin-bottom: 30px
+
+      &>a
+        font-size: 26px
+        line-height: 34px
+        font-weight: 700
+        text-transform: uppercase
+        color: $dark
+        display: flex
+        align-items: center
+
+        &:after
+          content: ''
+          background:
+            image: url(../images/icons/chevronBlack.png)
+          width: 24px
+          height: 24px
+
+      @include mobile
+        margin-bottom: 24px
+
+        &>a
+          font-size: 24px
+          line-height: 32px
+
+  &__selectMenu,
+  &__subMenu
+    display: none
+
+  &__select
+    &:focus-within
+      .menu__selectMenu
+        display: block
+
+    &>a
+      &:after
+        transform: rotate(90deg)
+
+  &__subSelect
+    &:focus-within
+      .menu__subMenu
+        display: block
+
+    &>a
+      display: flex
+      align-items: center
+
+      &:after
+        content: ''
+        display: block
+        background:
+          image: url(../images/icons/arrowDropDown_small.png)
+        width: 16px
+        height: 16px
+
+  &__selectMenu
+    padding: 16px 0 0 24px
+
+    li
+      margin-bottom: 24px
+      font-size: 20px
+      line-height: 24px
+      letter-spacing: -.5px
+
+      @include mobile
+        font-size: 14px
+        line-height: 20px
+
+  &__subMenu
+    padding: 16px 0 0 24px

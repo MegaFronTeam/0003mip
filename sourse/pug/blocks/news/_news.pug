@@ -1,0 +1,43 @@
+mixin newsItem()
+	a.news__card(href='#')
+		.news__date
+			p.news__day 02
+			p.news__month октября
+			p.news__year 2021
+		p.news__text
+			| Институт «Мосинжпроект» участвует в создании знакового проекта Урала — «Притяжение»
+		img.news__photo(src='images/news/1.jpg' alt='')
+mixin news(data)
+	// start news
+	.news
+		.container
+			.news__content
+				h2.news__title Новости
+				a.news__all.btn(href='#') Подробнее
+				.news__cards.news__cards--js
+					- for (var x = 0; x < 3; x++)
+						+newsItem()
+	// end news
+mixin newsPage(data)
+	// start news
+	+b.news--page
+		+b.secion-head
+			.container
+				.row
+					.col
+						+e.btns
+							+e.btn(href="#").active  2021
+							+e.btn(href="#") 2020
+							+e.btn(href="#") 2019
+					.col-sm-auto
+						+e.btn.w-100(href="#") Все новости
+		.container
+			.news__content
+				+b.news__cards--page
+					- for (var x = 0; x < 9; x++)
+						+newsItem()
+			.text-center.text-primary
+				+e.btn-more 
+					+icon("spinner")
+					| показать больше новостей
+	// end news

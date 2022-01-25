@@ -1,0 +1,65 @@
+@import "mixins"
+
+.slider
+  width: 100%
+
+  &__wrap
+    width: 100%
+    max-width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    &>.container
+      overflow: hidden
+
+  &__arrow
+    width: 32px
+    min-width: 32px
+    height: 32px
+    background: $gray
+    display: flex
+    justify-content: center
+    align-items: center
+    cursor: pointer
+    transition: .2s ease
+
+    svg
+      color: $dark
+      transition: .2s ease
+
+    &--next
+      transform: rotate(180deg)
+
+    &:hover
+      background: $prm
+
+      svg
+        color: $white
+
+    @include tablet
+      display: none
+
+  @include mobile
+    .slick-list
+      overflow: visible !important
+
+.slick-dots
+  display: flex
+  align-items: center
+  justify-content: center
+  align-self: end
+  margin-top: 15px
+
+  li
+    cursor: pointer
+    width: 26px
+    height: 3px
+    background: transparentize($dark_light, .7)
+    margin-right: 4px
+
+    button
+      display: none
+
+    &.slick-active
+      background: $prm

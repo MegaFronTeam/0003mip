@@ -1,9 +1,50 @@
 mixin footer()
-	+b.FOOTER.footer
-		.container
-			.row
-				.col
-					
-				.col
-				.col
-				.col-auto
+	footer.footer
+		.footer__container.container
+			.footer__copy
+				a.footer__logo(href='/')
+					img(src='images/Logo.svg' alt='')
+				p.small
+					| © ООО Институт
+					br
+					| «Мосинжпроект» 2015-2021
+				a.footer__coalla(href='https://www.coalla.ru/' target='_blank')
+					img(src='images/coala.svg' alt='')
+					p.small Сделано в Coalla Agency
+			.footer__links
+				p
+					a(href='#') Проектирование
+				p
+					a(href='#') Изыскания
+				p
+					a(href='#') Наши проекты
+				p
+					a(href='#') Новости
+				p
+					a(href='#') Контакты
+			.footer__contacts
+				p.small
+					| 101000, Москва,
+					br
+					| Сверчков переулок 4/1, стр1
+				p.small
+					| +7 (495) 625-25-44
+					br
+					| +7 (495) 225-19-40
+				p.small
+					a(href='mailto:institute@mosinzhproekt.ru') institute@mosinzhproekt.ru
+				.footer__social
+					a(href='#')
+						img(src='images/icons/Facebook.svg' alt='Facebook')
+					a(href='#')
+						img(src='images/icons/Instagram.svg' alt='Instagram')
+					a(href='#')
+						img(src='images/icons/Youtube.svg' alt='Youtube')
+			.footer__mobCopy
+				p
+					| © ООО Институт
+					br
+					| «Мосинжпроект» 2015-2021
+				a.footer__coalla(href='https://www.coalla.ru/' target='_blank')
+					img(src='images/coala.svg' alt='')
+					| Сделано в Coalla Agency

@@ -1,0 +1,159 @@
+@import "mixins"
+
+.footer
+  background: #A8A8A8
+  margin-top: auto
+  padding: 56px 0 40px
+  &__social
+    display: flex
+    @include roww(12px, m)
+      
+  &__container
+    display: flex
+
+  &__copy
+    display: flex
+    flex-direction: column
+
+    p
+      margin-bottom: 10px
+
+      &:last-of-type
+        margin-top: auto
+        margin-bottom: 10px
+
+  &__mobCopy
+    display: none
+
+  &__logo
+    display: block
+
+    img
+      width: 100%
+
+  &__coalla
+    display: flex
+    align-items: center
+
+    img
+      margin-right: 8px
+
+  &__links,
+  &__contacts
+    color: $dark_light
+    opacity: .6
+
+    p
+      margin-bottom: 8px
+
+      &:last-of-type
+        margin-bottom: 22px
+
+  &__links
+    margin-left: auto
+
+    a
+      position: relative
+
+      &:after
+        content: ''
+        display: block
+        position: absolute
+        background-color: transparentize($dark_light, .4)
+        bottom: 0
+        height: 1px
+        width: 0
+        transition: .2s ease
+
+      &:hover:after
+        width: 100%
+
+    p:last-child
+      margin-bottom: 0
+
+  &__contacts
+    margin-left: 158px
+
+  @include desktop
+    &__links
+      margin: 0 auto
+
+    &__contacts
+      margin-left: 0
+
+  @media (max-width: 650px)
+    padding: 24px 16px 13px
+
+    &__logo
+      width: 144px
+
+    &__copy
+      margin-bottom: 40px
+
+      p,
+      .footer__coalla
+        display: none
+
+    &__container
+      flex-direction: column
+      padding: 0
+
+    &__links
+      margin: 0
+
+      p
+        a
+          display: flex
+          justify-content: space-between
+          align-items: center
+          position: relative
+          padding-bottom: 10px
+          border-bottom: 1px solid transparentize($dark_light, .8)
+          margin-bottom: 14px
+
+          &:after
+            content: ''
+            position: relative
+            width: 24px !important
+            height: 24px
+            bottom: unset
+            left: unset
+            display: block
+            background:
+              image: url(../images/icons/chevron.png)
+              color: transparent
+              repeat: no-repeat
+              position: center
+
+
+    &__contacts
+      text-align: center
+      margin-bottom: 16px
+
+      p
+        br
+          display: none
+
+        &:last-of-type
+          margin-bottom: 16px
+
+    &__mobCopy
+      display: block
+      text-align: center
+      color: $dark_light
+      opacity: .6
+
+      p
+        font-size: 14px
+        line-height: 16px
+        margin-bottom: 5px
+
+    &__coalla
+      justify-content: center
+
+      p
+        font-size: 13px
+        line-height: 16px
+
+  @include mobile
+    padding-bottom: 77px

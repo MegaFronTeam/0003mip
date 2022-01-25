@@ -487,3 +487,48 @@ iframe {
 	
 	// @include row-sw(10px, sm, 100px);
 }
+
+
+// .btn
+
+.text-center{
+	text-align: center;
+}
+
+.text-primary{
+	color: $prm;
+	&:hover{
+		color: $prm_hover;
+	}
+}
+
+
+.secion-head{
+	background-color: #fff;
+	padding-top: rem(24 - 16);
+	padding-bottom: rem(24);
+	&__btns{
+		display: flex;
+		@include roww(15px, m);
+		flex-wrap: wrap;
+	}
+	&__btn{
+		margin-top: rem(16);
+		padding-left: rem(16);
+		padding-right: rem(16);
+		justify-content: center;
+		@include mobile{
+			flex-grow: 1;
+		}
+		
+		@extend .btn;
+		@extend  .btn-outline-primary;
+		&::after{
+			display: none;
+		}
+	}
+}
+
+.w-100{
+	width: 100%;
+}

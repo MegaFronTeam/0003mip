@@ -1,0 +1,64 @@
+@import "mixins"
+
+.profile
+  margin-bottom: auto
+
+  h1
+    margin-top: 55px
+    margin-bottom: 32px
+    text-align: center
+
+    @include mobile
+      margin-bottom: 16px
+
+  &__codeSent
+    margin-bottom: 25px
+    text-align: center
+
+  &__bookingHeading
+    text-align: center
+    margin-bottom: 24px
+    margin-top: -24px
+
+    &>p
+      margin-bottom: 8px
+
+      &:last-of-type
+        margin-bottom: 0
+
+  &__tabs
+    width: 100%
+    margin-bottom: 32px
+
+    @include mobile
+      margin-bottom: 24px
+
+  &__addresses
+    width: 100%
+
+  &__addAddress,
+  &__address
+    padding: 16px 0
+    border-bottom: 1px solid $gray_light
+    display: flex
+    align-items: center
+
+    img
+      cursor: pointer
+
+    @include mobile
+      padding: 8px 0
+
+  &__addAddress
+    padding-top: 0
+    justify-content: flex-start
+
+    img
+      margin-right: 8px
+
+  &__address
+    justify-content: space-between
+
+    p
+      font-size: 16px
+      line-height: 20px

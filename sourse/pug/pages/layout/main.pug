@@ -8,9 +8,9 @@ include ../../blocks/modal/_modal.pug
 include js-css.pug
 
 include ../../blocks/header/_header.pug
-include ../../blocks/topLine/_topLine.pug
-include ../../blocks/top-nav/_top-nav.pug 
-include ../../blocks/headerBlock/_headerBlock.pug
+//- include ../../blocks/topLine/_topLine.pug
+//- include ../../blocks/top-nav/_top-nav.pug 
+//- include ../../blocks/headerBlock/_headerBlock.pug
 include ../../blocks/sForm/_sForm.pug
 
 doctype html
@@ -40,7 +40,11 @@ html(lang="ru")
 		//- 		 w();
 		//- 		}, { passive: true });
 		//- 	}
-		meta(name="viewport", content="width=device-width,initial-scale=1.0,  shrink-to-fit=no")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		<link rel="manifest" href="site.webmanifest">
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
 		link(type="image/ico", href='img/favicon.ico', rel='shortcut icon') 
 		<meta name="format-detection" content="telephone=no"> 
 		+allcss()
@@ -48,10 +52,9 @@ html(lang="ru")
 	//- style.
 	//- 	.loaded_hiding {  opacity: 0; pointer-events: none;  } .loaded_hiding::before { display: none; }
 	//- body.loaded_hiding(class= mainPage) 
-	body(class= mainPage data-bg= bg)
-		.main-wrapper
-			block pagecontent
-				h3 content
+	body(class= mainPage data-bg= bg) 
+		block pagecontent
+			h3 content
 		+modal()
 		+allcjs()
 		

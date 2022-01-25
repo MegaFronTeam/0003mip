@@ -1,16 +1,26 @@
 mixin allcss() 
-	link(href="libs/swiper/swiper.min.css", rel="stylesheet")
-	link(href="libs/@fancyapps/ui/fancybox.css", rel="stylesheet")
+	//- link(href="libs/swiper/swiper.min.css", rel="stylesheet")
+	//- link(href="libs/@fancyapps/ui/fancybox.css", rel="stylesheet")
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap" rel="stylesheet">
-
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 	link(href="css/main.min.css", rel="stylesheet")
 
 mixin allcjs() 
 	script(src="libs/jquery/jquery.min.js")
+	script(src="scripts/modernizr-custom.js")
+	script(src="scripts/imask.js")
+	script(src="scripts/jquery-ui.min.js")
+	script(src="scripts/particles.min.js")
+	script(src="scripts/particles.js")
+	script(src="scripts/simpleParallax.min.js")
+	script(src="scripts/slick.min.js")
+	script(src="scripts/jquery.waypoints.min.js")
+	script(src="scripts/waypoint.js")
 	script(src="libs/@fancyapps/ui/fancybox.umd.js") 
 	script(src="libs/swiper/swiper-bundle.min.js")  
-	script(src="libs/inputmask/inputmask.min.js") 
+	//- script(src="libs/inputmask/inputmask.min.js") 
+	script(src="scripts/main.js")
 	script(src="js/common.js")

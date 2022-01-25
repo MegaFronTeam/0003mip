@@ -1,0 +1,74 @@
+@import "variables"
+
+.btn
+  padding: 12px 24px 12px
+  color: $dark
+  display: inline-flex
+  font-size: 13px
+  line-height: 15px
+  letter-spacing: .5px
+  font-weight: 700
+  text-transform: uppercase
+  box-shadow: none
+  border: none
+  cursor: pointer
+  justify-content: space-between
+  align-items: center
+  border: 1px solid 
+
+  &:after
+    position: relative
+    content: ''
+    height: 16px
+    width: 16px
+    right: 0
+    margin-left: 16px
+    background:
+      image: url(../images/icons/arrowBtn.png)
+      repeat: no-repeat
+      position: center
+    transition: .2s ease
+
+  &:hover
+    &:after
+      right: -5px
+
+  &--colorWhite
+    color: $white
+
+    &:after
+      background:
+        image: url(../images/icons/arrowBtn_white.png)
+
+  &--colorPrimary
+    color: $prm
+
+    &:after
+      background:
+        image: url(../images/icons/arrowBtn_prm.png)
+
+  &--bgWhite
+    background: $white
+    border-color: $white
+
+  &--bgPrimary
+    background: $prm
+    border-color: $prm
+  &-outline-primary
+    // background: $prm
+    border-color: $prm
+    color: $prm
+    &:hover
+      color: #fff
+      border-color: $prm_hover
+      background: $prm_hover
+    &.active,
+    &:active
+      color: #fff
+      border-color: $prm
+      background: $prm
+
+
+  &--bgBlack
+    background: $dark
+

@@ -1,0 +1,26 @@
+@import "mixins"
+
+.flex
+  display: flex
+  flex-direction: column
+
+  &-col
+    flex-direction: column
+
+  &--centered
+    display: flex
+    justify-content: center
+    align-items: center
+
+.container
+  width: 100%
+  max-width: 1680px
+  margin: 0 auto
+
+
+  @include m
+    padding: 0 24px
+  @include t
+    padding: 0 40px
+
+  padding: 0 16px
