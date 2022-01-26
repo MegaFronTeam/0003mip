@@ -23,7 +23,7 @@ mixin pic(i, bg,  media='576px')
 		//- noscript(class="loading-lazy")
 		if media
 			
-			each val in ["avif", webpFormat,exp] 
+			each val in [webpFormat,exp] 
 				each val2 in [smpath2,smpath1] 
 					+src(i,val,`${val2 + (val ==  "webp" ? "/webp"   : "") }`,"source")(media=(val2 == smpath2 ? "(min-width:"+ media+")" : null))
 		else 

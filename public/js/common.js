@@ -50,87 +50,9 @@ const JSCCommon = {
 		}
 		if (linkModal) addData();
 	},
-	// /modalCall
-	toggleMenu() {
-		document.addEventListener("click", function (event) {
-			const toggle = document.querySelectorAll(".toggle-menu-mobile--js");
-			const menu = document.querySelector(".menu-mobile--js");
-			const toggleEv = event.target.closest(".toggle-menu-mobile--js");
-			if (!toggleEv) return;
-			toggle.forEach(el => el.classList.toggle("on"));
-			menu.classList.toggle("active");
-			[document.body, document.querySelector('html')].forEach(el => el.classList.toggle("fixed"));
-		}, { passive: true });
-	},
-	closeMenu() {
-		const toggle = document.querySelectorAll(".toggle-menu-mobile--js");
-		const menu = document.querySelector(".menu-mobile--js");
-		if (!menu) return;
-		if (menu.classList.contains("active")) {
-			toggle.forEach(element => element.classList.remove("on"));
-			menu.classList.remove("active");
-			[document.body, document.querySelector('html')].forEach(el => el.classList.remove("fixed"));
-		}
-
-	},
-	mobileMenu() { 
-		const menu = document.querySelector(".menu-mobile--js");
-		if (!menu) return;
-		this.toggleMenu();
-		document.addEventListener('mouseup', (event) => {
-			let container = event.target.closest(".menu-mobile--js.active"); // (1)
-			let link = event.target.closest(".menu-mobile .menu a"); // (1)
-			let toggle = event.target.closest('.toggle-menu-mobile--js.on'); // (1)
-			if (!container && !toggle) this.closeMenu();
-		}, { passive: true });
-
-		window.addEventListener('resize', () => {
-			if (window.matchMedia("(min-width: 992px)").matches) this.closeMenu();
-		}, { passive: true });
-	},
-
+ 
 	// tabs  .
-	tabscostume(tab) {
-		// const tabs = document.querySelectorAll(tab);
-		// const indexOf = element => Array.from(element.parentNode.children).indexOf(element);
-		// tabs.forEach(element => {
-		// 	let tabs = element;
-		// 	const tabsCaption = tabs.querySelector(".tabs__caption");
-		// 	const tabsBtn = tabsCaption.querySelectorAll(".tabs__btn");
-		// 	const tabsWrap = tabs.querySelector(".tabs__wrap");
-		// 	const tabsContent = tabsWrap.querySelectorAll(".tabs__content");
-		// 	const random = Math.trunc(Math.random() * 1000);
-		// 	tabsBtn.forEach((el, index) => {
-		// 		const data = `tab-content-${random}-${index}`;
-		// 		el.dataset.tabBtn = data;
-		// 		const content = tabsContent[index];
-		// 		content.dataset.tabContent = data;
-		// 		if (!content.dataset.tabContent == data) return;
-
-		// 		const active = content.classList.contains('active') ? 'active' : '';
-		// 		// console.log(el.innerHTML);
-		// 		content.insertAdjacentHTML("beforebegin", `<div class="tabs__btn-accordion  btn btn-primary  mb-1 ${active}" data-tab-btn="${data}">${el.innerHTML}</div>`)
-		// 	})
-
-
-		// 	tabs.addEventListener('click', function (element) {
-		// 		const btn = element.target.closest(`[data-tab-btn]:not(.active)`);
-		// 		if (!btn) return;
-		// 		const data = btn.dataset.tabBtn;
-		// 		const tabsAllBtn = this.querySelectorAll(`[data-tab-btn`);
-		// 		const content = this.querySelectorAll(`[data-tab-content]`);
-		// 		tabsAllBtn.forEach(element => {
-		// 			element.dataset.tabBtn == data
-		// 				? element.classList.add('active')
-		// 				: element.classList.remove('active')
-		// 		});
-		// 		content.forEach(element => {
-		// 			element.dataset.tabContent == data
-		// 				? (element.classList.add('active'), element.previousSibling.classList.add('active'))
-		// 				: element.classList.remove('active')
-		// 		});
-		// 	})
-		// })
+	tabscostume(tab) { 
 
 		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
 			$(this)
@@ -142,13 +64,7 @@ const JSCCommon = {
 
 	},
 	// /tabs
-
-	inputMask() {
-		// mask for input
-		let InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
-		InputTel.forEach(element => element.setAttribute("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"));
-		Inputmask("+9(999)999-99-99").mask(InputTel);
-	},
+ 
 	heightwindow() {
 		// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 		let vh = window.innerHeight * 0.01;
@@ -235,8 +151,7 @@ const $ = jQuery;
 function eventHandler() {
 	// JSCCommon.ifie();
 	JSCCommon.modalCall();
-	// JSCCommon.tabscostume('tabs');
-	JSCCommon.mobileMenu();
+	// JSCCommon.tabscostume('tabs'); 
 	// JSCCommon.inputMask();
 	// JSCCommon.sendForm();
 	JSCCommon.heightwindow();
@@ -298,16 +213,37 @@ function eventHandler() {
 		},
 	}
 
-	const swiper4 = new Swiper('.sBanners__slider--js', {
-		// slidesPerView: 5,
-		...defaultSl,
+	const swiper4 = new Swiper('.bread-slider-js', {
 		slidesPerView: 'auto',
 		freeMode: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true,
+		watchOverflow: true,
+		spaceBetween: 0,
+		// loopFillGroupWithBlank: true,
+		// touchRatio: 0.2,
+		// slideToClickedSlide: true,
+		// freeModeMomentum: true,
 
+	});
+
+	const sArticleSlider = new Swiper('.mediaContent__slider--js', {
+
+		// slidesPerView: 'auto',
+		slidesPerView: 1,
+		loop: true,
+		watchOverflow: true,
+		spaceBetween: 0,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		pagination: {
+			el: ' .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+			// renderBullet: function (index, className) {
+			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
+			// }
+		},
 	});
 	// modal window
 

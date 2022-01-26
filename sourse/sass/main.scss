@@ -47,8 +47,8 @@ $output-bourbon-deprecation-warnings: false;
 // @import "./node_modules/bootstrap/scss/navbar";
 // @import "./node_modules/bootstrap/scss/card";
 // @import "./node_modules/bootstrap/scss/accordion";
-// @import "./node_modules/bootstrap/scss/breadcrumb";
-// @import "./node_modules/bootstrap/scss/pagination";
+@import "./node_modules/bootstrap/scss/breadcrumb";
+@import "./node_modules/bootstrap/scss/pagination";
 // @import "./node_modules/bootstrap/scss/badge";
 // @import "./node_modules/bootstrap/scss/alert";
 // @import "./node_modules/bootstrap/scss/progress";
@@ -71,14 +71,25 @@ $output-bourbon-deprecation-warnings: false;
 // scss-docs-end import-stack
 
 
-// .breadcrumb {
-// 	.active {
-// 		a {
-// 			// color: $breadcrumb-active-color;
-// 			pointer-events: none;
-// 		}
-// 	}
-// }
+.breadcrumb-wrap{
+  background: #F0F0F0;
+  border-bottom: 1px solid #D4D4D4;
+
+}
+.breadcrumb {
+  flex-wrap: nowrap;
+  &-item{
+    display: flex;
+    width: auto;
+    white-space: nowrap;
+  }
+	.active {
+		a {
+			// color: $breadcrumb-active-color;
+			pointer-events: none;
+		}
+	}
+}
 // @import "./node_modules/bootstrap/scss/pagination";
 
 // .pagination-wrapper ul {

@@ -1,19 +1,17 @@
 mixin newsItem()
 	a.news__card(href='#')
-		.news__date
-			p.news__day 02
-			p.news__month октября
-			p.news__year 2021
+		+news__date()
 		p.news__text
 			| Институт «Мосинжпроект» участвует в создании знакового проекта Урала — «Притяжение»
 		img.news__photo(src='images/news/1.jpg' alt='')
-mixin news(data)
+mixin news(nl)
 	// start news
 	.news
 		.container
 			.news__content
 				h2.news__title Новости
-				a.news__all.btn(href='#') Подробнее
+				if !nl
+					a.news__all.btn(href='#') Подробнее
 				.news__cards.news__cards--js
 					- for (var x = 0; x < 3; x++)
 						+newsItem()

@@ -299,22 +299,24 @@ ul {
 
 .swiper-button-hand {
 	width: var(--swiperArrowSize);
-	height: var(--swiperArrowSize);
-	border-radius: 50%;
+	height: var(--swiperArrowSize); 
 	background-color: var(--swiperBgDef);
-	border: 2px solid var(--swiperBorderColorDef);
-	color: var(--swiperColorDef);
+	cursor: pointer; 
+	border: none;
+	color: var(--swiperColorDef); 
 	@include bgs;
 	z-index: 300;
-	outline: none !important;
-	// margin-bottom: 0;
+	outline: none !important; 
 	background-image: none;
 	margin: 0;
 	@include a-cent(y);
 	box-shadow: 0 15px 60px rgba(0, 0, 0, 0.1);
 	@include mt;
 	user-select: none;
-
+	transform: translateY(-50%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	&:hover {
 		background-color: var(--swiperBgDefHover);
 		border-color: var(--swiperBorderColorDefHover);
@@ -322,31 +324,44 @@ ul {
 	}
 
 	.icon {
-		font-size: rem(12);
+		font-size: rem(24);
+		fill: none;
+		stroke: currentColor;
+		stroke-width: 2px;
 	}
 
 	&::after {
 		display: none;
-	} 
+	}
 	&-next {
 		right: var(--swiperArrowPosition);
+		// right: 0;
 	}
 
 	&-prev {
 		left: var(--swiperArrowPosition);
+		// left: 0;
 	}
+	// @include media-breakpoint-down(md) {
+	// 	display: none;
+	// }
 }
+
 
 .swiper-pagination {
 	width: 100%;
 	text-align: center;
-
+	position: absolute;
+	bottom: rem(11);
+	z-index: 3;
 	&-bullet {
-		opacity: 1;
-		width: 8px;
-		height: 8px;
 		border-radius: 50%;
-		background-color: #E6E6E6;
+		opacity: 1;
+		width: 7px;
+		height: 7px;
+		// border-radius: 50%;
+		border: 1px solid $primary;
+		background-color: $primary;
 		outline: none !important;
 		@include mt;
 		margin-left: rem(8);
@@ -356,11 +371,13 @@ ul {
 
 		&-active,
 		&:hover {
-			background-color: var(--bs-primary) ;
+			background-color: transparent;
 		}
 	}
+	@include media-breakpoint-up(md) {
+		// display: none;
+	}
 }
-
 
 
 

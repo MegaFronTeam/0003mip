@@ -1,5 +1,5 @@
 mixin item-sos(icon, a='#')
-	+e.A.item(href= a target="_blank")
+	+e.A.item(href= a target="_blank" class=`soc__item--${icon}`)
 		if block
 			block
 		else
