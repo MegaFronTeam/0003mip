@@ -768,6 +768,8 @@ mixin page-head(data)
 		.container
 			if data.title
 				h1(data-text= data.title)= data.title
+			if data.p
+				p!= data.p
 
 
 mixin news__date()
@@ -775,3 +777,13 @@ mixin news__date()
 		.news__day 02
 		.news__month октября
 		.news__year 2021
+
+
+mixin share()
+	+b.share
+		span Поделиться
+		+soc()
+			+item-sos("fb")
+			+item-sos("twitter")
+			+item-sos("vk")
+			+item-sos("instagram")

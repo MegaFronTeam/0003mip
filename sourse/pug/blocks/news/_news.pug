@@ -1,20 +1,35 @@
 mixin newsItem()
-	a.news__card(href='#')
+	a.news__card(href='#')&attributes(attributes)
 		+news__date()
 		p.news__text
 			| Институт «Мосинжпроект» участвует в создании знакового проекта Урала — «Притяжение»
 		img.news__photo(src='images/news/1.jpg' alt='')
-mixin news(nl)
+		
+mixin projectItem(t='Многоуровневые транспортные развязки, улично-дорожная-сеть на участке от ул. Лухмановская до границ с Московской областью')
+	a.news__card(href='#')&attributes(attributes)
+		img.news__photo(src='images/news/1.jpg' alt='')
+		.p-3.pb-0
+			.h5.mb-3= t
+			.small.mb-3
+				.strong.mb-1 Заказчик
+				| ГКУ «УДМС»
+			.small
+				.strong.mb-1 Период
+				| Проектирование: 2019-2020
+mixin news(nl, t='Новости')
 	// start news
 	.news
 		.container
 			.news__content
-				h2.news__title Новости
+				h2.news__title= t
 				if !nl
 					a.news__all.btn(href='#') Подробнее
 				.news__cards.news__cards--js
 					- for (var x = 0; x < 3; x++)
-						+newsItem()
+						if t=='Новости'
+							+newsItem()
+						else
+							+projectItem
 	// end news
 mixin newsPage(data)
 	// start news
@@ -27,15 +42,71 @@ mixin newsPage(data)
 							+e.btn(href="#").active  2021
 							+e.btn(href="#") 2020
 							+e.btn(href="#") 2019
-					.col-sm-auto
+					.col-md-auto
 						+e.btn.w-100(href="#") Все новости
 		.container
 			.news__content
 				+b.news__cards--page
 					- for (var x = 0; x < 9; x++)
-						+newsItem()
+						+newsItem()(class="wow animate__fadeInUp animate__animated")
 			.text-center.text-primary
 				+e.btn-more 
 					+icon("spinner")
 					| показать больше новостей
+	// end news
+mixin newsPage03(data)
+	// start news
+	+b.news--page
+		+b.secion-head
+			.container
+				.row
+					.col
+						+e.btns
+							+input("ВСЕ ПРОЕКТЫ",'select')
+							+input("период",'select')
+							+input("местоположение",'select')
+					.col-md-auto
+						+e.btns(style="--bs-gutter-x: 0")
+							+e.btn(href="#").active
+								+icon("cards")
+							+e.btn(href="#") 
+								+icon("mark")
+		.container
+			.news__content
+				+b.news__cards--page
+					+projectItem('Многоуровневые транспортные развязки на пересечении автомобильной дороги «Солнцево-Бутово-Видное» с Боровским шоссе и Киевским шоссе с необходимой для их функционирования улично-дорожной сетью')(class="wow animate__fadeInUp animate__animated")
+					- for (var x = 0; x < 8; x++)
+						+projectItem()(class="wow animate__fadeInUp animate__animated")
+			.text-center.text-primary
+				+e.btn-more 
+					+icon("spinner")
+					| показать больше проектов
+	// end news
+mixin newsPage03-1(data)
+	// start news
+	+b.news--page
+		+b.secion-head
+			.container
+				.row
+					.col
+						+e.btns
+							+input("ВСЕ ПРОЕКТЫ",'select')
+							+input("период",'select')
+							+input("местоположение",'select')
+					.col-md-auto
+						+e.btns(style="--bs-gutter-x: 0")
+							+e.btn(href="#").active
+								+icon("cards")
+							+e.btn(href="#") 
+								+icon("mark")
+		.container
+			.news__content
+				+b.news__cards--page
+					+projectItem('Многоуровневые транспортные развязки на пересечении автомобильной дороги «Солнцево-Бутово-Видное» с Боровским шоссе и Киевским шоссе с необходимой для их функционирования улично-дорожной сетью')(class="wow animate__fadeInUp animate__animated")
+					- for (var x = 0; x < 8; x++)
+						+projectItem()
+			.text-center.text-primary
+				+e.btn-more 
+					+icon("spinner")
+					| показать больше проектов
 	// end news

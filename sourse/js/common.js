@@ -245,7 +245,17 @@ function eventHandler() {
 			// }
 		},
 	});
-	// modal window
+	
+	
+	var wow = new WOW(
+		{
+			animateClass: 'animate__animated', // animation css class (default is animated)
+			mobile: false,       // trigger animations on mobile devices (default is true)
+			scrollContainer: true
+		}
+	);
+	wow.init();
+
 
 };
 if (document.readyState !== 'loading') {

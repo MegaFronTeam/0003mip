@@ -118,4 +118,11 @@
 					text-shadow: none;
 				}
 			}
+			p{
+				@include rfs(25px);
+				letter-spacing: -0.01em;
+				line-height: calc(32 / 25);
+				color: #fff;
+				font-feature-settings: 'pnum' on, 'lnum' on;
+			}
 		}

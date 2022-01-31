@@ -8,7 +8,7 @@
 	}
 	background-color: #e6e6e6;
 	@include media-breakpoint-up(md) {
-		.container{
+		.container--sm{
 			max-width: calc(1024px + var(--gx));
 		}
 	}
@@ -469,7 +469,11 @@
 		@include rfs(34px);
 		font-weight: bold;
 		line-height: calc(44 / 34);
-		max-width: rem(900);
+	}
+	.container--sm{
+		h1{
+			max-width: rem(900);
+		}
 	}
 	.news__date{
 		color: $primary;
@@ -477,5 +481,22 @@
 	}
 	.news__day {
 
+	}
+	&__col{
+		margin-top: rem(32);
+	}
+	&__item{
+		border-left: 1px solid;
+		padding-left: 1rem;
+		min-height: 100%;
+		padding-top: 3px;
+		padding-bottom: 3px;
+	}
+	@include media-breakpoint-up(md){
+
+		&__col:first-child &__item{
+			border: none;
+			padding-left: 0;
+		}
 	}
 }
