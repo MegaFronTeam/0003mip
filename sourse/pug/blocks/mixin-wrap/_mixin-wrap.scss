@@ -88,11 +88,20 @@
 		--minH: 456px;
 		// padding-top: rem(80);
 		padding-bottom: rem(53);
+		&--h{
+			--minH: #{rem(704)};
+			// max-height: ;
+			
+		}
 	}
 	
 	@include m{
 		--minH: 274px;
 		padding-bottom: rem(24);
+		&--h{
+
+			--minH: #{rem(442)};
+		}
 	}
 	--minH: 128px;
 	padding-top: rem(80);
@@ -124,5 +133,9 @@
 				line-height: calc(32 / 25);
 				color: #fff;
 				font-feature-settings: 'pnum' on, 'lnum' on;
+				margin-bottom: rem(24);
+				&.max-w{
+					max-width: rem(773);
+				}
 			}
 		}

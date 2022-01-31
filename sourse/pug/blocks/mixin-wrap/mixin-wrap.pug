@@ -762,7 +762,7 @@ mixin promo2()
 				
 
 mixin page-head(data)
-	+b.page-head.bg-wrap
+	+b.page-head.bg-wrap&attributes(attributes)
 		if data.bg
 			+pic(data.bg,'bg', 0).picture-bg
 		.container
@@ -770,7 +770,7 @@ mixin page-head(data)
 				h1(data-text= data.title)= data.title
 			if data.p
 				p!= data.p
-
+			block
 
 mixin news__date()
 	.news__date
