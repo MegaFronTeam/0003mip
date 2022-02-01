@@ -1,8 +1,8 @@
 (function() {
 
-  $('#mainSliderPhotos').each(function (index) {
+  $('#mainSliderPhotos, .page-head').each(function (index) {
     particlesJS.load('particles-js-' + index, 'assets/particlesjs-config.json', function() {
-      console.log('callback - particles.js config loaded');
+      // console.log('callback - particles.js config loaded');
     });
   })
 

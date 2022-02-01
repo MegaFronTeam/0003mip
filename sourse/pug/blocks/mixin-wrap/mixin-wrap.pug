@@ -763,6 +763,7 @@ mixin promo2()
 
 mixin page-head(data)
 	+b.page-head.bg-wrap&attributes(attributes)
+		.mainSlider__particles(id=`particles-js-0`)
 		if data.bg
 			+pic(data.bg,'bg', 0).picture-bg
 		.container
