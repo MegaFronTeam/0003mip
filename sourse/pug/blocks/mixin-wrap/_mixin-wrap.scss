@@ -161,17 +161,6 @@
 				}
 			}
 		}
-	
-	
-	.breadcrumb-wrap--inner {
-		@include media-breakpoint-up(md) {
-			margin-top: 84px !important;
-		}
-		@include media-breakpoint-up(sm) {
-			margin-top: 69px !important;
-		}
-		background-color: #E6E6E6;
-	}
 
 		.contactBlock{
 			margin-bottom: rem(30);
@@ -264,5 +253,14 @@
 		.icon-search {
 			color: $dark;
 		}
+	}
+	.breadcrumb-wrap {
+		@include media-breakpoint-up(md) {
+			margin-top: 84px !important;
+		}
+		@include media-breakpoint-up(sm) {
+			margin-top: 69px !important;
+		}
+		background-color: #E6E6E6;
 	}
 }
