@@ -127,6 +127,9 @@ body {
 
 .section-title {
 	margin-bottom: var(--sTPB);
+	h2{
+		color: #3F3F3F;
+	}
 }
 
 
@@ -652,12 +655,27 @@ iframe {
 		}
 	}
 	.breadcrumb-wrap {
-	// 	@include media-breakpoint-up(md) {
-	// 		margin-top: 84px !important;
-	// 	}
-	// 	@include media-breakpoint-up(sm) {
-	// 		margin-top: 69px !important;
-	// 	}
-		background-color: #E6E6E6;
-	}
+		// 	@include media-breakpoint-up(md) {
+			// 		margin-top: 84px !important;
+			// 	}
+			// 	@include media-breakpoint-up(sm) {
+				// 		margin-top: 69px !important;
+				// 	}
+				background-color: #E6E6E6;
+			}
+		}
+
+		.bg-gray-dark{
+
+			.page-head,
+			.breadcrumb-wrap {
+				background: #BCBCBC ;
+			}	
+			}
+.bg-none{
+	background-color: transparent;
+}
+
+.bg-gray-dark{
+	background: #BCBCBC !important;
 }

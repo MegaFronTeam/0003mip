@@ -1,0 +1,37 @@
+// start .sTeam
+.sTeam {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+		background: #DBDBDB;
+		picture{
+			margin-bottom: rem(24);
+			filter: saturate(0);
+			@include mt;
+		}
+		&__col{
+			&:hover{
+				picture{
+					filter: saturate(1);
+				}
+			}
+		}
+
+		.row{
+			--bs-gutter-y: var(--bs-gutter-x);
+		}
+		&__title{
+			@include rfs(20px);
+			margin-bottom: rem(16);
+			span{
+				@include rfs(25px);
+				font-weight: bold;
+				display: block;
+			}
+		}
+
+	@include media-breakpoint-up(xl) {} 
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {} 
+	@include media-breakpoint-down(xl) {}
+} // end.sTeam

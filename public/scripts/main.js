@@ -1,7 +1,12 @@
 (function() {
 
-  $('#mainSliderPhotos, .page-head').each(function (index) {
+  $('#mainSliderPhotos, .page-head, .sContent--base').each(function (index) {
     particlesJS.load('particles-js-' + index, 'assets/particlesjs-config.json', function() {
+      // console.log('callback - particles.js config loaded');
+    });
+  })
+  $(' .sContent--base').each(function (index) {
+    particlesJS.load('particles-js-1' , 'assets/particlesjs-config.json', function() {
       // console.log('callback - particles.js config loaded');
     });
   })

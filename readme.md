@@ -7,3 +7,6 @@
 6. <https://megafronteam.github.io/0003mip/public/04-projection.html>
 7. <https://megafronteam.github.io/0003mip/public/05-coordionation.html>
 8. <https://megafronteam.github.io/0003mip/public/10-contacts.html>
+9. <https://megafronteam.github.io/0003mip/public/09-leadership.html>
+10. <https://megafronteam.github.io/0003mip/public/12-1bim.html>
+11. <https://megafronteam.github.io/0003mip/public/13-history.html>

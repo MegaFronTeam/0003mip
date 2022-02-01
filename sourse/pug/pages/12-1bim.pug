@@ -1,0 +1,36 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+include ../blocks/news/_news.pug
+//- include ../blocks/partnersSlider/_partnersSlider.pug
+
+block variables
+	- let  mainPage= null
+	- let  bg= null
+
+block title
+	- let  title= 'Цифровизация, развитие BIM–технологий'
+	title= title
+block pagecontent
+	+header()
+	+page-head({ 
+		title,
+		bg:'bim-page.jpg'
+		} ).page-head--h
+	//- +breadcrumb(`Главная`,`Проекты`,`Многоуровневые транспортные развязки на пересечении автомобильной дороги « Солнцево-Бутово-Видное» с Боровским шоссе и Киевским...`)
+	+sContent12()
+
+	//- +news("",'Проекты')
+	//- +mainSlider()
+	//- +newsSlider()
+	//- +landingInfo
+	
+	//- +promo()
+	//- +promo2()
+	//- +newsPage
+	
+	
+	//- +partnersSlider
+	+footer

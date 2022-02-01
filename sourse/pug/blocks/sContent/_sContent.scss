@@ -3,6 +3,11 @@
 	.sContent {
 	padding-top: 0;
 	padding-bottom: 0;
+	position: relative;
+	z-index: 2;
+	.mainSlider__particles{
+		z-index: -1;
+	}
 	&--base{
 		padding-top: var(--sPT);
 		padding-bottom: var(--sPT);
@@ -17,7 +22,7 @@
 	background-color: #e6e6e6;
 	@include media-breakpoint-up(md) {
 		.container--sm{
-			max-width: calc(1024px + var(--gx));
+			max-width: calc(1072px + var(--gx));
 		}
 	}
 	blockquote { 
@@ -773,5 +778,29 @@
 				}
 			}
 		}
+	}
+}
+
+.contentBanner{
+	color: #fff;
+	@include media-breakpoint-up(xl) {
+		
+		--spX: #{rem(60)};
+	}
+	--spX: #{rem(20)};
+	padding: var(--spX);
+	margin-top: rem(80);
+	margin-bottom: rem(80);
+	p{
+		// margin-bottom: 0;
+	}
+	.img{
+		@include media-breakpoint-down(sm) {
+			margin-left: calc(-1 * var(--spX));
+			margin-right: calc(-1 * var(--spX));
+			// width: 100%;
+		}
+		margin-top: calc(-1* (var(--spX) + #{rem(40)} ));
+		margin-bottom: 24px;
 	}
 }
