@@ -138,8 +138,43 @@
 					max-width: rem(773);
 				}
 			}
-		}
 
+			&--inner {
+				--minH: auto;
+				background-color: #E6E6E6;
+				padding-top: rem(37);
+				padding-bottom: rem(24);
+				@include d {
+					--minH: auto;
+					padding-bottom: rem(24);
+				}
+				@include m {
+					--minH: auto;
+					padding-bottom: rem(24);
+				}
+				h1 {
+					color: #3F3F3F;
+					text-shadow: none;
+					&::before {
+						content: unset;
+					}
+				}
+			}
+			&--text{
+
+				--minH: 1px !important;
+				background-color: transparent;
+				padding-top: rem(40);
+				padding-bottom: rem(14) !important;
+				h1{
+					color: $body-color;
+					text-shadow: none;
+					&::before{
+						display: none;
+					}
+				}
+			} 
+		}
 
 		.contactBlock{
 			margin-bottom: rem(30);

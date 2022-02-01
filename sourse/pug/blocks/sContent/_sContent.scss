@@ -325,8 +325,12 @@
 	.docLine{
 		margin-bottom: rem(60);
 	}
-} // end.sContent
-
+	&--inner {
+		p {
+			font-size: rem(25);
+		}
+	} // end.sContent
+}
 .sContent--secondPage {
 	p:first-of-type {
 		padding-top: rem(16);
@@ -770,5 +774,4 @@
 			}
 		}
 	}
-
 }

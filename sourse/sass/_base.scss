@@ -631,3 +631,33 @@ iframe {
 		filter: saturate(0);
 	}
 }
+
+
+
+.page-base {
+	.header {
+		background-color: #A8A8A8;
+		color: $dark;
+		position: relative;
+		@include media-breakpoint-up(md) {
+			padding-bottom: rem(19);
+		}
+		&__select {
+			&::after {
+				background-image: url(../img/svg/chevron-down.svg);
+			}
+		}
+		.icon-search {
+			color: $dark;
+		}
+	}
+	.breadcrumb-wrap {
+	// 	@include media-breakpoint-up(md) {
+	// 		margin-top: 84px !important;
+	// 	}
+	// 	@include media-breakpoint-up(sm) {
+	// 		margin-top: 69px !important;
+	// 	}
+		background-color: #E6E6E6;
+	}
+}
