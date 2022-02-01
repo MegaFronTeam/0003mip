@@ -7,11 +7,11 @@ include ../blocks/news/_news.pug
 //- include ../blocks/partnersSlider/_partnersSlider.pug
 
 block variables
-	- let  mainPage= null
+	- let  mainPage= 'page-base'
 	- let  bg= null
 
 block title
-	- let  title= 'Согласование'
+	- let  title= 'Контакты'
 	title= title
 block pagecontent
 	+header()
@@ -20,13 +20,26 @@ block pagecontent
 		bg:'coordionation-page.jpg',
 		p: 'Работы по рассмотрению и согласованию проектных решений сторонних организаций'
 		} )
-	+b.sContent--base.bg-white.section
-		.container
-			p ООО «Институт «Мосинжпроект» выполняет работы по рассмотрению и согласованию проектных решений сторонних организаций в части увязки с ранее выпущенными или находящимися в разработке проектными решениями Института для устранения замечаний отдела подземных сооружений (ОПС) ГБУ «Мосгоргеотрест» или эксплуатирующих организаций.
+	//- +b.sContent--base.bg-white.section
+	//- 	.container
+	//- 		p ООО «Институт «Мосинжпроект» выполняет работы по рассмотрению и согласованию проектных решений сторонних организаций в части увязки с ранее выпущенными или находящимися в разработке проектными решениями Института для устранения замечаний отдела подземных сооружений (ОПС) ГБУ «Мосгоргеотрест» или эксплуатирующих организаций.
+	//- +breadcrumb(`Главная`,`Проекты`,`Многоуровневые транспортные развязки на пересечении автомобильной дороги « Солнцево-Бутово-Видное» с Боровским шоссе и Киевским...`)
 	+b.sContent--base.section
 		.container
-			+contactBlock()
-			+docLine()
+			+contactBlock10()
+	+b.mapBlock.section
+		.container
+			.row.gx-0
+				.col-md-6
+					+pic("contact-bg.jpg",'bg')
+				+e.col.col-md-6
+					+b.map-wrap
+						#map
+					+e.btn.btn.btn--bgPrimary(href="#")
+						+icon("chevron-right")
+						| Построить маршрут
+
+			//- +docLine()
 
 	//- +mainSlider()
 	//- +newsSlider()
@@ -39,3 +52,38 @@ block pagecontent
 	
 	//- +partnersSlider
 	+footer
+block map
+	script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c')
+
+	script.
+			function init() {
+				var center = [55.75970406898686,37.638611000000004];
+				var myMap1 = new ymaps.Map('map', {
+					center: center,
+					zoom: 17,
+					controls: ['zoomControl']
+				});
+				var myPlacemark1 = new ymaps.Placemark(center, { 
+					hintContent: '',
+					balloonContent: '101000, Москва, Сверчков переулок, д. 4/1, стр.1', 
+				},
+				{
+					iconLayout: 'default#image',
+					iconImageHref: 'img/svg/map-mark.svg',
+					// Размеры метки.
+					iconImageSize: [80, 80],
+					// Смещение левого верхнего угла иконки относительно
+					// её "ножки" (точки привязки).
+					iconImageOffset: [-40, -20]
+				});
+				myMap1.geoObjects.add(myPlacemark1);
+				myMap1.behaviors.disable('scrollZoom');
+				//на мобильных устройствах... (проверяем по userAgent браузера)
+				if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+					// ... отключаем перетаскивание карты
+					myMap1.behaviors.disable('drag');
+				}
+			}
+
+	script.
+		ymaps.ready(init);
