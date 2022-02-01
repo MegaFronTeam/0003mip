@@ -246,6 +246,18 @@ function eventHandler() {
 		},
 	});
 	
+	const sLicensesSlider = new Swiper('.sLicenses__slider--js', {
+
+		// slidesPerView: 'auto',
+		slidesPerView: 4,
+		loop: true,
+		watchOverflow: false,
+		spaceBetween: 0,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		}
+	});
 	
 	var wow = new WOW(
 		{

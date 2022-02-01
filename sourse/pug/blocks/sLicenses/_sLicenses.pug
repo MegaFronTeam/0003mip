@@ -1,0 +1,19 @@
+mixin sLicenses(data)
+	// start sLicenses
+	+b.SECTION.sLicenses.section#sLicenses&attributes(attributes)
+		.container
+			h2 Свидетельства и&nbsp;лицензии
+			mixin slide(img, num)
+				+e.slide.swiper-slide
+					+e.item
+						+e.sertificate(href=`img/@2x/${img}`, data-fancybox=`sertificate-${num}`)
+							+pic(img, ``, 0)
+			+e.sliderContainer
+				+e.slider--js.swiper
+					.swiper-wrapper
+						+slide('sLicenses-img-1.png', 1)
+						+slide('sLicenses-img-1.png', 1)
+						+slide('sLicenses-img-1.png', 1)
+						+slide('sLicenses-img-2.png', 2)
+				+arrow
+	// end sLicenses
