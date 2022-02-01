@@ -771,6 +771,9 @@ mixin page-head(data)
 			if data.p
 				p!= data.p
 			block
+			if data.btns
+				.row
+					a.btn.btn--colorWhite(href="#") btn
 
 mixin news__date()
 	.news__date
