@@ -763,8 +763,8 @@ mixin promo2()
 
 mixin page-head(data)
 	+b.page-head.bg-wrap&attributes(attributes)
-		.mainSlider__particles(id=`particles-js-0`)
 		if data.bg
+			.mainSlider__particles(id=`particles-js-0`)
 			+pic(data.bg,'bg', 0).picture-bg
 		.container
 			if data.title
@@ -804,6 +804,30 @@ mixin contactBlock()
 			+item(`map`,`Прием материалов проходит по&nbsp;адресу`,`Сверчков пер., д. 4/1 (вход через Девяткин пер.&nbsp;в&nbsp;арку)`)
 			+item(`time`,`График приёма специалистов`,`Вторник, четверг <br>  9:00-12:00; 13:00-17:00`)
 			+item(`phone`,`Телефон`,`+7(495) 225-19-40, доб. 3704`)
+			
+mixin contactBlock10()
+	+b.contactBlock
+		.row
+			mixin item(i,t,p)
+				+e.col.col-sm-4
+					+e.item
+						+icon(i)
+						+e.title!= t
+						if p
+							p!= p
+						block
+			+item(`map`,`Адрес`,`101000, Москва, Сверчков переулок, д. 4/1, стр.1`)
+			+item(`phone`,`Телефон`)
+				.strong.mb-1 Канцелярия
+				.mb-3 +7 (495) 225-19-40 доб. 1085
+				
+				.strong.mb-1 Приёмная директора
+				.mb-3 +7 (495) 625-25-44
+				.strong.mb-1 «Телефон доверия»  <br> по&nbsp;противодействию коррупции
+				.mb-3 +7 (985) 350-78-61
+
+			+item(`mail`,`Электронная почта`,`institute@mosinzhproekt.ru`)
+
 mixin docLine()
 	+b.docLine
 		.row
