@@ -32,8 +32,7 @@ const fileSources = {
 		// --sPB: ;
 		// --sTPB: ;
 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(xl) {} 
 	@include media-breakpoint-up(md) {}
 	@include media-breakpoint-up(sm) {} 
 	@include media-breakpoint-down(xl) {}
