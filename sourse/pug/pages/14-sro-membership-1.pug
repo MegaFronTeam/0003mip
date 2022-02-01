@@ -8,14 +8,14 @@ include ../blocks/partnersSlider/_partnersSlider.pug
 include ../blocks/sCards/_sCards.pug
 
 block variables
-	- let  mainPage= 'main-page' 
+	- let  mainPage= 'page-base'
 	- let  bg= null
 
 block title
 	- let  title= 'title'
 	title= title
 block pagecontent
-	+header().bg-color
+	+header()
 	+breadcrumb('Главная', 'О компании', 'Членство в СРО, свидетельства, лицензии').breadcrumb-wrap--inner
 	+page-head({
 		title: 'Членство в СРО, свидетельства, лицензии'

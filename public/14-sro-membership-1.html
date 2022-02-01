@@ -16,9 +16,9 @@
 <link rel="stylesheet" type="text/css" href="libs/swiper/swiper.min.css"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body class="main-page"> 
+	<body class="page-base"> 
 		<!-- start header-->
-		<header class="header bg-color">
+		<header class="header">
 			<div class="header__desktop container"><a class="header__logo" href="/"><img src="images/Logo.svg" alt=""/></a>
 				<ul>
 					<li class="header__select"><a>О компании</a>
@@ -50,7 +50,11 @@
 					<li><a href="#">Контакты</a></li>
 					<li><a href="#">О компании</a></li>
 				</ul>
-				<div class="header__search"><img src="images/icons/search.svg" alt=""/></div>
+				<div class="header__search">
+					<svg class="icon icon-search ">
+						<use xlink:href="img/svg/sprite.svg#search"></use>
+					</svg>
+				</div>
 				<div class="header__lang">ENG</div>
 			</div>
 			<div class="header__mobile container"><a class="header__logo" href="/"><img src="images/Logo_mobile.svg" alt=""/></a>
