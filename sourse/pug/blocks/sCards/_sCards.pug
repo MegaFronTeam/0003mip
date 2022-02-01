@@ -1,0 +1,16 @@
+mixin sCards(data)
+	// start sCards
+	+b.SECTION.sCards.section#sCards&attributes(attributes)
+		.container
+			+b.card
+				.row
+					.col-md-6
+						+e.left-side
+							+e.wrap
+								h3 Инженерные изыскания
+								p Ассоциация саморегулируемая организация &laquo;Центральное объединение организаций по&nbsp;инженерным изысканиям для строительства &laquo;Центризыскания&raquo; (Ассоциация СРО &laquo;Центризыскания&raquo;)
+								button Карточка члена СРО
+							img(src="img/svg/card-img-1.svg", alt="")
+						+e.right-side
+							+e.wrap
+	// end sCards

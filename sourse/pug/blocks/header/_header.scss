@@ -1,7 +1,18 @@
 
-	// start .header
-	.header {
-		 
-	
-
+// start .header
+.header {
+	&.bg-color {
+		background-color: #A8A8A8;
+		color: $dark;
+		@include media-breakpoint-up(sm) {
+			padding-bottom: rem(19);
+		}
+		.header {
+			&__select {
+				&::after {
+					background-image: url(../img/svg/chevron-down.svg);
+				}
+			}
+		}
+	}
 } // end.header

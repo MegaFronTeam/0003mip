@@ -1,0 +1,40 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/news/_news.pug
+include ../blocks/partnersSlider/_partnersSlider.pug
+include ../blocks/sCards/_sCards.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'title'
+	title= title
+block pagecontent
+	+header().bg-color
+	+breadcrumb('Главная', 'О компании', 'Членство в СРО, свидетельства, лицензии').breadcrumb-wrap--inner
+	+page-head({
+		title: 'Членство в СРО, свидетельства, лицензии'
+	}).page-head--inner
+	+b.sContent--inner.section
+		.container
+			p ООО &laquo;Институт &laquo;Мосинжпроект&raquo; является членом саморегулируемых организаций (СРО) в&nbsp;области инженерных изысканий и&nbsp;архитектурно-строительного проектирования с&nbsp;декабря 2015&nbsp;года.
+	+b.sContent.section
+		.container
+			p В&nbsp;соответствии с&nbsp;Градостроительным кодексом Российской Федерации СРО работают в&nbsp;качестве надзорных и&nbsp;контролирующих организаций, которые разрабатывают и&nbsp;утверждают стандарты профессиональной деятельности, соответствующие федеральным законам и&nbsp;иным нормативным правовым актам, а&nbsp;также обеспечивают исполнение своими членами обязательств по&nbsp;договорам подряда на&nbsp;выполнение инженерных изысканий и&nbsp;подготовку проектной документации.
+	+sCards()
+	//- +mainSlider()
+	//- +newsSlider()
+	//- +landingInfo
+	
+	//- +promo()
+	//- +promo2()
+	//- +news
+	
+	
+	//- +partnersSlider
+	+footer

@@ -319,7 +319,11 @@
 		height: 100% !important;
 	}
  
-	
+	&--inner {
+		p {
+			font-size: rem(25);
+		}
+	}
 } // end.sContent
 
 .sContent--secondPage {
@@ -765,5 +769,4 @@
 			}
 		}
 	}
-
 }

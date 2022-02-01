@@ -1,0 +1,25 @@
+// start .sCards
+.sCards {
+	--sPT: #{rem(16)};
+	--sPB: #{rem(40)};
+	// --sTPB: ;
+	background-color: #e6e6e6;
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {} 
+	@include media-breakpoint-down(xl) {}
+} // end.sCards
+
+.card {
+	background-color: #D4D4D4;
+	padding: rem(32);
+	&__left-side {
+		display: flex;
+	}
+	h3 {
+		@include rfs(25);
+		text-transform: capitalize;
+		margin-bottom: rem(96);
+	}
+}
