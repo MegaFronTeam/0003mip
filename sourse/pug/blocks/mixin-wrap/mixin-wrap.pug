@@ -763,6 +763,7 @@ mixin promo2()
 
 mixin page-head(data)
 	+b.page-head.bg-wrap&attributes(attributes)
+		.mainSlider__particles(id=`particles-js-0`)
 		if data.bg
 			+pic(data.bg,'bg', 0).picture-bg
 		.container
@@ -790,3 +791,26 @@ mixin share()
 			+item-sos("twitter")
 			+item-sos("vk")
 			+item-sos("instagram")
+
+mixin contactBlock()
+	+b.contactBlock
+		.row
+			mixin item(i,t,p)
+				+e.col.col-sm-4
+					+e.item
+						+icon(i)
+						+e.title!= t
+						p!= p
+			+item(`map`,`Прием материалов проходит по&nbsp;адресу`,`Сверчков пер., д. 4/1 (вход через Девяткин пер.&nbsp;в&nbsp;арку)`)
+			+item(`time`,`График приёма специалистов`,`Вторник, четверг <br>  9:00-12:00; 13:00-17:00`)
+			+item(`phone`,`Телефон`,`+7(495) 225-19-40, доб. 3704`)
+mixin docLine()
+	+b.docLine
+		.row
+			.col-auto
+				img(src="img/svg/pdf.svg", alt="")
+			.col Требование к документации для согласования
+			.col-sm-auto
+				+e.btn.btn.btn--bgBlack(href="#")
+					+icon("download")
+					| Скачать

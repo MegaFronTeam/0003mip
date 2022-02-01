@@ -9,7 +9,10 @@
 
 	}
 	a{
-		@extend .text-primary;
+		&:not(.btn){
+
+			@extend .text-primary;
+		}
 	}
 	background-color: #e6e6e6;
 	@include media-breakpoint-up(md) {
@@ -319,13 +322,15 @@
 		height: 100% !important;
 	}
  
+	.docLine{
+		margin-bottom: rem(60);
+	}
 	&--inner {
 		p {
 			font-size: rem(25);
 		}
-	}
-} // end.sContent
-
+	} // end.sContent
+}
 .sContent--secondPage {
 	p:first-of-type {
 		padding-top: rem(16);
