@@ -9,7 +9,18 @@
 		}
 		--sTPB: #{rem(40)};
 		background: #BCBCBC;
+		&__slider{
+			img{
+				filter: saturate(0);
+				@include mt;
+			}
+			&:hover{
+				img{
+					filter: saturate(1);
 
+				}
+			}
+		}
 		p{
 			font-size: rem(18);
 			margin-bottom: rem(16);
@@ -26,6 +37,7 @@
 			max-width: rem(260);
 			min-height: 100%;
 			padding-left: rem(16);
+		
 		}
 		&__title{
 			@include rfs(20px);
