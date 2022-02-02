@@ -248,17 +248,61 @@ function eventHandler() {
 	
 	const sLicensesSlider = new Swiper('.sLicenses__slider--js', {
 
-		// slidesPerView: 'auto',
-		slidesPerView: 4,
+		slidesPerView: 'auto',
 		loop: true,
 		watchOverflow: false,
+		freeMode: true,
 		spaceBetween: 0,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		breakpoints: {
+			0: {
+				slidesPerView: 2
+			},
+			640: {
+				slidesPerView: 3
+			},
+			768: {
+				slidesPerView: 4
+			},
+		}
+	});
+	const ssInstitute = new Swiper('.sInstitute__slider--js', {
+
+		slidesPerView: 'auto',
+		loop: true,
+		watchOverflow: false,
+		freeMode: true,
+		spaceBetween: 0,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		breakpoints: {
+			0: {
+				slidesPerView: 2
+			},
+			640: {
+				slidesPerView: 3
+			},
+			768: {
+				slidesPerView: 4
+			},
+		}
+	});
+	const sDescription = new Swiper('.sDescription__slider--js', {
+
+		slidesPerView: 1,
+		loop: false,
+		watchOverflow: false,
+		spaceBetween: 90,
 		navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
 		}
 	});
-	
 	var wow = new WOW(
 		{
 			animateClass: 'animate__animated', // animation css class (default is animated)
