@@ -1,0 +1,18 @@
+mixin sInstitute(data)
+	+b.SECTION.sInstitute.section#sInstitute&attributes(attributes)
+		.container
+			h3 В&nbsp;ООО &laquo;Институт &laquo;Мосинжпроект&raquo; созданы все условия для профессионального развития работников
+			p Мы&nbsp;ежегодно открываем свои двери студентам профильных ВУЗов для прохождения практики и&nbsp;стажировки. ООО &laquo;Институт &laquo;Мосинжпроект&raquo; сотрудничает с&nbsp;ведущими российскими высшими учебными учреждениями в&nbsp;области подготовки молодых специалистов, переподготовки и&nbsp;повышения квалификации работающего персонала, такими как:
+			mixin slide(img, text)
+				+e.slide.swiper-slide
+					+e.item
+						+pic(img, ``, 0)
+						p!= text
+			+e.sliderContainer
+				+e.slider--js.swiper
+					.swiper-wrapper
+						+slide('sInstitute-img-1.png', 'Московский государственный строительный университет')
+						+slide('sInstitute-img-2.png', 'Московский государственный горный университет')
+						+slide('sInstitute-img-3.png', 'Государственный технический университет (МАДИ)')
+						+slide('sInstitute-img-4.png', 'Российский университет транспорта (МИИТ)')
+				+arrow

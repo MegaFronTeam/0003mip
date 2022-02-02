@@ -10,4 +10,9 @@
 9. <https://megafronteam.github.io/0003mip/public/09-leadership.html>
 10. <https://megafronteam.github.io/0003mip/public/12-1bim.html>
 11. <https://megafronteam.github.io/0003mip/public/13-history.html>
+<<<<<<< HEAD
 12. <https://megafronteam.github.io/0003mip/public/04-3proektirovanie_conten.html>
+=======
+11. <https://megafronteam.github.io/0003mip/public/14-sro-membership-1.html>
+11. <https://megafronteam.github.io/0003mip/public/15-Personnel-policy.html>
+>>>>>>> 57eb7bb2a71d29d56f1f0daa3202889756ca880b
