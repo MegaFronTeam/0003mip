@@ -9,6 +9,8 @@ include ../blocks/sContact/_sContact.pug
 include ../blocks/sInstitute/_sInstitute.pug
 include ../blocks/sFundamentalPrinciples/_sFundamentalPrinciples.pug
 include ../blocks/sDescription/_sDescription.pug
+include ../blocks/sInvite/_sInvite.pug
+include ../blocks/sQuestions/_sQuestions.pug
 
 block variables
 	- let  mainPage= 'page-base'
@@ -29,6 +31,14 @@ block pagecontent
 	+sInstitute()
 	+sFundamentalPrinciples()
 	+sDescription()
+	+b.sContent--base.section
+		.container
+			h3 Защита персональных данных 
+			p В&nbsp;соответствии с&nbsp;Трудовым кодексом Российской Федерации, Федеральным законом от&nbsp;27.07.2006 &#8470;&nbsp;152-ФЗ &laquo;О&nbsp;персональных данных&raquo;, Требованиями к&nbsp;защите персональных данных при их&nbsp;обработке в&nbsp;информационных системах персональных данных, утвержденными постановлением Правительства Российской Федерации от&nbsp;01.11.2012 &#8470;&nbsp;1119, Положением об&nbsp;особенностях обработки персональных данных, осуществляемой без использования средств автоматизации, утвержденным постановлением Правительства Российской Федерации от&nbsp;15.09.2008 &#8470;&nbsp;687&nbsp;в ООО &laquo;Институт &laquo;Мосинжпроект&raquo; приняты Политика в&nbsp;отношении организации и&nbsp;обеспечения безопасности персональных данных.
+			+docLine2('Политика в&nbsp;отношении организации и&nbsp;обеспечения безопасности персональных данных')
+			+docLine2('Положение об&nbsp;организации обработки и&nbsp;обеспечения безопасности персональных данных')
+	+sInvite()
+	+sQuestions()
 	//- +mainSlider()
 	//- +newsSlider()
 	//- +landingInfo

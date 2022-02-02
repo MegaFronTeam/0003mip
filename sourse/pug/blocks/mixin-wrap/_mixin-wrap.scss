@@ -256,6 +256,22 @@
 				display: none;
 			}
 		}
+		&--second {
+			display: block;
+			color: $dark !important;
+			&:last-of-type {
+				padding-bottom: rem(32);
+				@include media-breakpoint-up(md) {
+					padding-bottom: rem(49);
+				}
+				@include media-breakpoint-up(lg) {
+					padding-bottom: rem(89);
+				}
+			}
+			@include media-breakpoint-up(sm) {
+				border-top: none;
+			}
+		}
 	}
 
 

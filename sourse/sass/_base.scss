@@ -656,22 +656,47 @@ iframe {
 	}
 	.breadcrumb-wrap {
 		// 	@include media-breakpoint-up(md) {
-			// 		margin-top: 84px !important;
-			// 	}
-			// 	@include media-breakpoint-up(sm) {
-				// 		margin-top: 69px !important;
-				// 	}
-				background-color: #E6E6E6;
-			}
+		// 		margin-top: 84px !important;
+		// 	}
+		// 	@include media-breakpoint-up(sm) {
+		// 		margin-top: 69px !important;
+		// 	}
+		background-color: #E6E6E6;
+	}
+}
+
+.page-secondary {
+	background-color: #D4D4D4;
+	.sContent {
+		background-color: #E6E6E6;
+		padding-top: rem(24);
+		padding-bottom: rem(24);
+		@include media-breakpoint-up(lg) {
+			padding-top: rem(48);
+			padding-bottom: rem(48);
+			background-color: #F0F0F0;
 		}
+		p {
+			font-size: rem(18);
+		}
+	}
+	.docLine {
+		&:first-of-type {
+			border-top: none;
+		}
+		&:last-of-type {
+			border-bottom: none;
+		}
+	}
+}
 
-		.bg-gray-dark{
+.bg-gray-dark{
 
-			.page-head,
-			.breadcrumb-wrap {
-				background: #BCBCBC ;
-			}	
-			}
+	.page-head,
+	.breadcrumb-wrap {
+		background: #BCBCBC ;
+	}	
+}
 .bg-none{
 	background-color: transparent;
 }

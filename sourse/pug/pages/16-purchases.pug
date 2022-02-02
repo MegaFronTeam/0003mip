@@ -1,0 +1,41 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+//- include ../blocks/news/_news.pug
+//- include ../blocks/partnersSlider/_partnersSlider.pug
+//- include ../blocks/sCards/_sCards.pug
+
+block variables
+	- let  mainPage= 'page-base page-secondary'
+	- let  bg= null
+
+block title
+	- let  title= 'Закупочная деятельность'
+	title= title
+block pagecontent
+	+header()
+	+breadcrumb('Главная', 'О компании', 'Закупочная деятельность')
+	+page-head({
+		title: 'Закупочная деятельность'
+	}).page-head--inner
+	+b.sContent--inner.section
+		.container
+			p ООО &laquo;Институт &laquo;Мосинжпроект&raquo; осуществляет закупочную деятельность на&nbsp;основе Гражданского кодекса РФ, Федерального закона РФ &#8470;&nbsp;223-ФЗ &laquo;О&nbsp;закупках товаров, работ, услуг отдельными видами юридических лиц&raquo; от&nbsp;18.07.2011г., иных федеральных законов и&nbsp;нормативных правовых актов, регулирующих отношения, связанные с&nbsp;осуществлением закупок, а&nbsp;также Положения о&nbsp;закупках товаров, работ, услуг Обществом с&nbsp;ограниченной ответственностью &laquo;Институт Мосинжпроект&raquo;.
+			p Вся информация о заказах на поставки товаров, выполнения работ, оказания услуг размещается на официальном сайте #[a(href="#") Единой информационной системы в сфере закупок]
+	+b.sContent--base.section
+		.container
+			+docLine('Положение о&nbsp;закупках ООО &laquo;Институт &laquo;Мосинжпроект&raquo; 2021')
+			+docLine('Федеральный закон Российской Федерации от&nbsp;18&nbsp;июля 2011&nbsp;г. &#8470;&nbsp;223-ФЗ &laquo;О&nbsp;закупках товаров, работ, услуг отдельными видами юридических лиц&raquo;')
+	//- +mainSlider()
+	//- +newsSlider()
+	//- +landingInfo
+	
+	//- +promo()
+	//- +promo2()
+	//- +news
+	
+	
+	//- +partnersSlider
+	+footer

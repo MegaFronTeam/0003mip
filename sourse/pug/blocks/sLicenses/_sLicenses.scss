@@ -17,6 +17,8 @@
 		display: block;
 		position: relative;
 		max-width: rem(240);
+		margin-left: auto;
+		margin-right: auto;
 		&:hover {
 			.icon-search {
 				opacity: 1;
@@ -40,6 +42,7 @@
 	}
 	.swiper-button-hand {
 		background-color: #C5C5C5;
+		--swiperArrowPosition: 0;
 		// top: 100px;
 		// @include media-breakpoint-up(sm) {
 		// 	top: 108px;
