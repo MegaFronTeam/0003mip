@@ -763,6 +763,22 @@ mixin promo2()
 					img.promo__imageFg(src='images/projects_fg.svg' alt='')
 				
 
+mixin nav-servises()
+	+b.servises-nav
+		ul
+			mixin item(i,t)
+				li
+					+e.link(href="#")&attributes(attributes)
+						+e.icon-wrap
+							+icon('fig-' + i)
+						+e.title.d-none.d-lg-block= t
+			+item(`1`,`Объекты дорожно-мостового строительства`,`Комплексное проектирование объектов дорожно-транспортной инфраструктуры`).active
+			+item(`2`,`Инженерные коммуникации`,`Проектирование инженерных сооружений и&nbsp;коммуникаций всех видов`)
+			+item(`3`,`Объекты метрополитена`,`Комплексное проектирование линий метрополитена`)
+			+item(`4`,`Гражданские объекты`,`Проектирование жилых и&nbsp;общественных зданий`)
+			+item(`5`,`Благоустройство территории`,`Разработка проектных решений по&nbsp;благоустройству и&nbsp;озеленению территорий`)
+			+item(`6`,`Транспортно-пересадочные узлы `,`Проектирование технологической (транспортной) части ТПУ`)
+
 mixin page-head(data)
 	+b.page-head.bg-wrap&attributes(attributes)
 		if data.bg
@@ -777,6 +793,8 @@ mixin page-head(data)
 			if data.btns
 				.row
 					a.btn.btn--colorWhite(href="#") btn
+			if data.nav
+				+nav-servises
 
 mixin news__date()
 	.news__date

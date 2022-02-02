@@ -10,3 +10,4 @@
 9. <https://megafronteam.github.io/0003mip/public/09-leadership.html>
 10. <https://megafronteam.github.io/0003mip/public/12-1bim.html>
 11. <https://megafronteam.github.io/0003mip/public/13-history.html>
+12. <https://megafronteam.github.io/0003mip/public/04-3proektirovanie_conten.html>

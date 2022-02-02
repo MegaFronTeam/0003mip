@@ -1,0 +1,55 @@
+// start .sServiseBody
+.sServiseBody {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+		background: #E6E6E6;
+		p{
+			@include rfs(25px);
+			font-weight: bold;
+			margin-bottom: rem(20);
+		}
+		@include media-breakpoint-up(sm) {
+		ul{
+			display: flex;
+			flex-wrap: wrap;
+		}
+		}
+		li{
+			// width: 50%;
+			@include media-breakpoint-up(sm) {
+
+				min-width: 50%;
+				flex: 1 0 0%;
+				border-bottom: 1px solid #D4D4D4;
+				padding-top: rem(24);
+				padding-right: rem(15);
+			} 
+			padding-bottom: rem(24);
+			padding-left: rem(30);
+			position: relative;
+			&:nth-last-child(0),
+			&:nth-last-child(1){
+				border: none;
+			}
+			&::before{
+				content: '';
+				position: absolute;
+				left: 0;
+				@include media-breakpoint-up(sm) {
+
+					top: rem(24);
+				} 
+				top: rem(-2);
+				background-image: var(--list-style);
+				width: rem(24);
+				height: rem(24);
+				background-size: contain;
+				background-repeat: no-repeat;
+			}
+		}
+	@include media-breakpoint-up(xl) {} 
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {} 
+	@include media-breakpoint-down(xl) {}
+} // end.sServiseBody

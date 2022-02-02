@@ -1,0 +1,27 @@
+mixin sServiseGal(data)
+	// start sServiseGal
+	+b.SECTION.sServiseGal.section#sServiseGal&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2= data.title
+				
+			+e.slider--js.swiper
+				.swiper-wrapper
+					+e.slide
+						+e.row-main.row
+							.col-lg-6
+								+pic('slide.jpg','bg','380px')
+
+							.col-lg-6
+								p Коммуникационный коллектор на территории административно-делового центра в поселке Коммунарка
+								+e.row.row
+									+e.col.col-6
+										+e.item
+											+e.title Заказчик
+											.small Департамент развития новых территорий города Москвы
+									+e.col.col-6
+										+e.item
+											+e.title Период работ
+											.small Проектирование: 2019-2020
+		+arrow
+	// end sServiseGal

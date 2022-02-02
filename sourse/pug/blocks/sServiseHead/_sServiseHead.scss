@@ -1,0 +1,36 @@
+// start .sServiseHead
+.sServiseHead {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+		background: #F0F0F0;
+
+	&__icon-wrap{
+		width: rem(104);
+		height: rem(104);
+		border-radius: 50%;
+		border: 3px solid;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: $primary;
+		margin-bottom: 16px;
+		.icon{
+			font-size: rem(75);
+		}
+	}
+	h1{
+		margin-bottom: rem(16);
+	}
+	&__head{
+		p{
+			@include rfs(25px);
+		}
+		margin-bottom: rem(48);
+	}
+
+	@include media-breakpoint-up(xl) {} 
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {} 
+	@include media-breakpoint-down(xl) {}
+} // end.sServiseHead

@@ -1,0 +1,45 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+include ../blocks/news/_news.pug
+include ../blocks/sServiseHead/_sServiseHead.pug
+include ../blocks/sServiseBody/_sServiseBody.pug
+include ../blocks/sServiseGal/_sServiseGal.pug
+//- include ../blocks/partnersSlider/_partnersSlider.pug
+
+block variables
+	- let  mainPage= null
+	- let  bg= null
+
+block title
+	- let  title= 'Инженерные коммуникации'
+	title= title
+block pagecontent
+	+header()
+	+page-head({
+		bg:'project-page-1.jpg',
+		nav: true
+		} ).pb-0
+			
+	+sServiseHead({
+		i:'fig-1',
+		title,
+		t2:`Комплексное проектирование инженерных объектов и&nbsp;коммуникаций всех видов`,
+		p: `Инженерные сети представляют собой сложные системы для бесперебойной работы сооружений жилого или производственного типа, которые создают все необходимые условия для нормальной работы и&nbsp;жизнедеятельности человека. Без инженерных коммуникаций функционирование городских объектов было&nbsp;бы невозможно. Строительство нового здания или реконструкция уже имеющихся сооружений не&nbsp;обойдется без проектирования инженерных сетей и&nbsp;коммуникационных устройств.`
+	})
+	+sServiseBody({
+		p:`ООО &laquo;Институт &laquo;Мосинжпроект&raquo; вот уже более полувека осуществляет комплексное проектирование инженерных сооружений и&nbsp;коммуникаций всех видов`,
+		items: [
+			`Коллекторы для инженерных коммуникаций`,
+			`Сети водоснабжения и водоотведения`,
+			`Сети электроснабжения, связи, уличного освещения`,
+			`Тепломагистрали и тепловые сети`,
+			`Газопроводы среднего и низкого давления`,
+		]
+	})
+	+sServiseGal({
+		title: 'Проекты инженерных коммуникаций'
+	})
+	+footer

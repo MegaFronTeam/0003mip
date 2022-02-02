@@ -1,0 +1,16 @@
+mixin sServiseHead(data)
+	// start sServiseHead
+	+b.SECTION.sServiseHead.section#sServiseHead&attributes(attributes)
+		.container.container--sm
+			+e.head
+				.row
+					.col-md-auto
+						+e.icon-wrap
+							+icon(data.i)
+					.col-md
+						h1!= data.title
+						p!= data.t2
+			+e.body
+				p!= data.p
+
+	// end sServiseHead
