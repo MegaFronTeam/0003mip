@@ -14,9 +14,14 @@
 
 	}
 	a{
-		&:not(.btn){
+		&:not(.btn),
+		&:not(.figure__item)
+		{
 
-			@extend .text-primary;
+			color: $prm;
+	&:hover{
+		color: $prm_hover;
+	}
 		}
 	}
 	background-color: #e6e6e6;

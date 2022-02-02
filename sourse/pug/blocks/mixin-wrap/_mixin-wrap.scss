@@ -129,6 +129,9 @@
 			}
 			p{
 				@include rfs(25px);
+				&.small{
+					@include rfs(18px);
+				}
 				letter-spacing: -0.01em;
 				line-height: calc(32 / 25);
 				color: #fff;
