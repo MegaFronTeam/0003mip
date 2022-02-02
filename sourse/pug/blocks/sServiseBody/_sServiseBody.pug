@@ -2,8 +2,9 @@ mixin sServiseBody(data)
 	// start sServiseBody
 	+b.sServiseBody.section#sServiseBody&attributes(attributes)
 		.container.container--sm
-			p!= data.p
+			p: strong!= data.p
 			ul
 				each item in data.items
 					li= item
+			block
 	// end sServiseBody

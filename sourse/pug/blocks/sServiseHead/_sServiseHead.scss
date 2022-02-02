@@ -15,8 +15,21 @@
 		align-items: center;
 		color: $primary;
 		margin-bottom: 16px;
-		.icon{
-			font-size: rem(75);
+		svg,
+		img{
+			width: rem(75);
+			* {
+				opacity: 1 !important;
+			}
+			[fill="white"]{
+				fill: $primary !important;
+			}
+			
+			[stroke="white"]{
+				stroke: $primary !important;
+			}
+
+
 		}
 	}
 	h1{

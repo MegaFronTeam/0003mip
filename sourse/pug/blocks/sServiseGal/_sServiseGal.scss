@@ -2,6 +2,14 @@
 .sServiseGal {
 		// --sPT: ;
 		// --sPB: ;
+		h2{
+			color: $primary;
+		}
+		@include mt;
+		filter: saturate(0);
+		&:hover{ 
+				filter: saturate(1); 
+		}
 		.container{
 			// max-width: calc(1572px + var(--gx))
 			padding-left: rem(64);
@@ -11,14 +19,6 @@
 		background: #BCBCBC;
 		&__slider{
 			img{
-				filter: saturate(0);
-				@include mt;
-			}
-			&:hover{
-				img{
-					filter: saturate(1);
-
-				}
 			}
 		}
 		p{

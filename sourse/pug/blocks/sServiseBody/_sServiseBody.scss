@@ -5,9 +5,12 @@
 		// --sTPB: ;
 		background: #E6E6E6;
 		p{
-			@include rfs(25px);
-			font-weight: bold;
-			margin-bottom: rem(20);
+			strong{
+
+				@include rfs(25px);
+				font-weight: bold;
+			}
+				margin-bottom: rem(20);
 		}
 		@include media-breakpoint-up(sm) {
 		ul{
@@ -20,16 +23,17 @@
 			@include media-breakpoint-up(sm) {
 
 				min-width: 50%;
+				max-width: 500px;
 				flex: 1 0 0%;
-				border-bottom: 1px solid #D4D4D4;
+				border-top: 1px solid #D4D4D4;
 				padding-top: rem(24);
-				padding-right: rem(15);
+				padding-right: rem(30);
 			} 
 			padding-bottom: rem(24);
 			padding-left: rem(30);
 			position: relative;
-			&:nth-last-child(0),
-			&:nth-last-child(1){
+			&:nth-child(1),
+			&:nth-child(2){
 				border: none;
 			}
 			&::before{

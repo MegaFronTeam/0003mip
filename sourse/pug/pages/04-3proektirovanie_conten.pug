@@ -2,7 +2,7 @@ extends layout/main.pug
 
 
 //- include ../blocks/sContent/_sContent.pug
-//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sContact/_sContact.pug 
 include ../blocks/news/_news.pug
 include ../blocks/sServiseHead/_sServiseHead.pug
 include ../blocks/sServiseBody/_sServiseBody.pug
@@ -21,7 +21,7 @@ block pagecontent
 	+page-head({
 		bg:'project-page-1.jpg',
 		nav: true
-		} ).pb-0
+		} ).pb-0.page-head--h
 			
 	+sServiseHead({
 		i:'fig-1',
