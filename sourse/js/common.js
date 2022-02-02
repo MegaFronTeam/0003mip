@@ -292,7 +292,7 @@ function eventHandler() {
 			},
 		}
 	});
-	const sDescription = new Swiper('.sDescription__slider--js', {
+	const sDescription = new Swiper('.sDescription__slider--js, .sServiseGal__slider--js', {
 
 		slidesPerView: 1,
 		loop: false,
