@@ -348,7 +348,10 @@
 					stroke-width: 2px;
 				}
 			}
-			&:hover,
+			&:hover{
+				color: #fff;
+
+			}
 			&.active{
 				opacity: 1;
 				background: rgba(#FFFFFF, .2);

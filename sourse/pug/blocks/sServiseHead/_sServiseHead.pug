@@ -6,7 +6,8 @@ mixin sServiseHead(data)
 				.row
 					.col-md-auto
 						+e.icon-wrap
-							+icon(data.i)
+							img(src=`img/svg/${data.i}.svg`, alt="").img-svg
+							//- +icon(data.i)
 					.col-md
 						h1!= data.title
 						p!= data.t2

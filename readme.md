@@ -10,9 +10,18 @@
 9. <https://megafronteam.github.io/0003mip/public/09-leadership.html>
 10. <https://megafronteam.github.io/0003mip/public/12-1bim.html>
 11. <https://megafronteam.github.io/0003mip/public/13-history.html>
-<<<<<<< HEAD
-12. <https://megafronteam.github.io/0003mip/public/04-3proektirovanie_conten.html>
-=======
-11. <https://megafronteam.github.io/0003mip/public/14-sro-membership-1.html>
-11. <https://megafronteam.github.io/0003mip/public/15-Personnel-policy.html>
->>>>>>> 57eb7bb2a71d29d56f1f0daa3202889756ca880b
+    
+12. <https://megafronteam.github.io/0003mip/public/14-sro-membership-1.html>
+13. <https://megafronteam.github.io/0003mip/public/15-Personnel-policy.html>
+//направления
+14. <https://megafronteam.github.io/0003mip/public/04-3proektirovanie_conten.html>
+15. <https://megafronteam.github.io/0003mip/public/04-3proektirovanie_conten-2.html>
+16. <https://megafronteam.github.io/0003mip/public/04-3proektirovanie_conten-3.html>
+17. <https://megafronteam.github.io/0003mip/public/04-3proektirovanie_conten-4.html>
+18. <https://megafronteam.github.io/0003mip/public/04-3proektirovanie_conten-5.html>
+19. <https://megafronteam.github.io/0003mip/public/04-3proektirovanie_conten-6.html>
+20. <https://megafronteam.github.io/0003mip/public/04-3proektirovanie_conten-7.html>
+21. <https://megafronteam.github.io/0003mip/public/04-3proektirovanie_conten-8.html>
+22. <https://megafronteam.github.io/0003mip/public/04-3proektirovanie_conten-9.html>
+23. <https://megafronteam.github.io/0003mip/public/04-3proektirovanie_conten-10.html>
+// направления

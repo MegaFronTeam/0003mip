@@ -1,0 +1,48 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug 
+include ../blocks/sServiseHead/_sServiseHead.pug
+include ../blocks/sServiseBody/_sServiseBody.pug
+include ../blocks/sServiseGal/_sServiseGal.pug
+//- include ../blocks/partnersSlider/_partnersSlider.pug
+
+block variables
+	- let  mainPage= null
+	- let  bg= null
+
+block title
+	- let  title= 'Гражданские объекты '
+	title= title
+block pagecontent
+	+header()
+	+page-head({
+		bg:'project-page-5.jpg',
+		nav: true
+		} ).pb-0.page-head--h
+			
+	+sServiseHead({
+		i:'fig-4',
+		title,
+		t2:`Проектирование жилых и общественных зданий`,
+		p: `К проектированию гражданских объектов государство устанавливает строгие требования. Обширный опыт и высокая квалификация наших специалистов позволяют нам осуществлять проектирование на самом высоком профессиональном уровне и получать превосходный результат.`
+	})
+	+sServiseBody({
+		p:`ООО «Институт «Мосинжпроект» осуществляет полный комплекс работ генерального проектировщика от концептуальной стадии до рабочего проектирования и ведения авторского надзора таких объектов, как:`,
+		items: [
+			`Административные здания`,
+			`Здания общественного назначения`,
+			`Спортивные сооружения`,
+			`Гостиницы`,
+			`Жилые дома`,
+			`Общественные пространства`,
+		]
+	})
+	.sServiseHead.section
+		.container.container--sm 
+			p Собственными силами специалистов Института разрабатываются следующие разделы: архитектурные решения, конструктивные решения, инженерные системы, технологические решения, проект организации строительства, охрана окружающей среды, сметная документация, обследования, инженерные изыскания.
+	+sServiseGal({
+		title: 'Проекты гражданских объектов'
+	})
+	+footer
