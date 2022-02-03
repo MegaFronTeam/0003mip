@@ -38,8 +38,13 @@
 		}
 	}
 	picture {
+		@include mt;
 		// width: 50%;
+		filter: grayscale(1);
 		margin-bottom: rem(24);
+		&:hover {
+			filter: grayscale(0);
+		}
 		@include media-breakpoint-up(lg) {
 			margin-right: calc(-1 * (50vw - 100%) - var(--bs-gutter-x));
 			margin-bottom: 0;

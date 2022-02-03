@@ -1,0 +1,74 @@
+// start .sLaws
+.sLaws {
+	--sPT: 0;
+	--sPB: 0;
+	// --sTPB: ;
+	background-color: #C7C7C7;
+	&__head {
+		background-color: $blue;
+		padding-top: rem(40);
+		padding-bottom: rem(40);
+		color: $white;
+		p {
+			font-size: rem(20);
+			margin-bottom: rem(8);
+			@include media-breakpoint-up(md) {
+				font-size: rem(25);
+				margin-bottom: 0;
+			}
+		}
+		a {
+			font-weight: 700;
+			&:hover {
+				color: #C7C7C7;
+			}
+		}
+	}
+	&__card {
+		background-color: $body-bg;
+		padding-top: rem(40);
+		padding-bottom: rem(40);
+		&:not(:last-child) {
+			margin-bottom: rem(16);
+		}
+		h3 {
+			text-transform: initial;
+			margin-bottom: rem(16);
+			@include media-breakpoint-up(sm) {
+				margin-bottom: rem(24);
+			}
+			@include media-breakpoint-up(md) {
+				max-width: rem(426);
+				margin-bottom: rem(0);
+			}
+		}
+		ul {
+			margin-left: 0;
+			display: flex;
+			flex-direction: column;
+			@include media-breakpoint-up(md) {
+				margin-left: rem(43);
+			}
+		}
+		li {
+			display: flex;
+			align-items: center;
+			&:not(:last-child) {
+				margin-bottom: rem(24);
+			}
+			&::before {
+				content: '';
+				display: inline-block;
+				min-width: 8px;
+				min-height: 8px;
+				background-color: $blue;
+				border-radius: 50%;
+				margin-right: rem(16);
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {} 
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {} 
+	@include media-breakpoint-down(xl) {}
+} // end.sLaws

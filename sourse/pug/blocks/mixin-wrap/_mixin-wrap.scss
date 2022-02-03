@@ -162,6 +162,9 @@
 						content: unset;
 					}
 				}
+				p {
+					color: $dark;
+				}
 			}
 			&--text{
 
@@ -270,6 +273,17 @@
 			}
 			@include media-breakpoint-up(sm) {
 				border-top: none;
+			}
+		}
+		&--third {
+			@include media-breakpoint-up(sm) {
+				border-top: none;
+			}
+			&:last-of-type {
+				@include media-breakpoint-up(sm) {
+					border-bottom: none;
+					margin-bottom: rem(48);
+				}
 			}
 		}
 	}

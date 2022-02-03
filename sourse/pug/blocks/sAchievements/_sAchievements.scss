@@ -1,0 +1,13 @@
+// start .sAchievements
+.sAchievements {
+	--sPT: #{rem(0)};
+	--sPB: #{rem(40)};
+	// --sTPB: ;
+	@include media-breakpoint-up(md) {
+		--sPB: #{rem(64)};
+	}
+	@include media-breakpoint-up(xl) {} 
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {} 
+	@include media-breakpoint-down(xl) {}
+} // end.sAchievements

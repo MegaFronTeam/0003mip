@@ -339,6 +339,15 @@
 		p {
 			font-size: rem(25);
 		}
+		h5 {
+			font-weight: 700;
+			text-transform: initial;
+			font-size: rem(18);
+			margin-bottom: rem(24);
+			@include media-breakpoint-up(md) {
+				margin-bottom: rem(32);
+			}
+		}
 	} // end.sContent
 }
 .sContent--secondPage {

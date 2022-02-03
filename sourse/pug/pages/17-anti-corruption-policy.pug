@@ -1,0 +1,44 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sServiseBody/_sServiseBody.pug
+include ../blocks/sQuestions/_sQuestions.pug
+include ../blocks/sLaws/_sLaws.pug
+//- include ../blocks/news/_news.pug
+//- include ../blocks/partnersSlider/_partnersSlider.pug
+//- include ../blocks/sCards/_sCards.pug
+
+block variables
+	- let  mainPage= 'page-base'
+	- let  bg= null
+
+block title
+	- let  title= 'Антикоррупционная политика'
+	title= title
+block pagecontent
+	+header()
+	+breadcrumb('Главная', 'О компании', 'Антикоррупционная политика')
+	+page-head({
+		title: 'Антикоррупционная политика'
+	}).page-head--inner
+	+b.sContent--inner.section
+		.container
+			p В&nbsp;соответствии с&nbsp;Федеральным законом России &laquo;О&nbsp;противодействии коррупции&raquo; &#8470;&nbsp;273-ФЗ от&nbsp;25.12.2008 (с&nbsp;изменениями и&nbsp;дополнениями), Федеральным законом России &laquo;Об&nbsp;антикоррупционной экспертизе нормативных правовых актов и&nbsp;проектов правовых актов&raquo; &#8470;&nbsp;172-ФЗ от&nbsp;17.07.2009 и&nbsp;другими антикоррупционными нормативными актами, утверждены и&nbsp;введены в&nbsp;действие: Антикоррупционная политика ООО &laquo;Институт &laquo;Мосинжпроект&raquo;, Положение о&nbsp;конфликте интересов в&nbsp;ООО &laquo;Институт &laquo;Мосинжпроект&raquo;, Положение о&nbsp;комиссии по&nbsp;противодействию коррупции в&nbsp;ООО &laquo;Институт &laquo;Мосинжпроект&raquo;.
+			h5 Ознакомиться с&nbsp;документами
+			+docLine('Антикоррупционная политика ООО &laquo;Институт &laquo;Мосинжпроект&raquo;').--third
+			+docLine('Положение о&nbsp;комиссии по&nbsp;противодействию коррупции в&nbsp;ООО &laquo;Институт &laquo;Мосинжпроект&raquo;').--third
+			+docLine('Положение о&nbsp;конфликте интересов в&nbsp;ООО &laquo;Институт &laquo;Мосинжпроект&raquo;').--third
+	+sLaws()
+	//- +mainSlider()
+	//- +newsSlider()
+	//- +landingInfo
+	
+	//- +promo()
+	//- +promo2()
+	//- +news
+	
+	
+	//- +partnersSlider
+	+footer

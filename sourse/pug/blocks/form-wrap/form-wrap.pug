@@ -40,6 +40,7 @@ mixin select(label,pl,...items)
 					option()= pl
 					each item in items
 						option()= item
+			block
 
 //- wrapper for form
 mixin form-wrap(inp)
@@ -77,3 +78,7 @@ mixin policy()
 	+e.policy
 		+in-c()(checked)
 			+e.SMALL.text.text-secondary Согласен на обработку и хранение моих персональных данных в соответствии с условиями
+
+mixin policy2()
+	+e.policy
+		+e.SMALL.text.text-secondary Нажимая кнопку &laquo;Отправить&raquo;, я&nbsp;даю свое согласие на&nbsp;обработку своих #[a(href="#") персональных данных]

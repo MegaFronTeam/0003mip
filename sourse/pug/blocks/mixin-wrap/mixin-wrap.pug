@@ -866,7 +866,7 @@ mixin contactBlock10()
 			+item(`mail`,`Электронная почта`,`institute@mosinzhproekt.ru`)
 
 mixin docLine(text)
-	+b.docLine
+	+b.docLine&attributes(attributes)
 		.row
 			.col-auto
 				img(src="img/svg/pdf.svg", alt="")

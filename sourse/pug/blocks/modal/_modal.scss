@@ -5,7 +5,19 @@
 .fancybox__content {
 	padding: 0;
 	max-width: 100%;
+	position: initial;
+	.is-close {
+		top: 0 !important;
+	}
 }
+
+.fancybox__slide {
+	@include media-breakpoint-down(sm) {
+		overflow-x: hidden;
+		padding: 0;
+	}
+}
+
 .modal-win {
 	// display: block;
 	background-color: #fff;
@@ -13,8 +25,17 @@
 	position: relative;
 	width: rem(1500);
 	// min-height: 100%; 
-	padding: 40px;
-
+	padding: 16px 32px 32px 32px;
+	&::before {
+		content: '';
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 1px;
+		background-color: rgba($color:#444444, $alpha: 0.2) ;
+		top: rem(67);
+		left: 0;
+	}
 	.modal-content {
 		// max-width: 485px;
 		// padding-right: 40px 15px;
@@ -24,6 +45,9 @@
 		color: $primary;
 		font-size: 40px;
 		font-weight: 100;
+	}
+	&--sm {
+		width: rem(416);
 	}
 }
 

@@ -13,15 +13,19 @@
     
 12. <https://megafronteam.github.io/0003mip/public/14-sro-membership-1.html>
 13. <https://megafronteam.github.io/0003mip/public/15-Personnel-policy.html>
+14. <https://megafronteam.github.io/0003mip/public/16-purchases.html>
+15. <https://megafronteam.github.io/0003mip/public/17-anti-corruption-policy.html>
+16. <https://megafronteam.github.io/0003mip/public/18-media-kit.html>
+17. <https://megafronteam.github.io/0003mip/public/19-benefits.html>
 //направления
-14. <https://megafronteam.github.io/0003mip/public/04-3proektirovanie_conten.html>
-15. <https://megafronteam.github.io/0003mip/public/04-3proektirovanie_conten-2.html>
-16. <https://megafronteam.github.io/0003mip/public/04-3proektirovanie_conten-3.html>
-17. <https://megafronteam.github.io/0003mip/public/04-3proektirovanie_conten-4.html>
-18. <https://megafronteam.github.io/0003mip/public/04-3proektirovanie_conten-5.html>
-19. <https://megafronteam.github.io/0003mip/public/04-3proektirovanie_conten-6.html>
-20. <https://megafronteam.github.io/0003mip/public/04-3proektirovanie_conten-7.html>
-21. <https://megafronteam.github.io/0003mip/public/04-3proektirovanie_conten-8.html>
-22. <https://megafronteam.github.io/0003mip/public/04-3proektirovanie_conten-9.html>
-23. <https://megafronteam.github.io/0003mip/public/04-3proektirovanie_conten-10.html>
+18. <https://megafronteam.github.io/0003mip/public/04-3proektirovanie_conten.html>
+19. <https://megafronteam.github.io/0003mip/public/04-3proektirovanie_conten-2.html>
+20. <https://megafronteam.github.io/0003mip/public/04-3proektirovanie_conten-3.html>
+21. <https://megafronteam.github.io/0003mip/public/04-3proektirovanie_conten-4.html>
+22. <https://megafronteam.github.io/0003mip/public/04-3proektirovanie_conten-5.html>
+23. <https://megafronteam.github.io/0003mip/public/04-3proektirovanie_conten-6.html>
+24. <https://megafronteam.github.io/0003mip/public/04-3proektirovanie_conten-7.html>
+25. <https://megafronteam.github.io/0003mip/public/04-3proektirovanie_conten-8.html>
+26. <https://megafronteam.github.io/0003mip/public/04-3proektirovanie_conten-9.html>
+27. <https://megafronteam.github.io/0003mip/public/04-3proektirovanie_conten-10.html>
 // направления

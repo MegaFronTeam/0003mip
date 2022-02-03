@@ -1,0 +1,15 @@
+mixin sAchievements-card()
+	+e.card
+		//- +pic('')
+		span 2021
+		h5 ООО «Институт «Мосинжпроект» признан «BIM-компанией года»
+		p За достижение значительных результатов при проектировании объектов на основе технологии информационного моделирования по версии крупнейшей компании-разработчика программного обеспечения Autodesk.
+
+mixin sAchievements(data)
+	// start sAchievements
+	+b.SECTION.sAchievements.section#sAchievements&attributes(attributes)
+		.container
+			.row
+				.col-md-6.col-lg-4
+					+sAchievements-card()
+	// end sAchievements

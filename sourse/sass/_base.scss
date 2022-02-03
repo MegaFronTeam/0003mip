@@ -645,6 +645,9 @@ iframe {
 		@include media-breakpoint-up(md) {
 			padding-bottom: rem(19);
 		}
+		@include media-breakpoint-down(sm) {
+			position: fixed;
+		}
 		&__select {
 			&::after {
 				background-image: url(../img/svg/chevron-down.svg);
@@ -666,7 +669,12 @@ iframe {
 }
 
 .page-secondary {
-	background-color: #D4D4D4;
+	.page-head {
+		background-color: #D4D4D4;
+	}
+	.breadcrumb-wrap {
+		background-color: #D4D4D4;
+	}
 	.sContent {
 		background-color: #E6E6E6;
 		padding-top: rem(24);
@@ -686,6 +694,12 @@ iframe {
 		}
 		&:last-of-type {
 			border-bottom: none;
+		}
+	}
+	.sServiseBody {
+		background-color: #E6E6E6;
+		@include media-breakpoint-up(lg) {
+			background-color: #F0F0F0;
 		}
 	}
 }
