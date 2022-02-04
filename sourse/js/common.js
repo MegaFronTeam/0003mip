@@ -303,6 +303,19 @@ function eventHandler() {
 			prevEl: '.swiper-button-prev',
 		}
 	});
+
+	const sTestingContent = new Swiper('.sTestingContent__slider--js', {
+
+		slidesPerView: 1,
+		loop: false,
+		watchOverflow: false,
+		spaceBetween: 0,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		}
+	});
+
 	var wow = new WOW(
 		{
 			animateClass: 'animate__animated', // animation css class (default is animated)

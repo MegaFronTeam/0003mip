@@ -860,6 +860,12 @@
 	}
 }
 
+.sContent--testing {
+	p {
+		margin-bottom: 0 !important;
+	}
+}
+
 .contentBanner{
 	color: #fff;
 	@include media-breakpoint-up(xl) {

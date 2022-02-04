@@ -20,6 +20,7 @@
 17. <https://megafronteam.github.io/0003mip/public/20-awards.html>
 17. <https://megafronteam.github.io/0003mip/public/21-research.html>
 17. <https://megafronteam.github.io/0003mip/public/22-management.html>
+17. <https://megafronteam.github.io/0003mip/public/23-testing-center.html>
 //направления
 18. <https://megafronteam.github.io/0003mip/public/04-3proektirovanie_conten.html>
 19. <https://megafronteam.github.io/0003mip/public/04-3proektirovanie_conten-2.html>
