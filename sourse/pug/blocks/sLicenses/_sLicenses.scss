@@ -19,7 +19,14 @@
 		max-width: rem(240);
 		margin-left: auto;
 		margin-right: auto;
+		picture {
+			@include mt;
+			filter: grayscale(1);
+		}
 		&:hover {
+			picture {
+				filter: grayscale(0);
+			}
 			.icon-search {
 				opacity: 1;
 			}

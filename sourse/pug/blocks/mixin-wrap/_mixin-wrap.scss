@@ -179,7 +179,15 @@
 						display: none;
 					}
 				}
-			} 
+			}
+			&--research {
+				h1 {
+					max-width: rem(522);
+				}
+				p {
+					margin-bottom: 0;
+				}
+			}
 		}
 
 		.contactBlock{
@@ -276,14 +284,27 @@
 			}
 		}
 		&--third {
+			display: block;
+			&:not(.btn):not(.secion-head__btn) {
+				color: $dark;
+			}
+			&:first-of-type {
+				padding-top: 0;
+			}
+			&:last-of-type {
+				margin-bottom: rem(16);
+				@include media-breakpoint-up(lg) {
+					margin-bottom: rem(40);
+				}
+				@include media-breakpoint-down(md) {
+					margin-bottom: rem(16);
+				}
+			}
 			@include media-breakpoint-up(sm) {
 				border-top: none;
 			}
-			&:last-of-type {
-				@include media-breakpoint-up(sm) {
-					border-bottom: none;
-					margin-bottom: rem(48);
-				}
+			@include media-breakpoint-down(md) {
+				border-bottom: 1px solid rgba(68,68,68,.2);
 			}
 		}
 	}

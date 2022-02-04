@@ -17,6 +17,9 @@
 15. <https://megafronteam.github.io/0003mip/public/17-anti-corruption-policy.html>
 16. <https://megafronteam.github.io/0003mip/public/18-media-kit.html>
 17. <https://megafronteam.github.io/0003mip/public/19-benefits.html>
+17. <https://megafronteam.github.io/0003mip/public/20-awards.html>
+17. <https://megafronteam.github.io/0003mip/public/21-research.html>
+17. <https://megafronteam.github.io/0003mip/public/22-management.html>
 //направления
 18. <https://megafronteam.github.io/0003mip/public/04-3proektirovanie_conten.html>
 19. <https://megafronteam.github.io/0003mip/public/04-3proektirovanie_conten-2.html>

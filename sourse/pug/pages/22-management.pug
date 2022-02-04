@@ -1,0 +1,58 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sServiseBody/_sServiseBody.pug
+include ../blocks/sQuestions/_sQuestions.pug
+include ../blocks/sAchievements/_sAchievements.pug
+include ../blocks/sFundamentalPrinciples/_sFundamentalPrinciples.pug
+//- include ../blocks/partnersSlider/_partnersSlider.pug
+//- include ../blocks/sCards/_sCards.pug
+
+block variables
+	- let  mainPage= 'page-base'
+	- let  bg= null
+
+block title
+	- let  title= 'Интегрированная система менеджмента'
+	title= title
+block pagecontent
+	+header()
+	+breadcrumb('Главная', 'О компании', 'Интегрированная система менеджмента')
+	+page-head({
+		title,
+		p: 'Для повышения эффективности деятельности ООО &laquo;Институт &laquo;Мосинжпроект&raquo; и&nbsp;обеспечения прочной основы для устойчивого развития, в&nbsp;организации введена интегрированная система менеджмента (ИСМ), отвечающая требованиям международных стандартов.'
+	}).page-head--inner
+	+b.sContent--base.--managment.section
+		.container
+			h2 В&nbsp;настоящее время в&nbsp;ООО &laquo;Институт &laquo;Мосинжпроект&raquo; разработаны, введены и&nbsp;сертифицированы
+			+docLine2('Система менеджмента качества в&nbsp;соответствии с&nbsp;требованиями ГОСТ Р&nbsp;ИСО 9001-2015;').docLine--third
+			+docLine2('Система экологического менеджмента в&nbsp;соответствии с&nbsp;требованиями ГОСТ Р&nbsp;ИСО 14001-2016;').docLine--third
+			+docLine2('Система менеджмента охраны здоровья и безопасности труда в соответствии с требованиями ГОСТ Р 54934-2012/OHSAS 18001:2007.').docLine--third
+			+docLine2('Аттестат аккредитации грунтовой лаборатории. ООО «Институт «Мосинжпроект» состоит в Реестре аккредитованных лиц  № RA.RU.21HY11 от 15.12.2019г  Федеральной службы аккредитации (ФСА)').docLine--third
+			p Система менеджмента качества испытательного центра и&nbsp;грунтовой лаборатории в&nbsp;соответствии с&nbsp;требованиями ГОСТ ИСО/МЭК 17025-2009(2018) &quot;Общие требования к&nbsp;компетентности испытательных и&nbsp;калибровочных лабораторий.
+			p Требования ИСМ являются обязательными для всех сотрудников Холдинга &laquo;Мосинжпроект&raquo;, его дочерних и&nbsp;зависимых обществ, подрядчиков и&nbsp;субподрядчиков. В&nbsp;основе интегрированной системы управления лежат политики и&nbsp;годовые цели, установленные в&nbsp;QHSE.
+			h2 В&nbsp;&laquo;Мосинжпроект&raquo; разработаны и&nbsp;внедрены
+			+docLine2('Политика ГК&nbsp;&laquo;Мосинжпроект&raquo; в&nbsp;области качества, охраны труда, промышленной безопасности и&nbsp;охраны окружающей среды').docLine--third
+			+docLine2('Политика АО&nbsp;&laquo;Мосинжпроект&raquo;, дочерних и&nbsp;зависимых обществ в&nbsp;области употребления алкоголя, наркотических и&nbsp;психотропных средств').docLine--third
+			+docLine2('Политика АО&nbsp;&laquo;Мосинжпроект&raquo;, дочерних и&nbsp;зависимых обществ о&nbsp;вмешательстве в&nbsp;опасные ситуации&nbsp;&mdash; право на&nbsp;приостановку (прекращение) работ').docLine--third
+	+b.sContent.--certificate.section
+		.container
+			h2 Международный сертификат
+			p Институт успешно прошел сертификационный аудит систем менеджмента качества на&nbsp;соответствие международным требованиям ISO 9001:2015, ISO 14001:2015, ISO 45001:2018. Сертификационным органом выступил Регистр Ллойда (Lloyd`s Register)&nbsp;&mdash; международная неправительственная независимая корпорация, основанная в&nbsp;1760г., является в&nbsp;течение двух столетий мировым лидером среди классификационных организаций.
+			+docLine3('Свидетельство о&nbsp;принятии Lloyd`s Register ISO 9001-00032712').docLine--third
+			+docLine3('Свидетельство о&nbsp;принятии Lloyd`s Register ISO 9001-00032713').docLine--third
+			+docLine3('Свидетельство о&nbsp;принятии Lloyd`s Register ISO 9001-00032714 (ссылки на&nbsp;документы)').docLine--third
+	+sFundamentalPrinciples2()
+	//- +mainSlider()
+	//- +newsSlider()
+	//- +landingInfo
+	
+	//- +promo()
+	//- +promo2()
+	//- +news
+	
+	
+	//- +partnersSlider
+	+footer

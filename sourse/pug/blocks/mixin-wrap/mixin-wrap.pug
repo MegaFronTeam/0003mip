@@ -877,8 +877,15 @@ mixin docLine(text)
 					| Скачать
 
 mixin docLine2(text)
-	+b.docLine--second(href="#")
+	+b.docLine(href="#")&attributes(attributes)
 		.row
 			.col-auto
 				img(src="img/svg/pdf.svg", alt="")
+			.col!= text
+
+mixin docLine3(text)
+	+b.docLine(href="#")&attributes(attributes)
+		.row
+			.col-auto
+				img(src="img/svg/pdf-2.svg", alt="")
 			.col!= text
