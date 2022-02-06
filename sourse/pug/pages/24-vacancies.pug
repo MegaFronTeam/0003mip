@@ -1,0 +1,42 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sServiseBody/_sServiseBody.pug
+include ../blocks/sQuestions/_sQuestions.pug
+include ../blocks/sAchievements/_sAchievements.pug
+include ../blocks/sSteps/_sSteps.pug
+include ../blocks/sVacancies/_sVacancies.pug
+//- include ../blocks/sTestingContent/_sTestingContent.pug
+//- include ../blocks/sFundamentalPrinciples/_sFundamentalPrinciples.pug
+//- include ../blocks/partnersSlider/_partnersSlider.pug
+//- include ../blocks/sCards/_sCards.pug
+
+block variables
+	- let  mainPage= 'page-base page-secondary'
+	- let  bg= null
+
+block title
+	- let  title= 'Вакансии'
+	title= title
+block pagecontent
+	+header()
+	+breadcrumb('Главная', 'О компании', 'Команда' ,'Вакансии')
+	+page-head({
+		title,
+		p: 'ООО &laquo;Институт &laquo;Мосинжпроект&raquo; расширяет свой штат. Работая у&nbsp;нас, вы&nbsp;сможете принять участие в&nbsp;проектировании уникальных для столицы и&nbsp;страны объектов, стать частью сплочённого коллектива, достигать профессиональных высот. Мы&nbsp;ищем опытных и&nbsp;начинающих специалистов, готовых расти в&nbsp;нашей компании.'
+	}).page-head--inner
+	+sSteps()
+	+sVacancies()
+	//- +mainSlider()
+	//- +newsSlider()
+	//- +landingInfo
+	
+	//- +promo()
+	//- +promo2()
+	//- +news
+	
+	
+	//- +partnersSlider
+	+footer

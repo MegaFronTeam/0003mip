@@ -3,6 +3,16 @@
 	// --sPT: ;
 	// --sPB: ;
 	// --sTPB: ;
+	&__logo {
+		position: absolute;
+		top: rem(24);
+		left: 50%;
+		transform: translateX(-50%);
+		@include media-breakpoint-up(lg) {
+			transform: translateX(0);
+			left: rem(39);
+		}
+	}
 	&__content {
 		display: flex;
 		align-items: center;
@@ -40,7 +50,8 @@
 	@include media-breakpoint-down(xl) {}
 } // end.s404
 
-.error {
+.error-page {
 	justify-content: center;
 	background-color: #BCBCBC;
+	position: relative;
 }

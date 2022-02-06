@@ -1,6 +1,9 @@
 mixin s404(data)
 	// start s404
 	+b.SECTION.s404.section#s404&attributes(attributes)
+		.mainSlider__particles(id=`particles-js-0`)
+		+e.logo(href='/')
+			img(src='images/Logo.svg' alt='')
 		.container
 			+e.content
 				h1 404
