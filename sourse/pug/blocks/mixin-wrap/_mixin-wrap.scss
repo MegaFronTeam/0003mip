@@ -213,6 +213,13 @@
 					padding-left: 0;
 				}
 			}
+			&__col:last-child &__item {
+				@include media-breakpoint-down(sm) {
+					border-bottom: none;
+					margin-bottom: 0;
+					padding-bottom: 0;
+				}
+			}
 			&__item{
 				position: relative;
 				@include media-breakpoint-down(xl) {

@@ -2,8 +2,22 @@
 		
 	margin-top: auto;
 
-// 
-
+//
+	&__copy {
+		@include media-breakpoint-down(sm) {
+			margin-bottom: 0;
+		}
+	}
+	&__logo {
+		@include media-breakpoint-down(sm) {
+			display: none;
+		}
+	}
+	&__links {
+		@media (max-width: 650px) {
+			display: none;
+		}
+	}
 }
 @media (max-width: 650px){
 
