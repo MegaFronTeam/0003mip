@@ -10,6 +10,11 @@
       // console.log('callback - particles.js config loaded');
     });
   })
+  $(' .s404').each(function (index) {
+    particlesJS.load('particles-js-0' , 'assets/particlesjs-config.json', function() {
+      // console.log('callback - particles.js config loaded');
+    });
+  })
 
   $('#mainSliderPhotos').slick({
     arrows: false,

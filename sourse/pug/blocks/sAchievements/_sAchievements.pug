@@ -1,5 +1,5 @@
 mixin sAchievements-card(num, year, title, text)
-	+e.card
+	+e.card.wow.animate__fadeInUp.animate__animated
 		//- +pic(`sAchievements-img-${num}.png`, 'bg', 0)
 		+e.award(href=`img/@2x/sAchievements-img-big-${num}.png`, data-fancybox=`award-${num}`)
 			+pic(`sAchievements-img-${num}.png`, ``, 0)
