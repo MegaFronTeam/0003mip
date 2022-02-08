@@ -265,7 +265,7 @@ function eventHandler() {
 		},
 		breakpoints: {
 			0: {
-				slidesPerView: 2
+				slidesPerView: 'auto'
 			},
 			640: {
 				slidesPerView: 3
@@ -313,7 +313,7 @@ function eventHandler() {
 	const sTestingContent = new Swiper('.sTestingContent__slider--js', {
 
 		slidesPerView: 1,
-		loop: false,
+		loop: true,
 		watchOverflow: false,
 		spaceBetween: 0,
 		navigation: {

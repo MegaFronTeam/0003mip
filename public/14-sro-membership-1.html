@@ -126,9 +126,9 @@
 			</div>
 		</div>
 		<!-- start sCards-->
-		<section class="sCards section wow animate__fadeInUp animate__animated" id="sCards">
+		<section class="sCards section" id="sCards">
 			<div class="container">
-				<div class="card">
+				<div class="card wow animate__fadeInUp animate__animated">
 					<div class="row">
 						<div class="col-lg-6">
 							<div class="card__left-side bg-wrap">
@@ -140,8 +140,7 @@
 								<div class="card__wrap">
 									<h3>Инженерные изыскания</h3><img src="img/svg/card-img-1.svg" alt=""/>
 								</div>
-								<p>Ассоциация саморегулируемая организация &laquo;Центральное объединение организаций по&nbsp;инженерным изысканиям для строительства &laquo;Центризыскания&raquo; (Ассоциация СРО &laquo;Центризыскания&raquo;)</p>
-								<button>Карточка члена СРО</button>
+								<p>Ассоциация саморегулируемая организация &laquo;Центральное объединение организаций по&nbsp;инженерным изысканиям для строительства &laquo;Центризыскания&raquo; (Ассоциация СРО &laquo;Центризыскания&raquo;)</p><a href="#">Карточка члена СРО</a>
 							</div>
 						</div>
 						<div class="col-lg-6">
@@ -161,7 +160,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="card">
+				<div class="card wow animate__fadeInUp animate__animated">
 					<div class="row">
 						<div class="col-lg-6">
 							<div class="card__left-side bg-wrap">
@@ -173,8 +172,7 @@
 								<div class="card__wrap">
 									<h3>Проектирование</h3><img src="img/svg/card-img-2.svg" alt=""/>
 								</div>
-								<p>СРО &laquo;Союз дорожных проектных организаций &laquo;РОДОС&raquo; (Союз &quot;РОДОС-ПРОЕКТИРОВАНИЕ)</p>
-								<button>Карточка члена СРО</button>
+								<p>СРО &laquo;Союз дорожных проектных организаций &laquo;РОДОС&raquo; (Союз &quot;РОДОС-ПРОЕКТИРОВАНИЕ)</p><a href="#">Карточка члена СРО</a>
 							</div>
 						</div>
 						<div class="col-lg-6">
@@ -205,11 +203,11 @@
 			</div>
 		</div>
 		<!-- start sLicenses-->
-		<section class="sLicenses section wow animate__fadeInUp animate__animated" id="sLicenses">
+		<section class="sLicenses section" id="sLicenses">
 			<div class="container">
 				<h2>Свидетельства и&nbsp;лицензии</h2>
 			</div>
-			<div class="sLicenses__sliderContainer">
+			<div class="sLicenses__sliderContainer wow animate__fadeInUp animate__animated">
 				<div class="sLicenses__slider sLicenses__slider--js swiper">
 					<div class="swiper-wrapper">
 						<div class="sLicenses__slide swiper-slide">
@@ -332,19 +330,23 @@
 						</div>
 						<!-- +e.input-wrap-->
 						<div class="form-wrap__input-wrap form-group">
-							<label><span class="form-wrap__title">Тема</span>
-								<select class="form-wrap__input form-control" required="required">
-									<option>Выберите тему</option>
-									<option>Выберите тему1</option>
-									<option>Выберите тему2</option>
-									<option>Выберите тему3</option>
-									<option>Выберите тему4</option>
+							<label><span class="form-wrap__input-title">Выберите тему</span>
+								<select class="form-wrap__input form-select" name="select" required="required">
+									<option value="Тема">Тема</option>
+									<option value=" placeholder 1">placeholder 1</option>
+									<option value=" placeholder 2">placeholder 2</option>
+									<option value=" placeholder 3">placeholder 3</option>
+									<option value=" placeholder 4">placeholder 4</option>
 								</select><span class="required">*</span>
 								<svg class="icon icon-chevron-down ">
 									<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
 								</svg>
-							</label>
+							</label><span class="required">*</span>
+							<svg class="icon icon-chevron-down ">
+								<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+							</svg>
 						</div>
+						<!-- +e.input-wrap-->
 						<div class="form-wrap__input-wrap form-group">
 							<label><span class="form-wrap__input-title">Ваше сообщение</span><textarea class="form-wrap__input form-control" name="textarea" placeholder="Введите сообщение"></textarea><span class="required">*</span>
 							</label><span class="required">*</span>
@@ -443,12 +445,12 @@
 									<h3>Анкета соискателя</h3>
 									<p>Заполните анкету или пришли своё резюме на&nbsp;электронный адрес <a href="#">institute@mosinzhproekt.ru</a></p>
 									<div class="form-wrap__input-wrap form-group">
-										<label><span class="form-wrap__input-title">Имя *</span><input class="form-wrap__input form-control" name="" type="text" placeholder="Ввдите имя" required="required"/><span class="required">*</span>
+										<label><span class="form-wrap__input-title">Имя *</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ввдите имя" required="required"/><span class="required">*</span>
 										</label><span class="required">*</span>
 									</div>
 									<!-- +e.input-wrap-->
 									<div class="form-wrap__input-wrap form-group">
-										<label><span class="form-wrap__input-title">Фамилия *</span><input class="form-wrap__input form-control" name="" type="text" placeholder="Ввдите фамилию" required="required"/><span class="required">*</span>
+										<label><span class="form-wrap__input-title">Фамилия *</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ввдите фамилию" required="required"/><span class="required">*</span>
 										</label><span class="required">*</span>
 									</div>
 									<!-- +e.input-wrap-->

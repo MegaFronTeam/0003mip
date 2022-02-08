@@ -1,9 +1,9 @@
 mixin sInvite(data)
 	// start sInvite
 	+b.SECTION.sInvite.section#sInvite&attributes(attributes)
-		.container
+		.container.wow.animate__fadeInUp.animate__animated
 			+b.text-md-center
 				h3 Мы&nbsp;приглашаем в&nbsp;свою команду молодых специалистов и&nbsp;состоявшихся профессионалов, готовых на&nbsp;деле реализовать свой потенциал
 				p Станьте частью нашей компании!
-				button.btn.btn--bgPrimary.btn--colorWhite Вакансии
+				a.btn.btn--bgBlack.btn--colorWhite(href='#') Вакансии
 	// end sInvite

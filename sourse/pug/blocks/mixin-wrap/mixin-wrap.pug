@@ -880,7 +880,8 @@ mixin docLine2(text)
 	+b.docLine(href="#")&attributes(attributes)
 		.row
 			.col-auto
-				img(src="img/svg/pdf.svg", alt="")
+				img(src="img/svg/pdf.svg", alt="").img-svg
+				//- +icon('pdf')
 			.col!= text
 
 mixin docLine3(text)

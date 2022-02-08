@@ -9,6 +9,12 @@
 	.is-close {
 		top: 0 !important;
 	}
+	& > .carousel__button.is-close {
+		color: #000;
+		@include media-breakpoint-up(sm) {
+			color: #fff;
+		}
+	}
 }
 
 .fancybox__slide {
@@ -16,6 +22,10 @@
 		overflow-x: hidden;
 		padding: 0;
 	}
+}
+
+.with-fancybox {
+	overflow: hidden;
 }
 
 .modal-win {
@@ -47,6 +57,9 @@
 			background-color: rgba($color:#444444, $alpha: 0.2) ;
 			top: rem(67);
 			left: 0;
+		}
+		.form-select {
+			background-image: none;
 		}
 	}
 	&--second {

@@ -848,6 +848,9 @@
 	}
 	.docLine {
 		margin-bottom: 0 !important;
+		[fill="#444444"] {
+			fill: rgba($color: #fff, $alpha: 0.3) !important;
+		}
 		&:not(.btn):not(.secion-head__btn) {
 			color: $white;
 			&:hover {

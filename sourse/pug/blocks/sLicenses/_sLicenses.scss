@@ -27,14 +27,11 @@
 			picture {
 				filter: grayscale(0);
 			}
-			.icon-search {
-				opacity: 1;
-			}
 		}
 	}
-	&__sliderContainer {
-		position: relative;
-	}
+	// &__sliderContainer {
+	// 	position: relative;
+	// }
 	.icon-search {
 		@include mt;
 		@include a-cent();
@@ -45,11 +42,11 @@
 		color: $white;
 		background-color: rgba(43, 43, 43, 0.6);
 		border-radius: rem(32);
-		opacity: 0;
 	}
 	.swiper-button-hand {
 		background-color: #C5C5C5;
 		--swiperArrowPosition: 0;
+		transform: translateY(0);
 		// top: 100px;
 		// @include media-breakpoint-up(sm) {
 		// 	top: 108px;

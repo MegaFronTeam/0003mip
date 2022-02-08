@@ -15,9 +15,9 @@
 		}
 	}
 	&__card {
-		max-width: rem(384);
-		margin-left: auto;
-		margin-right: auto;
+		// max-width: rem(384);
+		// margin-left: auto;
+		// margin-right: auto;
 		span {
 			display: inline-block;
 			color: #BCBCBC;
@@ -43,6 +43,7 @@
 		display: block;
 		position: relative;
 		position: relative;
+		text-align: center;
 		margin-bottom: rem(8);
 		@include media-breakpoint-up(md) {
 			margin-bottom: rem(16);
@@ -68,9 +69,9 @@
 			picture {
 				filter: grayscale(0);
 			}
-			.icon-search {
-				opacity: 1;
-			}
+			// .icon-search {
+			// 	opacity: 1;
+			// }
 		}
 	}
 	.icon-search {
@@ -83,7 +84,7 @@
 		color: $white;
 		background-color: rgba(43, 43, 43, 0.6);
 		border-radius: rem(32);
-		opacity: 0;
+		// opacity: 0;
 	}
 	@include media-breakpoint-up(xl) {} 
 	@include media-breakpoint-up(md) {}

@@ -8,6 +8,12 @@
 		--sPT: #{rem(80)};
 		--sPB: #{rem(71)};
 	}
+	.row {
+		--bs-gutter-y: #{rem(32)};
+		@include media-breakpoint-up(md) {
+			--bs-gutter-y: #{rem(44)};
+		}
+	}
 	h2 {
 		max-width: rem(897);
 		margin-bottom: rem(37);
