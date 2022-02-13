@@ -3,11 +3,13 @@ mixin newsItem()
 		+news__date()
 		p.news__text
 			| Институт «Мосинжпроект» участвует в создании знакового проекта Урала — «Притяжение»
-		img.news__photo(src='images/news/1.jpg' alt='')
+		+e.img-wrap
+			img.news__photo(src='images/news/1.jpg' alt='')
 		
 mixin projectItem(t='Многоуровневые транспортные развязки, улично-дорожная-сеть на участке от ул. Лухмановская до границ с Московской областью')
 	a.news__card(href='#')&attributes(attributes)
-		img.news__photo(src='images/news/1.jpg' alt='')
+		+e.img-wrap
+			img.news__photo(src='images/news/1.jpg' alt='')
 		.p-3.pb-0
 			.h5.mb-3= t
 			.small.mb-3
@@ -16,6 +18,12 @@ mixin projectItem(t='Многоуровневые транспортные ра�
 			.small
 				.strong.mb-1 Период
 				| Проектирование: 2019-2020
+
+mixin newsbtn(t='показать больше новостей')
+	+e.footer.text-center.text-primary
+		+e.btn-more(href="#")
+			+icon("spinner")
+			= t
 mixin news(nl, t='Новости')
 	// start news
 	.news
@@ -49,10 +57,7 @@ mixin newsPage(data)
 				+b.news__cards--page
 					- for (var x = 0; x < 9; x++)
 						+newsItem()(class="wow animate__fadeInUp animate__animated")
-			.text-center.text-primary
-				+e.btn-more 
-					+icon("spinner")
-					| показать больше новостей
+					+newsbtn
 	// end news
 mixin newsPage03(data)
 	// start news
@@ -77,10 +82,7 @@ mixin newsPage03(data)
 					+projectItem('Многоуровневые транспортные развязки на пересечении автомобильной дороги «Солнцево-Бутово-Видное» с Боровским шоссе и Киевским шоссе с необходимой для их функционирования улично-дорожной сетью')(class="wow animate__fadeInUp animate__animated")
 					- for (var x = 0; x < 8; x++)
 						+projectItem()(class="wow animate__fadeInUp animate__animated")
-			.text-center.text-primary
-				+e.btn-more 
-					+icon("spinner")
-					| показать больше проектов
+					+newsbtn('показать больше проектов')
 	// end news
 mixin newsPage03-1(data)
 	// start news
@@ -105,8 +107,5 @@ mixin newsPage03-1(data)
 					+projectItem('Многоуровневые транспортные развязки на пересечении автомобильной дороги «Солнцево-Бутово-Видное» с Боровским шоссе и Киевским шоссе с необходимой для их функционирования улично-дорожной сетью')(class="wow animate__fadeInUp animate__animated")
 					- for (var x = 0; x < 8; x++)
 						+projectItem()
-			.text-center.text-primary
-				+e.btn-more 
-					+icon("spinner")
-					| показать больше проектов
+					+newsbtn('показать больше проектов')
 	// end news

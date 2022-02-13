@@ -105,7 +105,9 @@
 			<!-- /picture-->
 			<div class="container">
 				<h1 data-text="проекты">проекты</h1>
-				<p>За&nbsp;последние 5&nbsp;лет институт участвовал в&nbsp;реализации крупных инфраструктурных проектов: Северо-Западная, Северо-Восточная и&nbsp;Юго-Восточная хорды, Южная рокада, дорога Солнцево-Бутово-Варшавское шоссе, станции Большой кольцевой линии метро, инфекционный госпиталь в&nbsp;Новой Москве, многофункциональный комплекс зданий Национального космического центра</p>
+				<div class="page-head__caption">
+					<p>За&nbsp;последние 5&nbsp;лет институт участвовал в&nbsp;реализации крупных инфраструктурных проектов: Северо-Западная, Северо-Восточная и&nbsp;Юго-Восточная хорды, Южная рокада, дорога Солнцево-Бутово-Варшавское шоссе, станции Большой кольцевой линии метро, инфекционный госпиталь в&nbsp;Новой Москве, многофункциональный комплекс зданий Национального космического центра</p>
+				</div>
 			</div>
 		</div>
 		<!-- start sProjectsMap-->
@@ -444,10 +446,12 @@
 					target.options.set('iconImageHref', markColor);
 					$(".sProjectsMap__map-caption").html(`<div class="content">${target.properties.get('balloonContent')}</div><div class="closeButton"></div></div>`);
 				})
-				.add('balloonclose', (e) => e.get('target').options.set('iconImageHref', mark));
+				.add('balloonclose', (e) => {
+						$(".sProjectsMap__map-caption").html("");
+					e.get('target').options.set('iconImageHref', mark)
+					});
 			
 			$(document).on('click', '.closeButton', function () {
-				$(".sProjectsMap__map-caption").html("");
 				map.balloon.close()
 				// $(document).
 			});

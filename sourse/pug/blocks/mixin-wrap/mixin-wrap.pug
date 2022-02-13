@@ -67,6 +67,7 @@ mixin newsSlider()
 			#newsSliderPrev.slider__arrow.slider__arrow--prev
 				svg(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none')
 					path(d='M15 17.5L9 11.5L15 5.5' stroke='currentColor' stroke-width='2')
+					
 			.container
 				#newsSlider.slider__carousel
 					.newsSlider__slide
@@ -795,19 +796,35 @@ mixin nav-servises2()
 			+item(`12`,`Дендрологические изыскания`)
 
 mixin page-head(data)
-	+b.page-head.bg-wrap&attributes(attributes)
+	+b.page-head(class=( (data.nav || data.nav2) ? 'page-head--landing'   : null )).bg-wrap&attributes(attributes)
 		if data.bg
 			.mainSlider__particles(id=`particles-js-0`)
 			+pic(data.bg,'bg', 0).picture-bg
 		.container
+			if data.nav
+				+e.back(href="#")
+					+icon("chevron-left")
+					| Проектирование
+					
+			if data.nav2
+				+e.back(href="#")
+					+icon("chevron-left")
+					| Изыскания
+
 			if data.title
 				h1(data-text= data.title)= data.title
 			if data.p
-				p!= data.p
-			block
-			if data.btns
-				.row
-					a.btn.btn--colorWhite(href="#") btn
+				+e.caption
+					p!= data.p
+					if data.btns
+						.row
+							a.btn.btn--colorWhite(href="#")=  data.btn
+			if block
+				+e.caption
+					block
+					if data.btns
+						.row
+							a.btn.btn--colorWhite(href="#")=  data.btn
 			if data.nav
 				+nav-servises
 			if data.nav2

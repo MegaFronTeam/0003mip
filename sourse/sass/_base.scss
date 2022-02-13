@@ -188,26 +188,26 @@ body {
 	outline: 0 !important;
 }
 
-.slick-arrow {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	z-index: 2;
-	cursor: pointer;
-	&.l {
-		left: 0;
-		svg {
-			transform: transform(rotateY(180deg));
-		}
-	}
-	&.r {
-		right: 0;
-	}
-	svg {
-		width: 17px;
-		height: auto;
-	}
-}
+// .slick-arrow {
+// 	position: absolute;
+// 	top: 50%;
+// 	transform: translateY(-50%);
+// 	z-index: 2;
+// 	cursor: pointer;
+// 	&.l {
+// 		left: 0;
+// 		svg {
+// 			transform: transform(rotateY(180deg));
+// 		}
+// 	}
+// 	&.r {
+// 		right: 0;
+// 	}
+// 	// svg {
+// 	// 	width: 17px;
+// 	// 	height: auto;
+// 	}
+// }
 
 .strong {
 	font-weight: bold;
@@ -688,4 +688,13 @@ iframe {
 .customControl {
 	display: none;
 	background: #444444;
+}
+
+
+.promo__image {
+	@include mt; 
+	filter: grayscale(1); 
+	&:hover {
+		filter: grayscale(0);
+	}
 }

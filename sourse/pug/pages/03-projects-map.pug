@@ -88,10 +88,12 @@ block map
 					target.options.set('iconImageHref', markColor);
 					$(".sProjectsMap__map-caption").html(`<div class="content">${target.properties.get('balloonContent')}</div><div class="closeButton"></div></div>`);
 				})
-				.add('balloonclose', (e) => e.get('target').options.set('iconImageHref', mark));
+				.add('balloonclose', (e) => {
+						$(".sProjectsMap__map-caption").html("");
+					e.get('target').options.set('iconImageHref', mark)
+					});
 
 			$(document).on('click', '.closeButton', function () {
-				$(".sProjectsMap__map-caption").html("");
 				map.balloon.close()
 				// $(document).
 			});

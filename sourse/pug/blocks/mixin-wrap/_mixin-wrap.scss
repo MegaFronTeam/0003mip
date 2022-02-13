@@ -104,7 +104,11 @@
 		}
 	}
 	--minH: 128px;
-	padding-top: rem(80);
+	@include media-breakpoint-up(sm) {
+
+		padding-top: rem(80);
+	}
+	padding-top: rem(60);
 	padding-bottom: rem(14);
 	
 	.h1,
@@ -114,7 +118,8 @@
         color: transparent;
         text-shadow: 0px -1px 1px #FFFFFF, 1px 0px 2px rgba(0, 0, 0, 0.88), 3px 2px 3px rgba(0, 0, 0, 0.27);
         margin-bottom: 16px;
-				
+				position: relative;
+				z-index: 5;
         &:before{
 
 					position: absolute;
@@ -129,6 +134,8 @@
 			}
 			p{
 				@include rfs(25px);
+				position: relative;
+				z-index: 5;
 				&.small{
 					@include rfs(18px);
 				}
@@ -186,6 +193,47 @@
 				}
 				p {
 					margin-bottom: 0;
+				}
+			}
+			.btn{
+				position: relative;
+				z-index: 2;
+			}
+			&--text-bg {
+				@include media-breakpoint-down(md) {
+					padding-bottom: 0;
+					.page-head__caption {
+					padding: rem(20) calc(var(--gx)/2) rem(26);
+					margin: 0 calc(var(--gx) / -2) 0;
+						background: #444444;
+					}
+
+				}
+			}
+			&--landing .container{
+				position: relative;
+				flex-grow: 1;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+			}
+			&__back{
+				position: absolute;
+				z-index: 5;
+				top: 0;
+				left: calc(var(--gx)/2);
+				color: #fff;
+				display: inline-flex;
+				align-items: center;
+				font-size: rem(18);
+				.icon{
+					position: relative;
+					top: rem(2);
+					font-size: rem(26);
+					margin-right: 4px;
+					stroke: currentColor;
+					stroke-width: 2px;
+					fill: none;
 				}
 			}
 		}
