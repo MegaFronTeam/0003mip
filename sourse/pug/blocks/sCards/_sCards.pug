@@ -2,7 +2,7 @@ mixin sCards(data)
 	// start sCards
 	+b.SECTION.sCards.section#sCards&attributes(attributes)
 		.container
-			+b.card
+			+b.card.wow.animate__fadeInUp.animate__animated
 				.row
 					.col-lg-6
 						+e.left-side.bg-wrap
@@ -12,7 +12,7 @@ mixin sCards(data)
 								img(src="img/svg/card-img-1.svg", alt="")
 						
 							p Ассоциация саморегулируемая организация &laquo;Центральное объединение организаций по&nbsp;инженерным изысканиям для строительства &laquo;Центризыскания&raquo; (Ассоциация СРО &laquo;Центризыскания&raquo;)
-							button Карточка члена СРО
+							a(href="#") Карточка члена СРО
 					.col-lg-6
 						+e.right-side
 							+e.wrap
@@ -23,7 +23,7 @@ mixin sCards(data)
 									h3 16.12.2015
 									p Дата регистрации в&nbsp;реестре членов СРО
 							p На&nbsp;основании членства ООО &laquo;Институт &laquo;Мосинжпроект&raquo; имеет право выполнять инженерные изыскания в&nbsp;отношении объектов капитального строительства, особо опасных, технически сложных и&nbsp;уникальных объектов капитального строительства (кроме объектов использования атомной энергии) по&nbsp;договорам подряда на&nbsp;выполнение инженерных изысканий на&nbsp;сумму по&nbsp;одному договору 300&nbsp;000&nbsp;000 рублей и&nbsp;более.
-			+b.card
+			+b.card.wow.animate__fadeInUp.animate__animated
 				.row
 					.col-lg-6
 						+e.left-side.bg-wrap
@@ -33,7 +33,7 @@ mixin sCards(data)
 								img(src="img/svg/card-img-2.svg", alt="")
 						
 							p СРО &laquo;Союз дорожных проектных организаций &laquo;РОДОС&raquo; (Союз &quot;РОДОС-ПРОЕКТИРОВАНИЕ)
-							button Карточка члена СРО
+							a(href="#") Карточка члена СРО
 					.col-lg-6
 						+e.right-side
 							+e.wrap

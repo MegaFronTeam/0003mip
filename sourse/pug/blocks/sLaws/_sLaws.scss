@@ -50,6 +50,13 @@
 				margin-left: rem(43);
 			}
 		}
+		ul + p {
+			padding-top: rem(16);
+			@include media-breakpoint-up(md) {
+				margin-left: rem(43);
+				padding-top: rem(24);
+			}
+		}
 		li {
 			display: flex;
 			align-items: center;

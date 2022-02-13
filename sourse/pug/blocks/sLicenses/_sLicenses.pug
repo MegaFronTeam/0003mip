@@ -9,7 +9,7 @@ mixin sLicenses(data)
 					+e.sertificate(href=`img/@2x/sLicenses-img-bg-${img}.jpg`, data-fancybox=`sertificate-${num}`)
 						+pic(`sLicenses-img-${img}.png`, ``, 0)
 						+icon('search')
-		+e.sliderContainer
+		+e.sliderContainer.wow.animate__fadeInUp.animate__animated
 			+e.slider--js.swiper
 				.swiper-wrapper
 					+slide('1', 1)

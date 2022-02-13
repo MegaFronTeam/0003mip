@@ -46,7 +46,9 @@
 		--sPB: #{rem(64)};
 	}
 	&__card {
-		max-width: rem(520);
+		@include media-breakpoint-up(md) {
+			max-width: rem(520);
+		}
 	}
 	h3, h5 {
 		text-transform: initial;

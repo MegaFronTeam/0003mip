@@ -5,6 +5,7 @@
 4. <https://megafronteam.github.io/0003mip/public/03-projects-map.html>
 <!-- 4. <https://megafronteam.github.io/0003mip/public/03-projects-1.html> -->
 5. <https://megafronteam.github.io/0003mip/public/03-projects-page.html>
+5. <https://megafronteam.github.io/0003mip/public/03-projects-map.html>
 6. <https://megafronteam.github.io/0003mip/public/04-projection.html>
 7. <https://megafronteam.github.io/0003mip/public/05-coordionation.html>
 8. <https://megafronteam.github.io/0003mip/public/10-contacts.html>

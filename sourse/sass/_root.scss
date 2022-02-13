@@ -37,8 +37,10 @@
 		--swiperBgDefHover:  var(--bs-primary);
 
 
-	--fancybox-bg: rgba(18,27,58,.9);
-
+		--fancybox-bg: #fff;
+		@include media-breakpoint-up(sm) {
+		--fancybox-bg: rgba(18,27,58,.9);
+		}
 
 
 	  //  --carousel-button-width: 48px;

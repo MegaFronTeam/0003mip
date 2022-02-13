@@ -25,8 +25,7 @@
 			<div class="container">
 				<div class="s404__content">
 					<h1>404</h1>
-					<p>Страница не&nbsp;найдена. Она не&nbsp;существовала или срок публикации истёк.</p>
-					<button class="btn btn--bgBlack btn--colorWhite">На главную</button>
+					<p>Страница не&nbsp;найдена. Она не&nbsp;существовала или срок публикации истёк.</p><a class="btn btn--bgBlack btn--colorWhite" href="#">На главную</a>
 				</div>
 			</div>
 		</section>
@@ -56,19 +55,23 @@
 						</div>
 						<!-- +e.input-wrap-->
 						<div class="form-wrap__input-wrap form-group">
-							<label><span class="form-wrap__title">Тема</span>
-								<select class="form-wrap__input form-control" required="required">
-									<option>Выберите тему</option>
-									<option>Выберите тему1</option>
-									<option>Выберите тему2</option>
-									<option>Выберите тему3</option>
-									<option>Выберите тему4</option>
+							<label><span class="form-wrap__input-title">Тема</span>
+								<select class="form-wrap__input form-select" name="select" required="required">
+									<option value="Выберите тему">Выберите тему</option>
+									<option value=" placeholder 1">placeholder 1</option>
+									<option value=" placeholder 2">placeholder 2</option>
+									<option value=" placeholder 3">placeholder 3</option>
+									<option value=" placeholder 4">placeholder 4</option>
 								</select><span class="required">*</span>
 								<svg class="icon icon-chevron-down ">
 									<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
 								</svg>
-							</label>
+							</label><span class="required">*</span>
+							<svg class="icon icon-chevron-down ">
+								<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+							</svg>
 						</div>
+						<!-- +e.input-wrap-->
 						<div class="form-wrap__input-wrap form-group">
 							<label><span class="form-wrap__input-title">Ваше сообщение</span><textarea class="form-wrap__input form-control" name="textarea" placeholder="Введите сообщение"></textarea><span class="required">*</span>
 							</label><span class="required">*</span>
@@ -167,12 +170,12 @@
 									<h3>Анкета соискателя</h3>
 									<p>Заполните анкету или пришли своё резюме на&nbsp;электронный адрес <a href="#">institute@mosinzhproekt.ru</a></p>
 									<div class="form-wrap__input-wrap form-group">
-										<label><span class="form-wrap__input-title">Имя *</span><input class="form-wrap__input form-control" name="" type="text" placeholder="Ввдите имя" required="required"/><span class="required">*</span>
+										<label><span class="form-wrap__input-title">Имя *</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ввдите имя" required="required"/><span class="required">*</span>
 										</label><span class="required">*</span>
 									</div>
 									<!-- +e.input-wrap-->
 									<div class="form-wrap__input-wrap form-group">
-										<label><span class="form-wrap__input-title">Фамилия *</span><input class="form-wrap__input form-control" name="" type="text" placeholder="Ввдите фамилию" required="required"/><span class="required">*</span>
+										<label><span class="form-wrap__input-title">Фамилия *</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ввдите фамилию" required="required"/><span class="required">*</span>
 										</label><span class="required">*</span>
 									</div>
 									<!-- +e.input-wrap-->

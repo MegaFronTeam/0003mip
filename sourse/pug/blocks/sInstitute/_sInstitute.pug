@@ -1,6 +1,6 @@
 mixin sInstitute(data)
 	+b.SECTION.sInstitute.section#sInstitute&attributes(attributes)
-		.container
+		.container.wow.animate__fadeInUp.animate__animated
 			h3 В&nbsp;ООО &laquo;Институт &laquo;Мосинжпроект&raquo; созданы все условия для профессионального развития работников
 			p Мы&nbsp;ежегодно открываем свои двери студентам профильных ВУЗов для прохождения практики и&nbsp;стажировки. ООО &laquo;Институт &laquo;Мосинжпроект&raquo; сотрудничает с&nbsp;ведущими российскими высшими учебными учреждениями в&nbsp;области подготовки молодых специалистов, переподготовки и&nbsp;повышения квалификации работающего персонала, такими как:
 		mixin slide(img, text)
@@ -9,7 +9,7 @@ mixin sInstitute(data)
 					+e.item
 						+pic(img, ``, 0)
 						p!= text
-		+e.sliderContainer
+		+e.sliderContainer.wow.animate__fadeInUp.animate__animated
 			+e.slider--js.swiper
 				.swiper-wrapper
 					+slide('sInstitute-img-1.png', 'Московский государственный строительный университет')
