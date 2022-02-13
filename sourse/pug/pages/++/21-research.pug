@@ -1,0 +1,34 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+include ../blocks/news/_news.pug
+include ../blocks/sTestingCenter/_sTestingCenter.pug
+//- include ../blocks/partnersSlider/_partnersSlider.pug
+
+block variables
+	- let  mainPage= null
+	- let  bg= null
+
+block title
+	- let  title= 'Инженерные изыскания'
+	title= title
+block pagecontent
+	+header()
+	+page-head({
+		title: "Инженерные изыскания", 
+		bg:'research-bg.jpg'
+		} ).page-head--h.page-head--research
+			p.max-w Выполнение инженерных изысканий для строительства
+	//- +mainSlider()
+	//- +newsSlider()
+	//- +landingInfo
+	
+	//- +promo()
+	//- +promo2()
+	+sContent05().wow.animate__fadeInUp.animate__animated
+	+sTestingCenter().wow.animate__fadeInUp.animate__animated
+	
+	//- +partnersSlider
+	+footer

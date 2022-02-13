@@ -1,0 +1,23 @@
+mixin sProjectsMap(data)
+	// start sProjectsMap
+	+b.SECTION.sProjectsMap.section#sProjectsMap&attributes(attributes)
+		+b.secion-head
+			.container
+				.row
+					.col
+						+e.btns
+							+input("ВСЕ ПРОЕКТЫ",'select')
+							+input("период",'select')
+							+input("местоположение",'select')
+					.col-md-auto
+						+e.btns(style="--bs-gutter-x: 0")
+							+e.btn(href="#")
+								+icon("cards")
+							+e.btn(href="#").active 
+								+icon("mark")
+		+e.map
+			#map()
+		+e.container
+			+e.map-caption.container
+			
+	// end sProjectsMap

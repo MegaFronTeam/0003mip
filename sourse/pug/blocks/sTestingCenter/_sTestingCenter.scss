@@ -1,0 +1,48 @@
+// start .sTestingCenter
+.sTestingCenter {
+	--sPT: #{rem(16)};
+	--sPB: #{rem(40)};
+	// --sTPB: ;
+	background-color: #C5C5C5;
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(24)};
+	}
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(48)};
+		--sPB: #{rem(48)};
+		.row {
+			--bs-gutter-x: #{rem(40)};
+		}
+	}
+	picture {
+		@include mt;
+		filter: grayscale(1);
+		margin-bottom: rem(31);
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(40);
+		}
+		@include media-breakpoint-up(lg) {
+			margin-left: calc(-50vw + 100% - var(--bs-gutter-x));
+			margin-bottom: rem(0);
+		}
+		&:hover {
+			filter: grayscale(0);
+		}
+	}
+	h2 {
+		margin-bottom: rem(8);
+	}
+	p {
+		margin-bottom: rem(24);
+		@include media-breakpoint-up(lg) {
+			max-width: rem(568);
+		}
+		a {
+			color: $blue;
+		}
+	}
+	@include media-breakpoint-up(xl) {} 
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {} 
+	@include media-breakpoint-down(xl) {}
+} // end.sTestingCenter

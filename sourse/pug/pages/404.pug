@@ -1,0 +1,41 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sServiseBody/_sServiseBody.pug
+include ../blocks/sQuestions/_sQuestions.pug
+include ../blocks/sAchievements/_sAchievements.pug
+include ../blocks/sTestingContent/_sTestingContent.pug
+include ../blocks/s404/_s404.pug
+//- include ../blocks/sFundamentalPrinciples/_sFundamentalPrinciples.pug
+//- include ../blocks/partnersSlider/_partnersSlider.pug
+//- include ../blocks/sCards/_sCards.pug
+
+block variables
+	- let  mainPage= 'error-page'
+	- let  bg= null
+
+block title
+	- let  title= '404'
+	title= title
+block pagecontent
+	//- +header()
+	//- +breadcrumb('Главная', 'О компании', 'Испытательный центр')
+	//- +page-head({
+	//- 	title,
+	//- 	bg: true,
+	//- 	p: 'Страница не найдена. Она не существовала или срок публикации истёк.'
+	//- }).page-head--inner
+	+s404()
+	//- +mainSlider()
+	//- +newsSlider()
+	//- +landingInfo
+	
+	//- +promo()
+	//- +promo2()
+	//- +news
+	
+	
+	//- +partnersSlider
+	//- +footers

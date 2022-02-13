@@ -7,7 +7,7 @@ $output-bourbon-deprecation-warnings: false;
 // @import "mq";
 @import "bourbon/app/assets/stylesheets/bourbon";
 // @import "../../node_modules/rfs/scss";
-// @import "./node_modules/@fancyapps/ui/src/Fancybox/Fancybox.scss";
+@import "./node_modules/@fancyapps/ui/src/Fancybox/Fancybox.scss";
 // @import "./node_modules/swiper/swiper.scss";
 
 @import "mixin";
@@ -25,7 +25,9 @@ $output-bourbon-deprecation-warnings: false;
 // Layout & components
 
 @import "./node_modules/bootstrap/scss/functions";
+
 @import "vars"; 
+
 @import "./node_modules/bootstrap/scss/variables";
 @import "./node_modules/bootstrap/scss/mixins";
 @import "./node_modules/bootstrap/scss/utilities";

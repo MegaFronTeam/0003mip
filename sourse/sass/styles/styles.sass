@@ -11,23 +11,24 @@
 @import "menu"
 @import "modals"
 
-/* custom scrollbar */
-::-webkit-scrollbar
-  width: 20px
-  background-color: transparent
+@include t 
+  /* custom scrollbar */
+  ::-webkit-scrollbar
+    width: 20px
+    background-color: transparent
 
-::-webkit-scrollbar-track
-  background-color: transparent
+  ::-webkit-scrollbar-track
+    background-color: transparent
 
-::-webkit-scrollbar-thumb
-  background-color: transparentize($gray, .8)
-  border-radius: 20px
-  border: 6px solid transparent
-  background-clip: content-box
-  transition: all .2s ease
+  ::-webkit-scrollbar-thumb
+    background-color: transparentize($gray, .8)
+    border-radius: 20px
+    border: 6px solid transparent
+    background-clip: content-box
+    transition: all .2s ease
 
-::-webkit-scrollbar-thumb:hover
-  background-color: transparentize($gray, .6)
+  ::-webkit-scrollbar-thumb:hover
+    background-color: transparentize($gray, .6)
 
 //html
 //  overflow: overlay

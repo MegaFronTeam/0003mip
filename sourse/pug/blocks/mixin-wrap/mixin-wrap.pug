@@ -865,13 +865,27 @@ mixin contactBlock10()
 
 			+item(`mail`,`Электронная почта`,`institute@mosinzhproekt.ru`)
 
-mixin docLine()
-	+b.docLine
+mixin docLine(text)
+	+b.docLine&attributes(attributes)
 		.row
 			.col-auto
 				img(src="img/svg/pdf.svg", alt="")
-			.col Требование к документации для согласования
+			.col!= text
 			.col-sm-auto
 				+e.btn.btn.btn--bgBlack(href="#")
 					+icon("download")
 					| Скачать
+
+mixin docLine2(text)
+	+b.docLine(href="#")&attributes(attributes)
+		.row
+			.col-auto
+				img(src="img/svg/pdf.svg", alt="")
+			.col!= text
+
+mixin docLine3(text)
+	+b.docLine(href="#")&attributes(attributes)
+		.row
+			.col-auto
+				img(src="img/svg/pdf-2.svg", alt="")
+			.col!= text

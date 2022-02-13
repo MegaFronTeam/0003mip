@@ -1,0 +1,41 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+include ../blocks/news/_news.pug
+//- include ../blocks/partnersSlider/_partnersSlider.pug
+
+block variables
+	- let  mainPage= null
+	- let  bg= null
+
+block title
+	- let  title= 'Согласование'
+	title= title
+block pagecontent
+	+header()
+	+page-head({
+		title, 
+		bg:'coordionation-page.jpg',
+		p: 'Работы по рассмотрению и согласованию проектных решений сторонних организаций'
+		} )
+	+b.sContent--base.bg-white.section
+		.container
+			p ООО «Институт «Мосинжпроект» выполняет работы по рассмотрению и согласованию проектных решений сторонних организаций в части увязки с ранее выпущенными или находящимися в разработке проектными решениями Института для устранения замечаний отдела подземных сооружений (ОПС) ГБУ «Мосгоргеотрест» или эксплуатирующих организаций.
+	+b.sContent--base.section
+		.container
+			+contactBlock()
+			+docLine('Требование к документации для согласования')
+
+	//- +mainSlider()
+	//- +newsSlider()
+	//- +landingInfo
+	
+	//- +promo()
+	//- +promo2()
+	//- +sContent04()
+	
+	
+	//- +partnersSlider
+	+footer

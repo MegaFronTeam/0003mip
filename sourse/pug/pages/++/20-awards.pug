@@ -1,0 +1,37 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sServiseBody/_sServiseBody.pug
+include ../blocks/sQuestions/_sQuestions.pug
+include ../blocks/sAchievements/_sAchievements.pug
+//- include ../blocks/partnersSlider/_partnersSlider.pug
+//- include ../blocks/sCards/_sCards.pug
+
+block variables
+	- let  mainPage= 'page-base'
+	- let  bg= null
+
+block title
+	- let  title= 'Награды и достижения'
+	title= title
+block pagecontent
+	+header()
+	+breadcrumb('Главная', 'О компании', 'Награды и достижения')
+	+page-head({
+		title: 'Награды и достижения',
+		p: 'За&nbsp;долгие годы работы компания ООО &laquo;Институт &laquo;Мосинжпроект&raquo; получила множество дипломов, наград, благодарностей.'
+	}).page-head--inner
+	+sAchievements()
+	//- +mainSlider()
+	//- +newsSlider()
+	//- +landingInfo
+	
+	//- +promo()
+	//- +promo2()
+	//- +news
+	
+	
+	//- +partnersSlider
+	+footer

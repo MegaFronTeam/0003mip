@@ -6,13 +6,17 @@
 		background: #DBDBDB;
 		picture{
 			margin-bottom: rem(24);
-			filter: saturate(0);
 			@include mt;
+			@include media-breakpoint-up(md) {
+				filter: saturate(0);
+			}
 		}
 		&__col{
 			&:hover{
 				picture{
-					filter: saturate(1);
+					@include media-breakpoint-up(md) {
+						filter: saturate(1);
+					}
 				}
 			}
 		}

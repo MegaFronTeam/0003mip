@@ -333,11 +333,20 @@
 	}
  
 	.docLine{
-		margin-bottom: rem(60);
+		// margin-bottom: rem(60);
 	}
 	&--inner {
 		p {
 			font-size: rem(25);
+		}
+		h5 {
+			font-weight: 700;
+			text-transform: initial;
+			font-size: rem(18);
+			margin-bottom: rem(24);
+			@include media-breakpoint-up(md) {
+				margin-bottom: rem(32);
+			}
 		}
 	} // end.sContent
 }
@@ -783,6 +792,77 @@
 				}
 			}
 		}
+	}
+}
+.sContent--research {
+	padding-top: var(--sPT);
+	padding-bottom: var(--sPT);
+	.figure {
+		@include media-breakpoint-up(md) {
+			&::before{
+				content: 'Изыскания';
+			}
+		}
+		&__item {
+			@include media-breakpoint-up(md) {
+				padding-top: rem(84);
+			}
+		}
+	}
+}
+
+.sContent--managment {
+	p {
+		&:first-of-type {
+			padding-top: rem(16);
+			@include media-breakpoint-up(md) {
+				padding-top: rem(40) !important;
+			}
+		}
+	}
+	p + p {
+		margin-bottom: rem(36);
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(48);
+		}
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(64);
+		}
+	}
+}
+
+.sContent--certificate {
+	--sPT: #{rem(32)};
+	--sPB: #{rem(32)};
+	background-color: $blue;
+	color: $white;
+	padding-top: var(--sPT);
+	padding-bottom: var(--sPB);
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(40)};
+		--sPB: #{rem(52)};
+	}
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(48)};
+		--sPB: #{rem(48)};
+	}
+	.docLine {
+		margin-bottom: 0 !important;
+		&:not(.btn):not(.secion-head__btn) {
+			color: $white;
+			&:hover {
+				color: #a8a8a8;
+			}
+		}
+		@include media-breakpoint-up(sm) {
+			border-color: rgba($color: #BCBCBC, $alpha: 0.3);
+		}
+	}
+}
+
+.sContent--testing {
+	p {
+		margin-bottom: 0 !important;
 	}
 }
 

@@ -17,7 +17,7 @@
     "browserslist": "^4.19.1",
     "browsersync-ssi": "^0.2.4",
     "colors": "^1.4.0",
-    "cssnano": "^5.0.14",
+    "cssnano": "^5.0.17",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
@@ -36,15 +36,15 @@
     "gulp-svgmin": "^4.1.0",
     "gulp-tabify": "0.0.2",
     "gulp-vinyl-flow": "^1.1.0",
-    "postcss": "^8.4.5",
+    "postcss": "^8.4.6",
     "postcss-nested": "^5.0.6",
     "postcss-scss": "^4.0.2",
     "postcss-sort-media-queries": "^4.1.0",
     "postcss-syntax": "^0.36.2",
-    "sass": "^1.45.1"
+    "sass": "^1.49.7"
   },
   "dependencies": {
-    "@fancyapps/ui": "^4.0.12",
+    "@fancyapps/ui": "^4.0.25",
     "animate.css": "^4.1.1",
     "inputmask": "^5.0.6",
     "jquery": "^3.6.0",

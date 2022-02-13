@@ -1,5 +1,5 @@
 "use strict";
-const JSCCommon = { 
+const JSCCommon = {
 	modalCall() {
 		const link = ".link-modal-js";
 
@@ -14,11 +14,11 @@ const JSCCommon = {
 			l10n: {
 				Escape: "Закрыть",
 				NEXT: "Вперед",
-				PREV: "Назад", 
-			}, 
-		}); 
-		document.querySelectorAll(".modal-close-js").forEach(el=>{
-			el.addEventListener("click", ()=>{
+				PREV: "Назад",
+			},
+		});
+		document.querySelectorAll(".modal-close-js").forEach(el => {
+			el.addEventListener("click", () => {
 				Fancybox.close();
 			})
 		})
@@ -50,9 +50,9 @@ const JSCCommon = {
 		}
 		if (linkModal) addData();
 	},
- 
+
 	// tabs  .
-	tabscostume(tab) { 
+	tabscostume(tab) {
 
 		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
 			$(this)
@@ -64,7 +64,7 @@ const JSCCommon = {
 
 	},
 	// /tabs
- 
+
 	heightwindow() {
 		// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 		let vh = window.innerHeight * 0.01;
@@ -145,6 +145,12 @@ const JSCCommon = {
 			}
 		}
 	},
+	inputMask() {
+		// mask for input
+		let InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
+		InputTel.forEach(element => element.setAttribute("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"));
+		Inputmask("+9(999)999-99-99").mask(InputTel);
+	},
 };
 const $ = jQuery;
 
@@ -152,13 +158,13 @@ function eventHandler() {
 	// JSCCommon.ifie();
 	JSCCommon.modalCall();
 	// JSCCommon.tabscostume('tabs'); 
-	// JSCCommon.inputMask();
+	JSCCommon.inputMask();
 	// JSCCommon.sendForm();
 	JSCCommon.heightwindow();
 	JSCCommon.makeDDGroup();
 	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 	// JSCCommon.animateScroll();
-	
+
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
 	let screenName;
@@ -245,7 +251,7 @@ function eventHandler() {
 			// }
 		},
 	});
-	
+
 	const sLicensesSlider = new Swiper('.sLicenses__slider--js', {
 
 		slidesPerView: 'auto',
@@ -303,6 +309,19 @@ function eventHandler() {
 			prevEl: '.swiper-button-prev',
 		}
 	});
+
+	const sTestingContent = new Swiper('.sTestingContent__slider--js', {
+
+		slidesPerView: 1,
+		loop: false,
+		watchOverflow: false,
+		spaceBetween: 0,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		}
+	});
+
 	var wow = new WOW(
 		{
 			animateClass: 'animate__animated', // animation css class (default is animated)
@@ -316,24 +335,24 @@ function eventHandler() {
 
 	const convertImages = (query, callback) => {
 		const images = document.querySelectorAll(query);
-	
+
 		images.forEach(image => {
 			fetch(image.src)
-			.then(res => res.text())
-			.then(data => {
-				const parser = new DOMParser();
-				const svg = parser.parseFromString(data, 'image/svg+xml').querySelector('svg');
-	
-				if (image.id) svg.id = image.id;
-				if (image.className) svg.classList = image.classList;
-	
-				image.parentNode.replaceChild(svg, image);
-			})
-			.then(callback)
-			.catch(error => console.error(error))
+				.then(res => res.text())
+				.then(data => {
+					const parser = new DOMParser();
+					const svg = parser.parseFromString(data, 'image/svg+xml').querySelector('svg');
+
+					if (image.id) svg.id = image.id;
+					if (image.className) svg.classList = image.classList;
+
+					image.parentNode.replaceChild(svg, image);
+				})
+				.then(callback)
+				.catch(error => console.error(error))
 		});
 	}
-	
+
 	convertImages('.img-svg');
 
 };
@@ -350,3 +369,4 @@ if (document.readyState !== 'loading') {
 // 		document.body.classList.remove('loaded_hiding');
 // 	}, 500);
 // }
+

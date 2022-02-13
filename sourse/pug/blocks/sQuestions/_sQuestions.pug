@@ -1,0 +1,11 @@
+mixin sQuestions(title, text, btn)
+	// start sQuestions
+	+b.SECTION.sQuestions.section#sQuestions&attributes(attributes)
+		.container
+			.row
+				.col-lg-9
+					h3!= title
+					p!= text
+				+e.col.col.text-right
+					a(href="#" data-src="#modal-call" data-fancybox="modal").btn.btn--bgBlack.btn--colorWhite!= btn
+	// end sQuestions

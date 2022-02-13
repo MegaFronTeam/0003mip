@@ -1,0 +1,92 @@
+// start .sAchievements
+.sAchievements {
+	--sPT: #{rem(0)};
+	--sPB: #{rem(40)};
+	// --sTPB: ;
+	background-color: #E6E6E6;
+	@include media-breakpoint-up(md) {
+		--sPB: #{rem(64)};
+	}
+	.row {
+		--bs-gutter-y: #{rem(40)};
+		--bs-gutter-x: #{rem(24)};
+		@include media-breakpoint-up(md) {
+			--bs-gutter-y: #{rem(56)};
+		}
+	}
+	&__card {
+		max-width: rem(384);
+		margin-left: auto;
+		margin-right: auto;
+		span {
+			display: inline-block;
+			color: #BCBCBC;
+			font-size: rem(62);
+			margin-bottom: rem(8);
+			@include media-breakpoint-up(md) {
+				margin-bottom: rem(16);
+			}
+		}
+		h5 {
+			text-transform: initial;
+			margin-bottom: rem(8);
+			@include media-breakpoint-up(md) {
+				margin-bottom: rem(16);
+			}
+		}
+		p {
+			margin-bottom: 0;
+			color: #3F3F3F;
+		}
+	}
+	&__award {
+		display: block;
+		position: relative;
+		position: relative;
+		margin-bottom: rem(8);
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(16);
+		}
+		picture {
+			@include mt;
+			filter: grayscale(1);
+			img {
+				border: 1px solid #BCBCBC;
+			}
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			display: block;
+			width: calc(100% + 8px);
+			height: 2px;
+			left: -4px;
+			bottom: 0;
+			background-color: $dark;
+		}
+		&:hover {
+			picture {
+				filter: grayscale(0);
+			}
+			.icon-search {
+				opacity: 1;
+			}
+		}
+	}
+	.icon-search {
+		@include mt;
+		@include a-cent();
+		// position: absolute;
+		font-size: rem(24);
+		padding: rem(8);
+    font-size: rem(40);
+		color: $white;
+		background-color: rgba(43, 43, 43, 0.6);
+		border-radius: rem(32);
+		opacity: 0;
+	}
+	@include media-breakpoint-up(xl) {} 
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {} 
+	@include media-breakpoint-down(xl) {}
+} // end.sAchievements

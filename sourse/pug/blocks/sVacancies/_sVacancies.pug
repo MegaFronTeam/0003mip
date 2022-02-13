@@ -1,0 +1,50 @@
+mixin sVacancies-item(title, more, less)
+	+e.item
+		h4!= title
+		block
+		if more
+			+e.show-more(href="#") Показать ещё вакансии
+				+icon('chevron-down')
+		if less
+			+e.show-less(href="#") Скрыть вакансии
+				+icon('chevron-down')
+
+mixin sVacancies-link(text, price)
+	+e.link.link-modal-js(href="modal-application-form")
+		.row
+			.col
+				p!= text
+			+e.col.col-lg-auto
+				span!= price
+			.col-auto
+				+icon('chevron-right')
+
+mixin sVacancies(data)
+	// start sVacancies
+	+b.SECTION.sVacancies.section#sVacancies&attributes(attributes)
+		.container
+			h2 Актуальные вакансии ООО &laquo;Институт &laquo;Мосинжпроект&raquo;
+			+sVacancies-item('Управление по&nbsp;инженерным изысканиям')
+				+sVacancies-link('Инженер-эколог 2 категории', 'от 65 000 ₽')
+				+sVacancies-link('Помощник машиниста буровой установки', 'от 44 000 ₽')
+				+sVacancies-link('Машинист буровой установки 4-5 разряда', 'от 80 000 ₽')
+			+sVacancies-item('Управление по&nbsp;инженерным изысканиям')
+				+sVacancies-link('Руководитель проектной группы (проектирование схем движения городского транспорта)', 'от 140 000 ₽')
+				+sVacancies-link('Главный инженер проекта (проектирование схем движения городского транспорта)', 'от 140 000 ₽')
+			+sVacancies-item('Отдел выпуска и&nbsp;архивирования документации')
+				+sVacancies-link('Оператор широкоформатной печати', 'от 50 000 ₽')
+			+sVacancies-item('Управление по&nbsp;проектированию гражданских объектов', 'more')
+				+sVacancies-link('Ведущий инженер отдела слаботочных систем (СКС,ЛВС,СКК,СКПТ, АТС)', 'по договорённости')
+				+sVacancies-link('Главный/ведущий специалист (генпланист) Архитектурного отдела УПГО', 'по договорённости')
+				+sVacancies-link('Главный инженер проекта УПГО', 'по договорённости')
+			+sVacancies-item('Управление по&nbsp;проектированию гражданских объектов', '', 'less')
+				+sVacancies-link('Главный специалист (трасса и&nbsp;организация эксплуатации)', 'от 120 000 ₽')
+				+sVacancies-link('Инженер (база данных)', 'по договорённости')
+				+sVacancies-link('Инженер 1/2 категории (документооборот)', 'по договорённости')
+				+sVacancies-link('Ведущий инженер (проектирование объектов метрополитена)', 'по договорённости')
+				+sVacancies-link('Инженер-проектировщик ОВИК', 'по договорённости')
+				+sVacancies-link('Ведущий инженер (расчет пожарного риска)', 'от 100 000 ₽')
+				+sVacancies-link('Инженер 1 категории (трасса и организация эксплуатации)', 'от 80 000 ₽')
+				+sVacancies-link('Ведущий инженер (Генпланист)', 'от 100 000 ₽')
+				+sVacancies-link('Ведущий инженер (Технолог)', 'от 114 000 ₽')
+	// end sVacancies

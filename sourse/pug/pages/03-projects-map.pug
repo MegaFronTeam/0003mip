@@ -1,0 +1,108 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+include ../blocks/news/_news.pug
+//- include ../blocks/partnersSlider/_partnersSlider.pug
+include ../blocks/sProjectsMap/_sProjectsMap.pug
+
+block variables
+	- let  mainPage= null
+	- let  bg= null
+
+block title
+	- let  title= 'проекты'
+	title= title
+block pagecontent
+	+header()
+	+page-head({
+		title, 
+		bg:'project-head.jpg',
+		p: `За&nbsp;последние 5&nbsp;лет институт участвовал в&nbsp;реализации крупных инфраструктурных проектов: Северо-Западная, Северо-Восточная и&nbsp;Юго-Восточная хорды, Южная рокада, дорога Солнцево-Бутово-Варшавское шоссе, станции Большой кольцевой линии метро, инфекционный госпиталь в&nbsp;Новой Москве, многофункциональный комплекс зданий Национального космического центра`
+		} ).page-head--h
+	//- +mainSlider()
+	//- +newsSlider()
+	//- +landingInfo
+	
+	//- +promo()
+	//- +promo2()
+	//- +newsPage03-1
+	+sProjectsMap()
+	
+	//- +partnersSlider
+	+footer
+
+block map
+	script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c')
+
+	script.
+			function init() {
+				const mark = 'img/svg/map.png';
+			const markColor = 'img/svg/map-color.png';
+			var center = [55.733, 37.588];
+			var map = new ymaps.Map('map', {
+				center: center,
+				zoom: 11,
+				controls: ['zoomControl']
+			});
+
+			function content(img, content) {
+				return `
+				<div class="custom-baloon">
+					<div class="custom-baloon__img-wrap"><img src="${img}"></div>
+					<div class="custom-baloon__caption">${content}</div>
+				</div>	`
+			}
+		
+			// Создадим коллекцию геообъектов.
+			var collection = new ymaps.GeoObjectCollection(null,
+				{
+					// hasBalloon: false,
+					hideIconOnBalloonOpen: false,
+					iconLayout: 'default#image',
+					iconImageHref: mark,
+					// Размеры метки.
+					iconImageSize: [32, 42],
+					// Смещение левого верхнего угла иконки относительно
+					// её "ножки" (точки привязки).
+					iconImageOffset: [-16, -20]
+				}
+			);
+
+			collection
+				.add(new ymaps.Placemark([55.733838, 37.588100], {
+					balloonContent: content("img/map.jpg"," Многоуровневые, транспортные, развязки, на, пересечении, автомобильной, дороги, «Солнцево-Бутово-Видное», с, Боровским, шоссе, и, Киевским, шоссе, с, необходимой, для, их, функционирования, улично-дорожной, сетью")
+				}))
+				.add(new ymaps.Placemark([55.758240, 37.678523], {
+					balloonContent: content("img/map.jpg"," Многоуровневые, транспортные, развязки, на, пересечении, автомобильной, дороги, «Солнцево-Бутово-Видное», с, Боровс ким, шоссе, и, Киевским, шоссе, с, необходимой, для, их, функционирования, улично-дорожной, сетью")
+				}))
+				.add(new ymaps.Placemark([55.693784, 37.564942], {
+					balloonContent: content("img/map.jpg"," Многоуровневые, транспортные, развязки, на, пересечении, автомобильной, дороги, «Солнцево-Бутово-Видное», с, Боровским, шоссе, и, Киевским, шоссе, с, необходимой, для, их, функционирования, улично-дорожной, сетью")
+				}));
+			map.geoObjects.add(collection);
+
+			collection.events
+				.add('balloonopen', e => {
+					var target = e.get('target');
+					target.options.set('iconImageHref', markColor);
+					$(".sProjectsMap__map-caption").html(`<div class="content">${target.properties.get('balloonContent')}</div><div class="closeButton"></div></div>`);
+				})
+				.add('balloonclose', (e) => e.get('target').options.set('iconImageHref', mark));
+
+			$(document).on('click', '.closeButton', function () {
+				$(".sProjectsMap__map-caption").html("");
+				map.balloon.close()
+				// $(document).
+			});
+
+			map.behaviors.disable('scrollZoom');
+			//на мобильных устройствах... (проверяем по userAgent браузера)
+			if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+				// ... отключаем перетаскивание карты
+				map.behaviors.disable('drag');
+			}
+			}
+
+	script.
+		ymaps.ready(init);

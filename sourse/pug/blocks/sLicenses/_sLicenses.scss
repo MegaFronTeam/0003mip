@@ -17,7 +17,16 @@
 		display: block;
 		position: relative;
 		max-width: rem(240);
+		margin-left: auto;
+		margin-right: auto;
+		picture {
+			@include mt;
+			filter: grayscale(1);
+		}
 		&:hover {
+			picture {
+				filter: grayscale(0);
+			}
 			.icon-search {
 				opacity: 1;
 			}
@@ -40,6 +49,7 @@
 	}
 	.swiper-button-hand {
 		background-color: #C5C5C5;
+		--swiperArrowPosition: 0;
 		// top: 100px;
 		// @include media-breakpoint-up(sm) {
 		// 	top: 108px;
