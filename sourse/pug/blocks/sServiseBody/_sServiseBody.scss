@@ -30,20 +30,25 @@
 		li{
 			// width: 50%;
 			@include media-breakpoint-up(sm) {
-
+				
 				min-width: 50%;
 				max-width: 500px;
 				flex: 1 0 0%;
-				border-top: 1px solid #D4D4D4;
-				padding-top: rem(24);
 				padding-right: rem(30);
 			} 
+			border-top: 1px solid #D4D4D4;
+			padding-top: rem(24);
 			padding-bottom: rem(24);
 			padding-left: rem(30);
 			position: relative;
-			&:nth-child(1),
+			&:nth-child(1){
+				
+				border: none;
+			}
+			@include media-breakpoint-up(sm) {
 			&:nth-child(2){
 				border: none;
+			}
 			}
 			&::before{
 				content: '';
@@ -51,9 +56,9 @@
 				left: 0;
 				@include media-breakpoint-up(sm) {
 
-					top: rem(24);
 				} 
 				top: rem(-2);
+				top: rem(24);
 				background-image: var(--list-style);
 				width: rem(24);
 				height: rem(24);

@@ -30,6 +30,27 @@
 			border-top: 1px solid #444444;
 			padding-top: rem(16);
 		}
+		@include media-breakpoint-down(md) {
+			&--flex{
+					display: flex;
+					flex-direction: row-reverse;
+					align-items: center;
+					p{
+						flex-grow: 1;
+						font-size: 18px;
+					}
+			}
+			p{
+				margin-right: -20px;
+				border-top: none;
+			}
+		}
+	}
+	&__col:not(:last-child) &__content{
+		@include media-breakpoint-down(md) {
+			border-bottom: 1px solid #444444;
+		}
+
 	}
 	@include media-breakpoint-up(xl) {} 
 	@include media-breakpoint-up(md) {}

@@ -62,6 +62,41 @@
 			// border-left: none;
 		}
 	}
+	.btn.btn--colorWhite.btn--bgBlack{
+		margin-top: 20px;
+		margin-bottom: 32px;
+	}
+
+	.slider__arrow{
+		position: absolute;
+		z-index: 20;
+		@include media-breakpoint-down(lg) {
+			display: flex !important;
+		}
+		@include media-breakpoint-up(lg) {
+			top: calc(50% - 140px);
+		}
+		
+		@include media-breakpoint-up(md) {
+			top: calc(50% - 100px);
+		}
+		top: calc(50% - 120px);
+		
+		&--prev{
+			@include media-breakpoint-up(md) {
+				left: -20px;
+			}
+			left: 0;
+		}
+		
+		&--next{
+			@include media-breakpoint-up(md) {
+			right: -20px;
+			}
+			right: 0;
+		}
+
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -70,3 +105,77 @@
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
 } // end.news
+
+.news__cards--projects{
+	@media (max-width: 1200px){
+		padding-top: 24px;
+	}
+	@media (max-width: 1000px){
+
+		padding: 24px 0 0;
+		.slick-track{
+			// display: block;
+			display: flex;
+			&::before,
+			&::after{
+				display: none;
+			}
+		}
+		// padding-top: 24px;
+	.slick-list{
+			
+			overflow: hidden !important;
+			margin: 0;
+			.news__cards{
+			}
+		}
+	}
+	@include media-breakpoint-down(md) {
+		.news__card-row{
+			display: block;
+		}
+	}
+	@include media-breakpoint-down(xl) {
+		.news__card{
+			background: none;
+			padding: 0;
+			&::before{
+				display: none;
+			}
+		}
+		.news__card{
+			width: 100%;
+		}
+		.news__img-wrap{
+			@include block(672, 414);
+		}
+		.p-3{
+			padding-left: 0 !important;
+			padding-right: 0 !important; 
+		}
+		.h5.mb-3{
+			font-size: 18px;
+			font-weight: normal;
+			max-width: rem(672); 
+		}
+		.news__card-row{
+			display: flex;
+			width: 100%;
+			// @include roww(20px);
+			.small{
+				position: relative;
+				border-left: 2px solid #000;
+				padding-left: 16px;
+				padding-right: 16px;
+				font-size: 14px;
+				height: auto;
+				margin-bottom: 1rem;
+				max-width: 340px;
+				flex-grow: 1;
+				.strong{
+					font-size: 20px;
+				}
+			}
+		}
+	}
+}

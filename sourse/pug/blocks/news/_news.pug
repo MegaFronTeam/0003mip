@@ -3,21 +3,22 @@ mixin newsItem()
 		+news__date()
 		p.news__text
 			| Институт «Мосинжпроект» участвует в создании знакового проекта Урала — «Притяжение»
-		+e.img-wrap
+		.news__img-wrap
 			img.news__photo(src='images/news/1.jpg' alt='')
 		
 mixin projectItem(t='Многоуровневые транспортные развязки, улично-дорожная-сеть на участке от ул. Лухмановская до границ с Московской областью')
 	a.news__card(href='#')&attributes(attributes)
-		+e.img-wrap
+		.news__img-wrap
 			img.news__photo(src='images/news/1.jpg' alt='')
 		.p-3.pb-0
 			.h5.mb-3= t
-			.small.mb-3
-				.strong.mb-1 Заказчик
-				| ГКУ «УДМС»
-			.small
-				.strong.mb-1 Период
-				| Проектирование: 2019-2020
+			.news__card-row
+				.small.mb-3
+					.strong.mb-1 Заказчик
+					| ГКУ «УДМС»
+				.small
+					.strong.mb-1 Период
+					| Проектирование: 2019-2020
 
 mixin newsbtn(t='показать больше новостей')
 	+e.footer.text-center.text-primary
@@ -29,6 +30,7 @@ mixin news(nl, t='Новости')
 	.news
 		.container
 			.news__content
+				
 				h2.news__title= t
 				if !nl
 					a.news__all.btn(href='#') Подробнее
@@ -39,6 +41,25 @@ mixin news(nl, t='Новости')
 						else
 							+projectItem
 	// end news
+
+mixin newsProject(nl, t='Новости')
+	// start news
+	.news
+		.container
+			.text-lg-left.text-center
+				h2.news__title= t
+			
+			.news__content.d-block
+				.news__cards.d-block.news__cards--projects.news__cards--2js
+					- for (var x = 0; x < 2; x++)
+						+projectItem
+					+projectItem("Многоуровневые транспортные развязки,")
+			.d-xl-none
+				a.btn.btn--colorWhite.btn--bgBlack(href='#') Наши проекты
+				
+	// end news
+
+
 mixin newsPage(data)
 	// start news
 	+b.news--page

@@ -362,10 +362,34 @@ function eventHandler() {
 		$(this).select2(
 			{
 				dropdownParent: th.parent(),
+				closeOnSelect: false
 				// placeholder: th.data("placeholder"), 
 			}
 			);
-		})
+	})
+	
+	
+	$('.news__cards--2js').slick({
+    // arrows: false,
+		nextArrow: `<div class="slider__arrow slider__arrow--next"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+						<path d="M15 17.5L9 11.5L15 5.5" stroke="currentColor" stroke-width="2"></path>
+					</svg></div>`,
+    prevArrow: `<div class="slider__arrow slider__arrow--prev"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+						<path d="M15 17.5L9 11.5L15 5.5" stroke="currentColor" stroke-width="2"></path>
+					</svg></div>`,
+    slidesToShow: 1,
+    mobileFirst: true,
+    infinite: true,
+    responsive: [ 
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 3
+        }
+      }
+    ]
+  })
+
 
 };
 if (document.readyState !== 'loading') {

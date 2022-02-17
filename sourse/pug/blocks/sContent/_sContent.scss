@@ -12,6 +12,12 @@
 		padding-top: var(--sPT);
 		padding-bottom: var(--sPT);
 
+		.docLine {
+			border-bottom: 1px solid rgba(68,68,68,.2);
+			border-top: none;
+			padding-bottom: rem(24);
+			padding-top: rem(24);
+	}
 	}
 	a{
 		&:not(.btn),

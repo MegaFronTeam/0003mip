@@ -19,6 +19,8 @@
 		}
 		a {
 			font-weight: 700;
+			display: inline-block;position: relative;
+			top: em(2);
 			&:hover {
 				color: #C7C7C7;
 			}
