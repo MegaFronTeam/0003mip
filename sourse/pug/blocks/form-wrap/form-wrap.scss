@@ -242,7 +242,9 @@ input::-webkit-inner-spin-button {
 	@include media-breakpoint-up(md) {
 		max-width: 282px;
 	}
+	@include media-breakpoint-down(md) {
 	width: 100% !important;
+	}
 	.select2-search{
 		display: flex;
 		align-items: center;
