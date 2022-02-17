@@ -48,6 +48,7 @@
     "animate.css": "^4.1.1",
     "inputmask": "^5.0.6",
     "jquery": "^3.6.0",
+    "select2": "^4.1.0-rc.0",
     "swiper": "^7.4.1",
     "wowjs": "^1.1.3"
   }

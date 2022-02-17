@@ -355,6 +355,18 @@ function eventHandler() {
 
 	convertImages('.img-svg');
 
+
+	$('.custom-select-multiple-js').each(function () {
+		
+		let th = $(this);
+		$(this).select2(
+			{
+				dropdownParent: th.parent(),
+				// placeholder: th.data("placeholder"), 
+			}
+			);
+		})
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

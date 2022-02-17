@@ -497,6 +497,7 @@ iframe {
 	background-color: #fff;
 	padding-top: rem(24 - 16);
 	padding-bottom: rem(24);
+	.select2-selection,
 	select {
 		background-color: #fff;
 		border-color: $primary;
@@ -505,6 +506,7 @@ iframe {
 		color: $primary;
 		font-size: 13px;
 		min-height: rem(40);
+		border-radius: 0;
 	}
 	&__input-wrap {
 		@include media-breakpoint-down(md) {

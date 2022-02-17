@@ -67,9 +67,9 @@ mixin newsPage03(data)
 				.row
 					.col
 						+e.btns
-							+input("ВСЕ ПРОЕКТЫ",'select')
-							+input("период",'select')
-							+input("местоположение",'select')
+							+select("ВСЕ ПРОЕКТЫ")
+							+select("период")
+							+select("местоположение")
 					.col-md-auto
 						+e.btns(style="--bs-gutter-x: 0")
 							+e.btn(href="#").active
@@ -92,9 +92,10 @@ mixin newsPage03-1(data)
 				.row
 					.col
 						+e.btns
-							+input("ВСЕ ПРОЕКТЫ",'select')
-							+input("период",'select')
-							+input("местоположение",'select')
+							//- +input("ВСЕ ПРОЕКТЫ",'select')
+							+select("ВСЕ ПРОЕКТЫ")
+							+select("период")
+							+select("местоположение")
 					.col-md-auto
 						+e.btns(style="--bs-gutter-x: 0")
 							+e.btn(href="#").active

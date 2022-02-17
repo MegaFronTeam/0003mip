@@ -31,15 +31,15 @@ mixin input(placeholder,  t='text', label, name= t)
 			+t(t,placeholder, name)&attributes(attributes)
 		block
 	// +e.input-wrap
-mixin select(label,pl,...items)
-	+e.input-wrap.form-group
-		label
-			+e.SPAN.title= label
-			+e.SELECT.input.form-control&attributes(attributes)
+mixin select(pl)
+	+e.input-wrap.form-group(style=`--title: "${pl}"`)
+			+e.SELECT.input.form-control.custom-select-multiple-js(multiple )&attributes(attributes)
 
-					option()= pl
-					each item in items
-						option()= item
+					option() Объекты метрополитена
+					option() Дорожные объекты
+					option() Дорожные объекты
+					option() Транспортно-пересадочные узлы
+					option() Благоустройство
 			block
 
 //- wrapper for form
