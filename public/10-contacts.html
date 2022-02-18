@@ -14,6 +14,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 <link rel="stylesheet" type="text/css" href="libs/swiper/swiper.min.css"/>
+		<link href="libs/select2/css/select2.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body class="page-base"> 
@@ -386,6 +387,7 @@
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="libs/select2/js/select2.full.min.js"> </script>
 		<script src="scripts/main.js"></script>
 		<script src="js/common.js"></script>
 		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c"></script>
@@ -411,6 +413,16 @@
 					iconImageOffset: [-40, -20]
 				});
 				myMap1.geoObjects.add(myPlacemark1);
+			
+				myPlacemark.events
+				.add('mouseenter', function (e) {
+						// Ссылку на объект, вызвавший событие,
+						// можно получить из поля 'target'.
+						e.get('target').options.set('iconImageHref', 'img/svg/map-mark.svg');
+				})
+				.add('mouseleave', function (e) {
+						e.get('target').options.unset('preset');
+				});
 				myMap1.behaviors.disable('scrollZoom');
 				//на мобильных устройствах... (проверяем по userAgent браузера)
 				if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
