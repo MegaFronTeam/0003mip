@@ -1,0 +1,23 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+include ../blocks/sSearch/_sSearch.pug
+//- include ../blocks/partnersSlider/_partnersSlider.pug
+
+block variables
+	- let  mainPage= 'page-base'
+	- let  bg= null
+
+block title
+	- let  title= 'Результаты поиска'
+	title= title
+block pagecontent
+	+header()
+	+page-head({
+		title
+		} ).page-head--text(style="background: #E6E6E6;")
+		+searchBlock()
+	+sSearch
+	+footer

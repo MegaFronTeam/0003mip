@@ -390,7 +390,22 @@ function eventHandler() {
     ]
   })
 
+	$('.sAboutTeam__card').hcSticky({
+    stickTo: $('.sAboutTeam__sidebar--js')
+  });
 
+	$(".toggle-search").click(function () {
+		$(this).parents('.header__search').toggleClass("active")
+			.find('.block-search-wrap').toggleClass("active")
+	})
+
+	document.addEventListener('mouseup', (event) => {
+		let container2 = event.target.closest("   .header__search.active"); 
+		if (!container2) { 
+				$(' .header__search.active').removeClass('active').find('.block-search-wrap').removeClass('active'); 
+			};
+	}, { passive: true });
+	
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

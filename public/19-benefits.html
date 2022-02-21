@@ -25,7 +25,17 @@
 					<li class="header__select"><a>О компании</a>
 						<div class="header__selectMenu">
 							<ul>
-								<li><a href="#">учредительные документы</a></li>
+								<li class="header__select"><a href="#">учредительные документы</a>
+									<div class="header__selectMenu">
+										<ul>
+											<li><a href="#">Реквизиты</a></li>
+											<li><a href="#">членство в сро</a></li>
+											<li><a href="#">Системы менеджмента</a></li>
+											<li><a href="#">закупочная деятельность</a></li>
+											<li><a href="#">защита персональных данных</a></li>
+										</ul>
+									</div>
+								</li>
 								<li><a href="#">Реквизиты</a></li>
 								<li><a href="#">членство в сро</a></li>
 								<li><a href="#">Системы менеджмента</a></li>
@@ -34,27 +44,30 @@
 							</ul>
 						</div>
 					</li>
-					<li class="header__select"><a>Деятельность</a>
-						<div class="header__selectMenu">
-							<ul>
-								<li><a href="#">учредительные документы</a></li>
-								<li><a href="#">Реквизиты</a></li>
-								<li><a href="#">членство в сро</a></li>
-								<li><a href="#">Системы менеджмента</a></li>
-								<li><a href="#">закупочная деятельность</a></li>
-								<li><a href="#">защита персональных данных</a></li>
-							</ul>
-						</div>
-					</li>
+					<li class="header__select"><a>Деятельность</a></li>
 					<li><a href="#">Проекты</a></li>
 					<li><a href="#">Новости</a></li>
 					<li><a href="#">Контакты</a></li>
 					<li><a href="#">О компании</a></li>
 				</ul>
 				<div class="header__search">
-					<svg class="icon icon-search ">
-						<use xlink:href="img/svg/sprite.svg#search"></use>
-					</svg>
+					<div class="toggle-search">
+						<svg class="icon icon-search ">
+							<use xlink:href="img/svg/sprite.svg#search"></use>
+						</svg>
+					</div>
+					<div class="block-search-wrap">
+						<div class="block-search">
+							<form>
+								<input type="text"/>
+								<button>
+									<svg class="icon icon-search ">
+										<use xlink:href="img/svg/sprite.svg#search"></use>
+									</svg>
+								</button>
+							</form>
+						</div>
+					</div>
 				</div>
 				<div class="header__lang">ENG</div>
 			</div>
@@ -430,6 +443,7 @@
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
 		<script src="libs/select2/js/select2.full.min.js"> </script>
+		<script src="libs/hc-sticky/hc-sticky.js"> </script>
 		<script src="scripts/main.js"></script>
 		<script src="js/common.js"></script>
 	</body>

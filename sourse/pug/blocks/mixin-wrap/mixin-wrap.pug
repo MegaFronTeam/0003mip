@@ -907,3 +907,11 @@ mixin docLine3(text)
 			.col-auto
 				img(src="img/svg/pdf-2.svg", alt="")
 			.col!= text
+
+
+mixin searchBlock()
+	+b.search-block
+		form
+			input(type="text")
+			button
+				+icon("search")

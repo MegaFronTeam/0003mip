@@ -37,3 +37,4 @@
 28. <https://megafronteam.github.io/0003mip/public/04-3proektirovanie_conten-9.html>
 29. <https://megafronteam.github.io/0003mip/public/04-3proektirovanie_conten-10.html>
 // направления
+1.  <https://megafronteam.github.io/0003mip/public/27-search.html>

@@ -704,3 +704,62 @@ iframe {
 .mainSlider{
 	background-color: $dark;
 }
+
+.mapBlock{
+	img{
+		@include mt;
+		&:not(:hover){
+			filter: saturate(0);
+		}
+	}
+}
+
+.search-block{
+	position: relative;
+	margin-bottom: rem(40);
+	margin-top: 10px;
+	input{
+		width: 100%;
+		background: #FFFFFF;
+		border-radius: 2px;
+		padding: rem(7) rem(12);
+		padding-right: rem(40);
+
+	}
+	button{
+		position: absolute;
+		padding-right: 8px;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background: none !important;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.icon{
+			font-size: 24px;
+		}
+	}
+}
+
+.header__search{
+	position: relative;
+	.block-search-wrap{
+		position: absolute;
+		right: 0;
+		width: rem(734);
+		// top: 50%;
+		transform-origin: right;
+		@include mt; 
+		max-width: calc(100vw - 200px );
+		visibility: var(--show, hidden);
+		transform: scaleX(var(--show, 0));
+		&.active{
+			--show: 1;
+		}
+
+	}
+	.search-block{
+		margin: 0;
+	}
+}
