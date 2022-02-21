@@ -21,7 +21,45 @@
     display: flex
     align-items: center
     cursor: pointer
-
+    .header__selectMenu
+      .header__select
+        width: 100%
+        display: block
+        position: relative
+        &::before
+          content: ''
+          position: absolute
+          left: 99%
+          width: 70px
+          height: 100%
+          top: 0
+        &:hover
+          &> a
+              opacity: 0.5
+          &::after
+            transform: rotate(-90deg) rotateX(180deg)
+            opacity: 0.5
+        & > a
+          padding-right: 20px
+        &::after
+          position: absolute
+          right: -5px
+          top: rem(6)
+          transform: rotate(-90deg) 
+          @include mt
+          background-size: contain
+          width: 24px
+          height: 24px
+      .header__selectMenu
+          background: #2B2B2B
+          top: -8px
+          left: calc(100% + 16px)
+          --bd: #444444
+          a
+            text-transform: none
+            font-weight: normal
+            &:hover
+              color: #A8A8A8
     a:hover:after
       display: none
 
@@ -34,30 +72,40 @@
       width: 16px
       height: 16px
       background:
-        image: url(../images/icons/arrowDropDown.png)
+        image: url(../img/svg/arrowDropDown.svg)
 
   &__selectMenu
     position: absolute
     top: 25px
     left: 0
     background: $dark_light
-    padding: 16px
+    padding: 8px 16px
+    
     width: max-content
     display: none
 
     ul
-      display: flex
-      flex-direction: column
+      display: block
+      // display: flex
+      // flex-direction: column
 
       li
-        padding-bottom: 8px
-        border-bottom: 1px solid $dark
-        margin-bottom: 8px
+        &:not(:last-child) 
+          a
+            border-bottom: 1px solid var(--bd,  $dark)
+
+          
+        a
+          padding-top: 10px
+          padding-bottom: 10px
+          display: block
 
         &:last-of-type
           padding-bottom: 5px
           border-bottom: none
           margin-bottom: 0
+          a
+            border: none
 
         a
           display: block
