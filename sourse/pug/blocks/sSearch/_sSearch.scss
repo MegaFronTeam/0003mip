@@ -1,15 +1,15 @@
 // start .sSearch
 .sSearch {
-		// --sPT: ;
+		--sPT: 0;
 		// --sPB: ;
 		// --sTPB: ;
 		background: #E6E6E6;
 	.secion-head{
 		background: #F0F0F0;
-		@include media-breakpoint-down(md) {
-			margin-left: calc(-1 * var(--gx) / 2);
-			margin-right: calc(-1 * var(--gx) / 2);
-		}
+		// @include media-breakpoint-down(md) {
+		// 	margin-left: calc(-1 * var(--gx) / 2);
+		// 	margin-right: calc(-1 * var(--gx) / 2);
+		// }
 	}
 	.secion-head__btns{
 		@include media-breakpoint-down(md) {
