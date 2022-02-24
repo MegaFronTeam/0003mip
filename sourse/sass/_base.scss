@@ -748,12 +748,20 @@ iframe {
 		align-items: center;
 		.icon{
 			font-size: 24px;
+			color: $body-color;
 		}
 	}
 }
-
+.header__lang{
+	position: relative;
+	top: rem(2);
+}
 .header__search{
 	position: relative;
+	.toggle-search{
+		display: flex;
+		align-items: center;
+	}
 	.block-search-wrap{
 		position: absolute;
 		right: 0;
