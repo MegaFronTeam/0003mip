@@ -4,6 +4,9 @@
 		// --sPB: ;
 		// --sTPB: ;
 		background: #DBDBDB;
+		.row{
+			--bs-gutter-y: 48px;
+		}
 		picture{
 			margin-bottom: rem(24);
 			@include mt;
@@ -22,11 +25,12 @@
 		}
 
 		.row{
-			--bs-gutter-y: var(--bs-gutter-x);
+			// --bs-gutter-y: var(--bs-gutter-x);
 		}
 		&__title{
 			@include rfs(20px);
 			margin-bottom: rem(16);
+			font-weight: 600;
 			span{
 				@include rfs(25px);
 				font-weight: bold;
