@@ -497,8 +497,8 @@ iframe {
 	background-color: #fff;
 	padding-top: rem(24 - 16);
 	padding-bottom: rem(24);
-	.select2-selection,
-	select {
+	&__input,
+	.select2-selection {
 		background-color: #fff;
 		border-color: $primary;
 		text-transform: uppercase;
@@ -507,6 +507,12 @@ iframe {
 		font-size: 13px;
 		min-height: rem(40);
 		border-radius: 0;
+		font-weight: 500;
+	}
+	&__input{
+		font-size: 13px !important;
+		font-weight: 700;
+		min-width: 250px;
 	}
 	&__input-wrap {
 		@include media-breakpoint-down(md) {
@@ -762,4 +768,8 @@ iframe {
 	.search-block{
 		margin: 0;
 	}
+}
+
+.litepicker .container__days .day-item.is-in-range{
+	color: #fff;
 }

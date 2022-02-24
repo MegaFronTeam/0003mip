@@ -405,6 +405,33 @@ function eventHandler() {
 				$(' .header__search.active').removeClass('active').find('.block-search-wrap').removeClass('active'); 
 			};
 	}, { passive: true });
+
+
+
+	let pickers = document.querySelectorAll(".input-date-picker-js");
+		pickers.forEach(el => {
+		
+			// console.log(el);
+			new Litepicker({
+				element: el,
+				singleMode: false,
+				dropdowns: {"minYear":1990,"maxYear":null,"months":true,"years":true},
+				// inlineMode: true,
+				allowRepick: true,
+				// selectBackward: true,
+				numberOfColumns: 2,
+				numberOfMonths: 2,
+				tooltipText: {
+					one: 'night',
+					other: 'nights'
+				},
+				tooltipNumber: (totalDays) => {
+					return totalDays - 1;
+				},
+				lang: 'ru-RU',
+				format: "DD.MM.YYYY",
+			})
+		});
 	
 };
 if (document.readyState !== 'loading') {
