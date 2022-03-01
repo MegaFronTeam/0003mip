@@ -4,16 +4,19 @@
   position: fixed
   background: #D4D4D4
   color: $dark
-  width: 100vw
+  width: 100%
   height: 100vh
-  display: flex
+  display: block
   top: 0
   left: 0
   z-index: -1
-  padding: 100px 48px 0
+  padding: 100px 48px 
+  overflow-y: auto
+
 
   @include mobile
     padding: 24px
+    padding-bottom: 60px
 
   &>ul
     &>li
@@ -25,8 +28,13 @@
         font-weight: 700
         text-transform: uppercase
         color: $dark
-        display: flex
         align-items: center
+        display: block
+        // display: flex
+        position: relative
+        padding-right: 40px
+        @media (min-width: 480px)
+          max-width: 350px
 
         &:after
           content: ''
@@ -34,6 +42,9 @@
             image: url(../images/icons/chevronBlack.png)
           width: 24px
           height: 24px
+          position: absolute
+          right: 0
+          top: em(3)
 
       @include mobile
         margin-bottom: 24px
@@ -49,29 +60,37 @@
   &__select
     &:focus-within
       .menu__selectMenu
-        display: block
+        // display: block
 
     &>a
       &:after
         transform: rotate(90deg)
-
+      &.active
+        &:after
+          transform: rotate(90deg) rotateY(180deg)
   &__subSelect
     &:focus-within
       .menu__subMenu
-        display: block
+        // display: block
 
     &>a
-      display: flex
-      align-items: center
-
+      display: inline-block 
+      padding-right: 20px
+      position: relative
+      // max-width: 270px
       &:after
         content: ''
         display: block
+        position: absolute
+        right: 0
+        top: em(5)
         background:
           image: url(../images/icons/arrowDropDown_small.png)
         width: 16px
         height: 16px
-
+      &.active
+        &:after
+          transform:   rotateX(180deg)
   &__selectMenu
     padding: 16px 0 0 24px
 
@@ -87,3 +106,7 @@
 
   &__subMenu
     padding: 16px 0 0 24px
+
+  .menu__subMenu.active,
+  .menu__selectMenu.active
+    display: block

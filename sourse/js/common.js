@@ -433,6 +433,11 @@ function eventHandler() {
 			})
 		});
 	
+	$("#mobileMenu").on("click", '.menu__select> a, .menu__subSelect> a', function (e) {
+		e.preventDefault();
+		// $(this).parents('li')
+		$(this).toggleClass("active").next().toggleClass("active")
+	})
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

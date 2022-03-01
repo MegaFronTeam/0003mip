@@ -79,9 +79,28 @@ mixin header()
 				.trigger__middle
 				.trigger__bottom
 		#mobileMenu.menu
+			.d-mob
+				+searchBlock()
 			ul
-				li
-					a(href='#') О компании
+				li.menu__select 
+					a О компании
+					
+					ul.menu__selectMenu
+						li.menu__subSelect
+							a(href='#') Проектирование
+							ul.menu__subMenu
+								li
+									a(href='#') Объекты метрополитена
+								li
+									a(href='#') Гражданские объекты
+								li
+									a(href='#') Дорожные объекты
+								li
+									a(href='#') Благоустройство
+								li
+									a(href='#') Транспортно-пересадочные узлы
+								li
+									a(href='#') Инженерные коммуникации
 				li.menu__select
 					a(href='#') Деятельность
 					ul.menu__selectMenu
