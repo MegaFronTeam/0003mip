@@ -5,12 +5,15 @@
 	// --sTPB: ;
 	background-color: #d4d4d4;
 	&__line-head{
-		background-color: #d4d4d4;
-		position: absolute;
-		height: 20px;
-		width: 100%;
-		top: 0;
-		left: 0;
+		&::before{
+			// content: '';
+			// background-color: #d4d4d4;
+			// position: absolute;
+			// height: 20px;
+			// width: 100%;
+			// top: 0;
+			// left: 0;
+		}
 	}
 	&__line {
 		position: absolute;
@@ -60,11 +63,12 @@
 			);
 		}
 		&::after {
-			background-image: url('../img/svg/mask5.png');
+			background-image: url('../img/svg/mask9.png');
 			// // z-index: -1;
-			background-repeat:  space ;
+			background-repeat:  round ;
+			// background-repeat: repeat;
 			background-size: 100%;
-			background-position-y: -43px;
+			background-position: 0 50%;
 		}
 
 		// mask-image: url('../img/svg/mask2.svg');
