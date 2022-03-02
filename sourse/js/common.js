@@ -438,6 +438,10 @@ function eventHandler() {
 		// $(this).parents('li')
 		$(this).toggleClass("active").next().toggleClass("active")
 	})
+
+	$(document).on("click", '.alert-block__close', function () {
+		$(this).parents('.alert-block ').removeClass('active')
+	})
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

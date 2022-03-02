@@ -95,5 +95,13 @@ mixin modal()
 							+e.BUTTON.btn.btn.--bgPrimary.--colorWhite(type="submit") Отправить
 							+policy2()
 	// #modal-call
+
+	+b.alert-block.active
+		+e.close
+			+icon('close')
+		+e.title
+			img(src="img/svg/alert.svg", alt="")
+			span Отправлено
+		p Ваше сообщение отправлено, Наши менеджер свяжется с вами.
 	
 	// end modals
