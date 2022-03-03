@@ -442,6 +442,41 @@ function eventHandler() {
 	$(document).on("click", '.alert-block__close', function () {
 		$(this).parents('.alert-block ').removeClass('active')
 	})
+
+
+
+
+		// We want to preview images, so we register
+	// the Image Preview plugin, We also register 
+	// exif orientation (to correct mobile image
+	// orientation) and size validation, to prevent
+	// large files from being added
+	FilePond.registerPlugin(
+		// encodes the file as base64 data
+		FilePondPluginFileEncode,
+	
+		// validates the size of the file
+		FilePondPluginFileValidateSize,
+		
+		// corrects mobile image orientation
+		FilePondPluginImageExifOrientation,
+		
+		// previews dropped images
+		FilePondPluginImagePreview
+	);
+
+	// Select the file input and use 
+	// create() to turn it into a pond
+	FilePond.create(
+		document.querySelector('.filepond'),
+		{
+			// labelIdle: `Drag & Drop your picture or <span class="filepond--label-action">Browse</span>`,
+			labelIdle: `Нажмите или перетащите  файлы в эту область. .rar .zip .doc .docx .pdf .jpg не более 10 мб`,
+		}
+	);
+
+	// How to use with Pintura Image Editor:
+	// https://pqina.nl/pintura/docs/latest/getting-started/installation/filepond/
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

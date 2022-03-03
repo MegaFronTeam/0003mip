@@ -18,7 +18,14 @@
 		}
 	}
 	&__title {
+		margin-bottom: rem(40); 
+	}
+	&__input-title {
 		margin-bottom: rem(40);
+		color: #A1A09D;
+		font-size: rem(14);
+		margin-bottom: rem(6);
+		display: inline-block;
 	}
 	&__input{
 		// @extend .form-control;
@@ -38,10 +45,6 @@
  		display: block;
 	}
 	span {
-		color: #A1A09D;
-		font-size: rem(14);
-		margin-bottom: rem(6);
-		display: inline-block;
 	}
 	textarea {
 		min-height: rem(120);

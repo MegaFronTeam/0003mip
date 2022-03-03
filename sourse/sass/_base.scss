@@ -825,3 +825,28 @@ iframe {
 						// }
 					}
 }
+
+
+
+.filepond--drop-label.filepond--drop-label label{
+	font-size: 12px;
+	color: #ABABAB;
+	display: block;
+	padding-left: 20px;
+	padding-right: 20px;
+
+}
+
+.filepond--drip{
+	border-radius: 4px;
+	border: 1px dashed  #ABABAB;
+	background: #ECECEC;
+	opacity: 1;
+	cursor: pointer;
+
+}
+
+.invalid-feedback{
+	display: block;
+	margin-top: 7px;
+}

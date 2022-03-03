@@ -15,6 +15,8 @@
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 <link rel="stylesheet" type="text/css" href="libs/swiper/swiper.min.css"/>
 		<link href="libs/select2/css/select2.min.css" rel="stylesheet"/>
+		<link href="libs/filepond/filepond.min.css" rel="stylesheet"/>
+		<link href="libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body class="page-base"> 
@@ -448,7 +450,7 @@
 									</div>
 									<!-- +e.input-wrap-->
 									<div class="form-wrap__input-wrap form-group">
-										<label><span class="form-wrap__input-title">E-mail *</span><input class="form-wrap__input form-control" name="email" type="email" placeholder="Введите e-mail" required="required"/><span class="required">*</span>
+										<label><span class="form-wrap__input-title">E-mail *</span><input class="form-wrap__input form-control border-danger" name="email" type="email" placeholder="Введите e-mail" required="required"/><span class="required">*</span>
 										</label><span class="required">*</span>
 									</div>
 									<!-- +e.input-wrap-->
@@ -457,6 +459,8 @@
 										</label><span class="required">*</span>
 									</div>
 									<!-- +e.input-wrap-->
+									<div class="invalid-feedback">Example invalid form file feedback</div>
+									<div class="form-wrap__input-title">Резюме, анкета</div><input type="file"  class="filepond" name="filepond"  multiple  data-allow-reorder="true" data-max-file-size="3MB" data-max-files="3">
 									<button class="form-wrap__btn btn btn--bgPrimary btn--colorWhite" type="submit">Отправить
 									</button>
 									<div class="form-wrap__policy"><small class="form-wrap__text text-secondary">Нажимая кнопку &laquo;Отправить&raquo;, я&nbsp;даю свое согласие на&nbsp;обработку своих <a href="#">персональных данных</a></small>
@@ -500,6 +504,11 @@
 		<script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"> </script>
 		<script src="https://cdn.jsdelivr.net/npm/litepicker/dist/plugins/multiselect.js"> </script>
 		<script src="scripts/main.js"></script>
+		<script src="https://unpkg.com/filepond-plugin-file-encode/dist/filepond-plugin-file-encode.min.js"> </script>
+		<script src="https://unpkg.com/filepond-plugin-file-validate-size/dist/filepond-plugin-file-validate-size.min.js"> </script>
+		<script src="https://unpkg.com/filepond-plugin-image-exif-orientation/dist/filepond-plugin-image-exif-orientation.min.js"> </script>
+		<script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.js"> </script>
+		<script src="https://unpkg.com/filepond/dist/filepond.min.js"> </script>
 		<script src="js/common.js"></script>
 	</body>
 </html>

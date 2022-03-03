@@ -88,10 +88,14 @@ mixin modal()
 								span.required *
 							+input('+7 (    )        -      -', 'tel', 'Контактный телефон *')(required)
 								span.required *
-							+input('Введите e-mail', 'email', 'E-mail *')(required)
+							+input('Введите e-mail', 'email', 'E-mail *')(required).border-danger
 								span.required *
 							+input('', 'textarea', 'Cопроводительное письмо *')(required)
 								span.required *
+							.invalid-feedback Example invalid form file feedback
+							.form-wrap__input-title Резюме, анкета
+							<input type="file"  class="filepond" name="filepond"  multiple  data-allow-reorder="true" data-max-file-size="3MB" data-max-files="3">
+								
 							+e.BUTTON.btn.btn.--bgPrimary.--colorWhite(type="submit") Отправить
 							+policy2()
 	// #modal-call
