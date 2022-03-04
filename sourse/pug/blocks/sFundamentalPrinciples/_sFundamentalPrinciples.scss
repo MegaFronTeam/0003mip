@@ -17,6 +17,7 @@
 	h2 {
 		max-width: rem(897);
 		margin-bottom: rem(37);
+		letter-spacing: 0.5px;
 		@include media-breakpoint-up(md) {
 			margin-bottom: rem(86);
 		}

@@ -173,6 +173,15 @@
 					color: $dark;
 				}
 			}
+			&--sm-spacing{
+				@include d {
+
+					padding-top: 31px;
+				}
+				h1{
+					margin-bottom: 0px;
+				}
+			}
 			&--text{
 
 				--minH: 1px !important;

@@ -5,6 +5,9 @@
 	padding-bottom: 0;
 	position: relative;
 	z-index: 2;
+	p{
+		line-height: calc(24 / 16);
+	}
 	.mainSlider__particles{
 		z-index: -1;
 	}

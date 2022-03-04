@@ -10,7 +10,18 @@
 	}
 	h3 {
 		margin-bottom: rem(16);
+		text-transform: none;
+		letter-spacing: -0.5px; 
+		color: #444444;
+		max-width: 700px;
 	}
+	&__head{
+		p{
+			font-size: 18px;
+			max-width: 1100px;
+		}
+	}
+	
 	.container {
 		& > p {
 			margin-bottom: rem(40);
