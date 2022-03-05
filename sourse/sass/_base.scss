@@ -859,3 +859,11 @@ iframe {
 	padding-left: 0 !important;
 	padding-right: 0 !important;
 }
+
+
+.landingInfo__number {
+	&::before {
+		content:  attr(data-currentNumber);
+		display: inline; 
+			}
+	}

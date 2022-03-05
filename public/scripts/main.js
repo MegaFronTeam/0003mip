@@ -195,14 +195,16 @@
       counters.forEach( counter => {
         const animate = () => {
           const value = +counter.getAttribute('data-number');
-          const data = +counter.innerText;
-
+          const data = +counter.innerText; 
+          
           const increment = Math.ceil(value / time);
 
-          if(data < value) {
+          if (data < value) {
+            counter.setAttribute('data-currentNumber', Math.ceil(data + increment));
             counter.innerText = Math.ceil(data + increment);
             setTimeout(animate, 1);
           } else {
+            counter.setAttribute('data-currentNumber', value);
             counter.innerText = value;
           }
 
