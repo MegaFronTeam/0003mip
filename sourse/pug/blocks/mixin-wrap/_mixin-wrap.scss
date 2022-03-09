@@ -309,9 +309,14 @@
 		@include media-breakpoint-up(sm){
 
 		}
-		border-top: 1px solid rgba($color: #444444, $alpha: .2);
+		border-top: 1px solid #c6c6c6;
+		&:not(:last-child){
+			border-bottom: 1px solid #c6c6c6;
+		}
+		&:first-child{
+			border-bottom: 1px solid #c6c6c6;
 
-		border-bottom: 1px solid rgba($color: #444444, $alpha: .2);
+		}
 		margin-top: -1px;
 		padding-top: rem(12);
 		padding-bottom: rem(12);

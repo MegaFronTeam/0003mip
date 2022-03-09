@@ -20,6 +20,7 @@
 	}
 	&__row {
 		margin-bottom: rem(35);
+		counter-reset: num;
 		@include media-breakpoint-up(md) {
 			margin-bottom: rem(60);
 		}
@@ -27,6 +28,18 @@
 			margin-bottom: rem(54);
 		}
 		.col-md-6 {
+			&::before {
+				content: counter(num);
+				counter-increment: num;
+				display: block;
+				font-size: rem(40);
+				@include media-breakpoint-up(md) {
+					font-size: rem(38);
+				}
+				@include media-breakpoint-up(lg) {
+					font-size: rem(62);
+				}
+			}
 			&:first-child {
 				p {
 					margin-bottom: rem(24);
@@ -47,6 +60,7 @@
 		}
 	}
 	span {
+		display: none;
 		font-size: rem(40);
 		@include media-breakpoint-up(md) {
 			font-size: rem(38);

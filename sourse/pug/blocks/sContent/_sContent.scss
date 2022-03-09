@@ -5,6 +5,9 @@
 	padding-bottom: 0;
 	position: relative;
 	z-index: 2;
+	&--spb{
+		padding-bottom: 40px;
+	}
 	p{
 		line-height: calc(24 / 16);
 	}

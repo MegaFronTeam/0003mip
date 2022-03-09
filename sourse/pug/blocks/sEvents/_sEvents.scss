@@ -139,7 +139,9 @@
 					font-size: rem(62);
 				}
 			}
-			&:last-child {
+			&:last-child,
+			&:last-child::before {
+				
 				font-weight: 700;
 				font-size: rem(14);
 				@include media-breakpoint-up(lg) {
@@ -194,3 +196,15 @@
 	@include media-breakpoint-down(xl) {
 	}
 } // end.sEvents
+
+
+[lang="en"] {
+	.sEvents__head span:last-child{
+		font-size: 0;
+		&::before{
+			content: 'year';
+			font-size: 1rem;
+		}
+		// content: 'year';
+	}
+}

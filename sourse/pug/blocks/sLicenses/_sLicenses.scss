@@ -4,6 +4,9 @@
 	// --sPB: ;
 	// --sTPB: ;
 	background-color: #D4D4D4;
+	.swiper-wrapper{
+		align-items: center;
+	}
 	h2 {
 		margin-bottom: rem(16);
 		@include media-breakpoint-up(sm) {
