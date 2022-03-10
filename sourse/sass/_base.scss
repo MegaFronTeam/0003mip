@@ -627,9 +627,17 @@ iframe {
 			&::after {
 				background-image: url(../img/svg/chevron-down.svg);
 			}
+		
 		}
 		.icon-search {
 			color: $dark;
+		}
+	}
+	.header__selectMenu{
+		.header__select {
+			&::after {
+				background-image: url(../img/svg/arrowDropDown.svg);
+			}
 		}
 	}
 	.breadcrumb-wrap {
@@ -866,4 +874,8 @@ iframe {
 		content:  attr(data-currentNumber);
 		display: inline; 
 			}
+	}
+
+	.header__desktop>ul>li.header__select>a {
+		pointer-events: none;
 	}

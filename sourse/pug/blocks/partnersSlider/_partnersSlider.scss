@@ -3,6 +3,28 @@
 		// --sPT: ;
 		// --sPB: ;
 		// --sTPB: ;
+		.slick-track{
+			&::before,
+			&::after{
+				display: none;
+			}
+			display: flex;
+		}
+		&__slide{
+			display: flex !important;
+			flex-direction: column;
+			height: auto;
+			// border: 1px solid #000;
+			p{
+				// flex-grow: 1;
+			}
+		}
+		&__img-wrap{
+			flex-grow: 1;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
