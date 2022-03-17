@@ -260,6 +260,9 @@ input::-webkit-inner-spin-button {
 			white-space: nowrap;
 			font-weight: bold;
 			font-size: 13px;
+			max-width: calc(100% - #{rem(0)});
+			overflow: hidden;
+			text-overflow: ellipsis
 		}
 	}
 	// select2-search
