@@ -433,11 +433,25 @@ function eventHandler() {
 			})
 		});
 	
-	$("#mobileMenu").on("click", '.menu__select> a, .menu__subSelect> a', function (e) {
+	$("#mobileMenu").on("click", '.menu__select> a', function (e) {
 		e.preventDefault();
 		// $(this).parents('li')
 		$(this).toggleClass("active").next().toggleClass("active")
+	}) 
+	document.querySelector("#mobileMenu").addEventListener("click", function (e) {
+		let a = e.target.closest('a');
+		let ul = e.target.closest('.menu__subMenu');
+		let toggle = e.target.closest('.menu__subSelect');
+		if (a || ul || !toggle) return; 
+		toggle.classList.toggle('active');
+		$(toggle.querySelector('ul')).slideToggle();
 	})
+	// $("#mobileMenu").on("click", '.menu__select> a, .menu__subSelect> a', function (e) {
+	// 	e.preventDefault();
+	// 	// $(this).parents('li')
+	// 	$(this).toggleClass("active").next().toggleClass("active")
+	// })
+
 
 	$(document).on("click", '.alert-block__close', function () {
 		$(this).parents('.alert-block ').removeClass('active')
