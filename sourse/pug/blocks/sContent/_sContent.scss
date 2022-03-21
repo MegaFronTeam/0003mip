@@ -548,6 +548,17 @@
 	}
 }
 
+
+.figure-wrap{
+	position: relative;
+	&__title{
+		content: 'Проектирование';
+		@include a-cent1;
+		@include rfs(34px);
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+}
 .sContent .figure{
 	position: relative;
 	.btn{
@@ -568,11 +579,11 @@
 
 		font-size: 14px;
 		&::before{
-			content: 'Проектирование';
-			@include a-cent1;
-			@include rfs(34px);
-			font-weight: bold;
-			text-transform: uppercase;
+			// content: 'Проектирование';
+			// @include a-cent1;
+			// @include rfs(34px);
+			// font-weight: bold;
+			// text-transform: uppercase;
 		}
 	}
 	p{

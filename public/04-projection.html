@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<title>Проектирование</title>
@@ -15,6 +15,8 @@
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 <link rel="stylesheet" type="text/css" href="libs/swiper/swiper.min.css"/>
 		<link href="libs/select2/css/select2.min.css" rel="stylesheet"/>
+		<link href="libs/filepond/filepond.min.css" rel="stylesheet"/>
+		<link href="libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body> 
@@ -57,7 +59,7 @@
 						</svg>
 					</div>
 					<div class="block-search-wrap">
-						<div class="block-search">
+						<div class="search-block">
 							<form>
 								<input type="text"/>
 								<button>
@@ -73,9 +75,23 @@
 			</div>
 			<div class="header__mobile container"><a class="header__logo" href="/"><img src="images/Logo_mobile.svg" alt=""/></a>
 				<div class="header__search">
-					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-						<path fill-rule="evenodd" clip-rule="evenodd" d="M14.71 14H15.5L20.49 19L19 20.49L14 15.5V14.71L13.73 14.43C12.59 15.41 11.11 16 9.5 16C5.91 16 3 13.09 3 9.5C3 5.91 5.91 3 9.5 3C13.09 3 16 5.91 16 9.5C16 11.11 15.41 12.59 14.43 13.73L14.71 14ZM5.00013 9.49998C5.00013 11.99 7.01013 14 9.50013 14C11.9901 14 14.0001 11.99 14.0001 9.49998C14.0001 7.00998 11.9901 4.99998 9.50013 4.99998C7.01013 4.99998 5.00013 7.00998 5.00013 9.49998Z" fill="currentColor"></path>
-					</svg>
+					<div class="toggle-search">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M14.71 14H15.5L20.49 19L19 20.49L14 15.5V14.71L13.73 14.43C12.59 15.41 11.11 16 9.5 16C5.91 16 3 13.09 3 9.5C3 5.91 5.91 3 9.5 3C13.09 3 16 5.91 16 9.5C16 11.11 15.41 12.59 14.43 13.73L14.71 14ZM5.00013 9.49998C5.00013 11.99 7.01013 14 9.50013 14C11.9901 14 14.0001 11.99 14.0001 9.49998C14.0001 7.00998 11.9901 4.99998 9.50013 4.99998C7.01013 4.99998 5.00013 7.00998 5.00013 9.49998Z" fill="currentColor"></path>
+						</svg>
+					</div>
+					<div class="block-search-wrap">
+						<div class="search-block">
+							<form>
+								<input type="text"/>
+								<button>
+									<svg class="icon icon-search ">
+										<use xlink:href="img/svg/sprite.svg#search"></use>
+									</svg>
+								</button>
+							</form>
+						</div>
+					</div>
 				</div>
 				<div class="header__trigger trigger">
 					<div class="trigger__top"></div>
@@ -84,8 +100,33 @@
 				</div>
 			</div>
 			<div class="menu" id="mobileMenu">
+				<div class="d-mob">
+					<div class="search-block">
+						<form>
+							<input type="text"/>
+							<button>
+								<svg class="icon icon-search ">
+									<use xlink:href="img/svg/sprite.svg#search"></use>
+								</svg>
+							</button>
+						</form>
+					</div>
+				</div>
 				<ul>
-					<li><a href="#">О компании</a></li>
+					<li class="menu__select"> <a>О компании</a>
+						<ul class="menu__selectMenu">
+							<li class="menu__subSelect"><a href="#">Проектирование</a>
+								<ul class="menu__subMenu">
+									<li><a href="#">Объекты метрополитена</a></li>
+									<li><a href="#">Гражданские объекты</a></li>
+									<li><a href="#">Дорожные объекты</a></li>
+									<li><a href="#">Благоустройство</a></li>
+									<li><a href="#">Транспортно-пересадочные узлы</a></li>
+									<li><a href="#">Инженерные коммуникации</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
 					<li class="menu__select"><a href="#">Деятельность</a>
 						<ul class="menu__selectMenu">
 							<li class="menu__subSelect"><a href="#">Проектирование</a>
@@ -129,79 +170,83 @@
 			<div class="container container--sm">
 				<p>Проектирование каждого объекта осуществляется с использованием новейших достижений технического прогресса с обязательным учетом перспективного развития города.</p>
 				<p>Помимо проектирования объектов инженерно-транспортной инфраструктуры, институт занимается подготовкой территорий для строительства метрополитена. В рамках данного направления осуществляется работа по освобождению площадок, переустройству и выносу инженерных коммуникаций из зоны строительства, масштабному благоустройству территорий, прилегающих к станциям метрополитена.</p>
-				<div class="figure">
-					<a class="figure__item" href="#">
-						<div class="figure__icon-wrap"><img src="img/svg/fig-1.svg" alt=""/>
-						</div>
-						<div class="figure__inner">
-							<div class="figure__title">Объекты дорожно-мостового строительства
+				<div class="figure-wrap">
+					<div class="figure-wrap__title d-none d-md-block">Проектирование
+					</div>
+					<div class="figure">
+						<a class="figure__item" href="#">
+							<div class="figure__icon-wrap"><img src="img/svg/fig-1.svg" alt=""/>
 							</div>
-							<p>Комплексное проектирование объектов дорожно-транспортной инфраструктуры</p>
-							<div class="d-md-none"> 
-								<div class="btn btn--colorPrimary">Подробнее</div>
+							<div class="figure__inner">
+								<div class="figure__title">Объекты дорожно-мостового строительства
+								</div>
+								<p>Комплексное проектирование объектов дорожно-транспортной инфраструктуры</p>
+								<div class="d-md-none"> 
+									<div class="btn btn--colorPrimary">Подробнее</div>
+								</div>
 							</div>
-						</div>
-					</a>
-					<a class="figure__item" href="#">
-						<div class="figure__icon-wrap"><img src="img/svg/fig-2.svg" alt=""/>
-						</div>
-						<div class="figure__inner">
-							<div class="figure__title">Инженерные коммуникации
+						</a>
+						<a class="figure__item" href="#">
+							<div class="figure__icon-wrap"><img src="img/svg/fig-2.svg" alt=""/>
 							</div>
-							<p>Проектирование инженерных сооружений и&nbsp;коммуникаций всех видов</p>
-							<div class="d-md-none"> 
-								<div class="btn btn--colorPrimary">Подробнее</div>
+							<div class="figure__inner">
+								<div class="figure__title">Инженерные коммуникации
+								</div>
+								<p>Проектирование инженерных сооружений и&nbsp;коммуникаций всех видов</p>
+								<div class="d-md-none"> 
+									<div class="btn btn--colorPrimary">Подробнее</div>
+								</div>
 							</div>
-						</div>
-					</a>
-					<a class="figure__item" href="#">
-						<div class="figure__icon-wrap"><img src="img/svg/fig-3.svg" alt=""/>
-						</div>
-						<div class="figure__inner">
-							<div class="figure__title">Объекты метрополитена
+						</a>
+						<a class="figure__item" href="#">
+							<div class="figure__icon-wrap"><img src="img/svg/fig-3.svg" alt=""/>
 							</div>
-							<p>Комплексное проектирование линий метрополитена</p>
-							<div class="d-md-none"> 
-								<div class="btn btn--colorPrimary">Подробнее</div>
+							<div class="figure__inner">
+								<div class="figure__title">Объекты метрополитена
+								</div>
+								<p>Комплексное проектирование линий метрополитена</p>
+								<div class="d-md-none"> 
+									<div class="btn btn--colorPrimary">Подробнее</div>
+								</div>
 							</div>
-						</div>
-					</a>
-					<a class="figure__item" href="#">
-						<div class="figure__icon-wrap"><img src="img/svg/fig-4.svg" alt=""/>
-						</div>
-						<div class="figure__inner">
-							<div class="figure__title">Гражданские объекты
+						</a>
+						<a class="figure__item" href="#">
+							<div class="figure__icon-wrap"><img src="img/svg/fig-4.svg" alt=""/>
 							</div>
-							<p>Проектирование жилых и&nbsp;общественных зданий</p>
-							<div class="d-md-none"> 
-								<div class="btn btn--colorPrimary">Подробнее</div>
+							<div class="figure__inner">
+								<div class="figure__title">Гражданские объекты
+								</div>
+								<p>Проектирование жилых и&nbsp;общественных зданий</p>
+								<div class="d-md-none"> 
+									<div class="btn btn--colorPrimary">Подробнее</div>
+								</div>
 							</div>
-						</div>
-					</a>
-					<a class="figure__item" href="#">
-						<div class="figure__icon-wrap"><img src="img/svg/fig-5.svg" alt=""/>
-						</div>
-						<div class="figure__inner">
-							<div class="figure__title">Благоустройство территории
+						</a>
+						<a class="figure__item" href="#">
+							<div class="figure__icon-wrap"><img src="img/svg/fig-5.svg" alt=""/>
 							</div>
-							<p>Разработка проектных решений по&nbsp;благоустройству и&nbsp;озеленению территорий</p>
-							<div class="d-md-none"> 
-								<div class="btn btn--colorPrimary">Подробнее</div>
+							<div class="figure__inner">
+								<div class="figure__title">Благоустройство территории
+								</div>
+								<p>Разработка проектных решений по&nbsp;благоустройству и&nbsp;озеленению территорий</p>
+								<div class="d-md-none"> 
+									<div class="btn btn--colorPrimary">Подробнее</div>
+								</div>
 							</div>
-						</div>
-					</a>
-					<a class="figure__item" href="#">
-						<div class="figure__icon-wrap"><img src="img/svg/fig-6.svg" alt=""/>
-						</div>
-						<div class="figure__inner">
-							<div class="figure__title">Транспортно-пересадочные узлы 
+						</a>
+						<a class="figure__item" href="#">
+							<div class="figure__icon-wrap"><img src="img/svg/fig-6.svg" alt=""/>
 							</div>
-							<p>Проектирование технологической (транспортной) части ТПУ</p>
-							<div class="d-md-none"> 
-								<div class="btn btn--colorPrimary">Подробнее</div>
+							<div class="figure__inner">
+								<div class="figure__title">Транспортно-пересадочные узлы 
+								</div>
+								<p>Проектирование технологической (транспортной) части ТПУ</p>
+								<div class="d-md-none"> 
+									<div class="btn btn--colorPrimary">Подробнее</div>
+								</div>
 							</div>
-						</div>
-					</a>
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -385,7 +430,7 @@
 									</div>
 									<!-- +e.input-wrap-->
 									<div class="form-wrap__input-wrap form-group">
-										<label><span class="form-wrap__input-title">E-mail *</span><input class="form-wrap__input form-control" name="email" type="email" placeholder="Введите e-mail" required="required"/><span class="required">*</span>
+										<label><span class="form-wrap__input-title">E-mail *</span><input class="form-wrap__input form-control border-danger" name="email" type="email" placeholder="Введите e-mail" required="required"/><span class="required">*</span>
 										</label><span class="required">*</span>
 									</div>
 									<!-- +e.input-wrap-->
@@ -394,6 +439,8 @@
 										</label><span class="required">*</span>
 									</div>
 									<!-- +e.input-wrap-->
+									<div class="invalid-feedback">Example invalid form file feedback</div>
+									<div class="form-wrap__input-title">Резюме, анкета</div><input type="file"  class="filepond" name="filepond"  multiple  data-allow-reorder="true" data-max-file-size="3MB" data-max-files="3">
 									<button class="form-wrap__btn btn btn--bgPrimary btn--colorWhite" type="submit">Отправить
 									</button>
 									<div class="form-wrap__policy"><small class="form-wrap__text text-secondary">Нажимая кнопку &laquo;Отправить&raquo;, я&nbsp;даю свое согласие на&nbsp;обработку своих <a href="#">персональных данных</a></small>
@@ -406,6 +453,17 @@
 			</div>
 		</div>
 		<!-- #modal-call-->
+		<!-- class .active для показа-->
+		<div class="alert-block">
+			<div class="alert-block__close">
+				<svg class="icon icon-close ">
+					<use xlink:href="img/svg/sprite.svg#close"></use>
+				</svg>
+			</div>
+			<div class="alert-block__title"><img src="img/svg/alert.svg" alt=""/><span>Отправлено</span>
+			</div>
+			<p>Ваше сообщение отправлено, Наши менеджер свяжется с вами.</p>
+		</div>
 		<!-- end modals-->
 		<link href="libs/animate.css/animate.min.css" rel="stylesheet"/>
 		<script src="libs/jquery/jquery.min.js"></script>
@@ -424,7 +482,14 @@
 		<script src="libs/inputmask/inputmask.min.js"> </script>
 		<script src="libs/select2/js/select2.full.min.js"> </script>
 		<script src="libs/hc-sticky/hc-sticky.js"> </script>
+		<script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"> </script>
+		<script src="https://cdn.jsdelivr.net/npm/litepicker/dist/plugins/multiselect.js"> </script>
 		<script src="scripts/main.js"></script>
+		<script src="https://unpkg.com/filepond-plugin-file-encode/dist/filepond-plugin-file-encode.min.js"> </script>
+		<script src="https://unpkg.com/filepond-plugin-file-validate-size/dist/filepond-plugin-file-validate-size.min.js"> </script>
+		<script src="https://unpkg.com/filepond-plugin-image-exif-orientation/dist/filepond-plugin-image-exif-orientation.min.js"> </script>
+		<script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.js"> </script>
+		<script src="https://unpkg.com/filepond/dist/filepond.min.js"> </script>
 		<script src="js/common.js"></script>
 	</body>
 </html>
