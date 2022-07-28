@@ -1,9 +1,28 @@
 mixin sContact()
 	// start sContact
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 sContact
-				
-			.row
+		.container.container--sm
+			+e.wrap
+				+b.section-title
+					h2 КОНТАКТЫ
+					+e.row.row
+						.col-md
+							h3 Варосян Артур Мушегович
+							p Начальник отдела оценки влияния строительства и противоаварийных мероприятий
+						+e.col.col-md-auto
+							a(href="tel:+74952251940p5249")
+								+icon('phone')
+								| +7 (495) 225-19-40, доб. 5249
+							a(href="tel:+79661950442")
+								+icon('phone')
+								| +7 (966) 195-04-42
+				+b.docLine.d-block(href="#").text-body&attributes(attributes)
+					.row
+						.col-auto
+							img(src="img/svg/pdf.svg", alt="")
+						.col-auto Требование к документации для согласования
+						.col-sm-auto
+							+e.btn.btn.btn--bgBlack
+								+icon("download")
+								| Скачать
 	// end sContact

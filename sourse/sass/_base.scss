@@ -888,3 +888,24 @@ iframe {
 			padding-top: 0;
 		 }
 	}
+
+.agreement-page {
+	.page-head {
+		h1 {
+			@extend .h2;
+			color: #fff;
+			text-shadow: none;
+			max-width: rem(1052);
+			&::before {
+				content: unset;
+			}
+		}
+		.btn {
+			&--bgWhite {
+				&::after {
+					content: unset;
+				}
+			}
+		}
+	}
+}

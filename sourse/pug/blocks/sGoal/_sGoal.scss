@@ -1,0 +1,111 @@
+// start .sGoal
+.sGoal {
+	--sPT: #{rem(40)};
+	--sPB: #{rem(28)};
+	// --sTPB: ;
+	background-color: $light;
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(80)};
+		--sPB: #{rem(56)};
+	}
+	.section-title {
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(60);
+		}
+		h4 {
+			text-transform: initial;
+			margin-bottom: rem(14);
+		}
+		p {
+			margin-bottom: rem(0);
+			&:not(:last-child) {
+				margin-bottom: rem(23);
+			}
+		}
+	}
+	h3 {
+		text-transform: initial;
+		margin-bottom: rem(30);
+	}
+	&__row {
+		--bs-gutter-x: #{rem(16)};
+		--bs-gutter-y: #{rem(16)};
+		margin-bottom: rem(16);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(24);
+		}
+	}
+	&__item {
+		position: relative;
+		padding: rem(24) rem(24) rem(24) rem(24);
+		background-color: #fff;
+		height: 100%;
+		@include media-breakpoint-up(lg) {
+			padding: rem(24) rem(120) rem(24) rem(24);
+		}
+		picture {
+			img {
+				object-position: top;
+			}
+		}
+		h5 {
+			margin-bottom: rem(6);
+			font-weight: 700;
+			text-transform: initial;
+			max-width: rem(305);
+		}
+		p {
+			max-width: rem(305);
+			font-size: rem(14);
+			margin-bottom: 0;
+			line-height: 1.29em;
+		}
+		.icon {
+			width: 44px;
+			height: 44px;
+			margin-bottom: rem(8);
+			@include media-breakpoint-up(lg) {
+				width: rem(88);
+				height: rem(88);
+				margin-bottom: 0;
+				position: absolute;
+				right: 24px;
+				top: 24px;
+			}
+		}
+	}
+	&__warning {
+		border: 1px solid $primary;
+		padding: rem(16);
+		display: flex;
+		color: $primary;
+		flex-direction: column;
+		margin-bottom: rem(23);
+		@include media-breakpoint-up(lg) {
+			flex-direction: row;
+			margin-bottom: rem(46);
+		}
+		.icon {
+			flex: 0 0 auto;
+			font-size: rem(24);
+			margin-bottom: rem(16);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: 0;
+				margin-right: rem(16);
+			}
+		}
+	}
+	&__footer {
+		p {
+			margin-bottom: rem(25);
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {} 
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {} 
+	@include media-breakpoint-down(xl) {}
+} // end.sGoal

@@ -1,9 +1,14 @@
 mixin sForm()
 	// start sForm
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 sForm
-				
-			.row
+		.container.container--sm
+			+form-wrap()
+				h3 Обратная связь
+				+input('Введите имя', 'text', 'Имя *')
+				+input('Ввдите название компании', 'text', 'Компания *')
+				+input('Введите e-mail', 'email', 'E-mail *')
+				+input('', 'text', 'Тема *')
+				+input('', 'textarea', 'Ваше сообщение *')
+				+e.btn.BUTTON(type="submit").btn.btn--bgPrimary.btn--colorWhite Отправить
+				+policy2()
 	// end sForm

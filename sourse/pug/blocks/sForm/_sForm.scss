@@ -1,7 +1,52 @@
 
-	// start .sForm
-	.sForm {
-		 
-	
+// start .sForm
+.sForm {
+	padding-top: 0;
+	padding-bottom: rem(52);
+	background-color: #e6e6e6;
+	.form-wrap {
+		padding: rem(20) rem(30) rem(25);
+		background-color: #D4D4D4;
+		@include media-breakpoint-up(lg) {
+			padding: rem(30) rem(78) rem(55);
+		}
+		h3 {
+			text-transform: initial;
+			margin-bottom: rem(26);
+		}
+		&__input-wrap {
+			margin-bottom: rem(15);
+		}
+		&__input-title {
+			color: $dark;
+			margin-bottom: rem(4);
+			font-size: rem(14);
+		}
+		&__input {
+			background-color: #fff;
+			border: 1px solid #BCBCBC;
+			border-radius: 2px;
+			&::placeholder {
+				color: #D4D4D4;
+				font-size: rem(18);
+			}
+		}
+		textarea {
+			min-height: rem(120);
+			@include media-breakpoint-up(lg) {
+				min-height: rem(192);
+			}
+		}
+		&__btn {
+			width: 100%;
+			&::after {
+				content: unset;
+			}
+		}
+		&__policy {
+			text-align: left;
+			color: #36332C !important;
+		}
+	}
 
 } // end.sForm

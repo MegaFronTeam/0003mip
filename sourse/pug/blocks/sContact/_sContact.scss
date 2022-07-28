@@ -1,7 +1,56 @@
 
-	// start .sContact
-	.sContact {
-		 
-	
-
+// start .sContact
+.sContact {
+	padding-top: 0;
+	padding-bottom: rem(48);
+	background-color: #e6e6e6;
+	&__wrap {
+		background-color: #D4D4D4;
+	}
+	.section-title {
+		padding: rem(46) rem(46) rem(40) rem(40);
+		border-bottom: 1px solid #BCBCBC;
+		margin-bottom: 0;
+		&__row {
+			--bs-gutter-y: #{rem(20)};
+		}
+		h2 {
+			color: $dark;
+			margin-bottom: rem(38);
+		}
+		h3 {
+			color: #444444;
+			margin-bottom: rem(6);
+			text-transform: initial;
+		}
+		p {
+			color: #444444;
+			margin-bottom: 0;
+			font-size: rem(14);
+		}
+		&__col {
+			display: flex;
+			flex-direction: column;
+			// align-items: center;
+			.icon {
+				flex: 0 0 auto;
+				font-size: rem(24);
+				margin-right: rem(7);
+				color: $primary;
+				vertical-align: top;
+			}
+			a {
+				&:not(:last-child) {
+					margin-bottom: rem(16);
+				}
+			}
+		}
+	}
+	.docLine {
+		border: none;
+		padding: rem(32) rem(20) rem(32) rem(40);
+		&__btn {
+			margin-left: rem;
+		}
+	}
 } // end.sContact

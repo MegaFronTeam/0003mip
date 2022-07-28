@@ -37,3 +37,7 @@
 29. <https://megafronteam.github.io/0003mip/public/04-3proektirovanie_conten-10.html>
 // направления
 1.  <https://megafronteam.github.io/0003mip/public/27-search.html>
+
+
+// 28.07.2022
+1.  <https://megafronteam.github.io/0003mip/public/28-agreement.html>

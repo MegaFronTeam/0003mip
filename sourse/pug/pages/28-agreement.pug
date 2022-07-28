@@ -1,0 +1,34 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sSearch/_sSearch.pug
+include ../blocks/sGoal/_sGoal.pug
+include ../blocks/sTestingContent/_sTestingContent.pug
+include ../blocks/sInfo/_sInfo.pug
+include ../blocks/sForm/_sForm.pug
+//- include ../blocks/partnersSlider/_partnersSlider.pug
+
+block variables
+	- let  mainPage= 'agreement-page'
+	- let  bg= null
+
+block title
+	- let  title= 'СОГЛАСОВАНИЕ ПОСАДКИ ЗДАНИЙ И СООРУЖЕНИЙ В ТЕХНИЧЕСКОЙ ЗОНЕ ГУП «МОСКОВСКИЙ МЕТРОПОЛИТЕН»'
+	title= title
+block pagecontent
+	+header()
+	+page-head({
+		title, 
+		bg:'new-head.jpg'
+		} )
+			a.btn.btn--bgWhite(href="#") Связаться с нами
+	+breadcrumb(`Главная`,`Новости`,`Институт «Мосинжпроект» участвует в создании знакового проекта Урала — «Притяжение»`)
+	+sContent06
+	+sGoal
+	+sTestingContent2
+	+sInfo
+	+sContact
+	+sForm
+	+footer
