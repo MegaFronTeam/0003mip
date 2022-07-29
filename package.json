@@ -46,14 +46,14 @@
   "dependencies": {
     "@fancyapps/ui": "^4.0.25",
     "animate.css": "^4.1.1",
+    "filepond": "^4.30.4",
+    "filepond-plugin-image-preview": "^4.6.8",
     "hc-sticky": "^2.2.7",
     "inputmask": "^5.0.6",
     "jquery": "^3.6.0",
+    "jquery-filepond": "^1.0.0",
     "litepicker": "^2.0.12",
     "select2": "^4.1.0-rc.0",
-    "filepond": "^4.29.0",
-    "filepond-plugin-image-preview": "^4.6.8",
-    "jquery-filepond": "^1.0.0",
     "swiper": "^7.4.1",
     "wowjs": "^1.1.3"
   }

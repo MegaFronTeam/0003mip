@@ -9,6 +9,11 @@ mixin sForm()
 				+input('Введите e-mail', 'email', 'E-mail *')
 				+input('', 'text', 'Тема *')
 				+input('', 'textarea', 'Ваше сообщение *')
+				//- +input('', 'file', 'Прикрепить фаил').filepond
+				+e.input-wrap
+					label
+						+e.SPAN.input-title Прикрепить фаил
+						input(type="file" class="filepond")
 				+e.btn.BUTTON(type="submit").btn.btn--bgPrimary.btn--colorWhite Отправить
 				+policy2()
 	// end sForm

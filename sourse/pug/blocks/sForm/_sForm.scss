@@ -45,7 +45,10 @@
 		}
 		&__policy {
 			text-align: left;
-			color: #36332C !important;
+			--bs-secondary-rgb: #36332C;
+		}
+		.filepond {
+			margin-top: rem(13);
 		}
 	}
 
