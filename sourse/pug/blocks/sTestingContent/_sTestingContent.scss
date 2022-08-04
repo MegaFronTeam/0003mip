@@ -43,12 +43,29 @@
 			}
 		}
 		.sTestingContent {
-			&__sliderContainer {
-				// max-height: rem(485);
-				picture {
-					filter: grayscale(0);
-					margin-bottom: 0;
+			&__row {
+				--bs-gutter-x: 0;
+			}
+			&__col {
+				display: block;
+				@include media-breakpoint-up(sm) {
+					&:not(:last-child) {
+						border-right: 1px solid #D4D4D4;
+					}
 				}
+			}
+		}
+		picture {
+			@include block(512, 483);
+			filter: grayscale(0);
+			margin-bottom: 0;
+			height: 100%;
+			img {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
 			}
 		}
 		.swiper-button-hand {

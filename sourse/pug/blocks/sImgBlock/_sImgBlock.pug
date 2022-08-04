@@ -1,0 +1,15 @@
+mixin sImgBlock(data)
+	// start sImgBlock
+	+b.SECTION.sImgBlock.section#sImgBlock&attributes(attributes)
+		+e.dark-bg
+			.container
+				+e.img-row.row
+					+e.img-col.col-md-5
+						+pic('sContent-img-1.png', 'bg', 0)
+					.col-md-7
+						+pic('sContent-img-2.png', 'bg', 0)
+					.col-md-6
+						+pic('sContent-img-3.png', 'bg', 0)
+					.col-md-6
+						+pic('sContent-img-4.png', 'bg', 0)
+	// end sImgBlock

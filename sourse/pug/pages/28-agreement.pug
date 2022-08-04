@@ -8,6 +8,7 @@ include ../blocks/sGoal/_sGoal.pug
 include ../blocks/sTestingContent/_sTestingContent.pug
 include ../blocks/sInfo/_sInfo.pug
 include ../blocks/sForm/_sForm.pug
+include ../blocks/sImgBlock/_sImgBlock.pug
 //- include ../blocks/partnersSlider/_partnersSlider.pug
 
 block variables
@@ -26,9 +27,12 @@ block pagecontent
 			a.btn.btn--bgWhite(href="#") Связаться с нами
 	+breadcrumb(`Главная`,`Новости`,`Институт «Мосинжпроект» участвует в создании знакового проекта Урала — «Притяжение»`)
 	+sContent06
-	+sGoal
-	+sTestingContent2
 	+sInfo
-	+sContact
+	+sInfoList
+	+sImgBlock
+	+sInfoFooter
+	//- +sGoal
+	+sTestingContent2
+	+sContact().sContact--2
 	+sForm
 	+footer

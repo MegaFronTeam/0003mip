@@ -1,20 +1,24 @@
 // start .sInfo
 .sInfo {
-	--sPT: #{rem(36)};
-	--sPB: #{rem(23)};
+	--sPT: #{rem(24)};
+	--sPB: #{rem(32)};
 	// --sTPB: ;
 	background-color: #E6E6E6;
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(40)};
+		--sPB: #{rem(40)};
+	}
 	@include media-breakpoint-up(lg) {
-		--sPT: #{rem(72)};
-		--sPB: #{rem(46)};
+		--sPT: #{rem(48)};
+		--sPB: #{rem(56)};
 	}
 	&__row {
 		--asideW: calc(514px + var(--bs-gutter-x));
 		--spx: calc(-50vw + 50% - var(--asideW)*-1/2);
-		margin-bottom: rem(43);
-		@include media-breakpoint-up(lg) {
-			margin-bottom: rem(86);
-		}
+		// margin-bottom: rem(43);
+		// @include media-breakpoint-up(lg) {
+		// 	margin-bottom: rem(86);
+		// }
 	}
 	&__wrap {
 		margin-bottom: rem(20);
@@ -61,10 +65,10 @@
 		}
 	}
 	&__list {
-		margin-bottom: rem(32);
-		@include media-breakpoint-up(lg) {
-			margin-bottom: rem(64);
-		}
+		margin-bottom: 0;
+		// @include media-breakpoint-up(lg) {
+		// 	margin-bottom: rem(64);
+		// }
 		p {
 			margin-bottom: rem(22);
 		}
@@ -104,6 +108,9 @@
 				margin-bottom: rem(25);
 			}
 		}
+	}
+	&--list {
+		background-color: #f0f0f0;
 	}
 	@include media-breakpoint-up(xl) {} 
 	@include media-breakpoint-up(md) {}
