@@ -33,12 +33,13 @@
 		}
 	}
 	&__content {
+		margin-left: rem(40);
 		@include media-breakpoint-up(lg) {
-			margin-left: rem(40);
 		}
 		h5 {
 			text-transform: initial;
 			margin-bottom: rem(22);
+			font-weight: 70;
 		}
 		ol {
 			list-style-type: none;
