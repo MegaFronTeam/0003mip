@@ -796,7 +796,7 @@ mixin nav-servises2()
 			+item(`12`,`Дендрологические изыскания`)
 
 mixin page-head(data)
-	+b.page-head(class=( (data.nav || data.nav2) ? 'page-head--landing'   : null )).bg-wrap&attributes(attributes)
+	+b.page-head(class=( (data.nav || data.nav2 || data.nav3) ? 'page-head--landing'   : null )).bg-wrap&attributes(attributes)
 		if data.bg
 			.mainSlider__particles(id=`particles-js-0`)
 			+pic(data.bg,'bg', 0).picture-bg
@@ -810,6 +810,10 @@ mixin page-head(data)
 				+e.back(href="#")
 					+icon("chevron-left")
 					| Изыскания
+			if data.nav3
+				+e.back(href="#")
+					+icon("chevron-left")
+					| Геотехнические изыскания
 
 			if data.title
 				h1(data-text= data.title)= data.title

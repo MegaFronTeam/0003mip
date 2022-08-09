@@ -3,7 +3,7 @@
 	--sPT: #{rem(24)};
 	--sPB: #{rem(32)};
 	// --sTPB: ;
-	background-color: #E6E6E6;
+	background-color: #D4D4D4;
 	@include media-breakpoint-up(md) {
 		--sPT: #{rem(40)};
 		--sPB: #{rem(40)};
@@ -33,13 +33,14 @@
 		}
 	}
 	&__content {
-		margin-left: rem(40);
 		@include media-breakpoint-up(lg) {
+			margin-left: rem(40);
 		}
 		h5 {
+			@include rfs(18px);
 			text-transform: initial;
 			margin-bottom: rem(22);
-			font-weight: 70;
+			font-weight: 700;
 		}
 		ol {
 			list-style-type: none;
@@ -100,7 +101,22 @@
 		}
 	}
 	&__footer {
+		picture {
+			@include block(512, 483);
+			filter: grayscale(0);
+			margin-bottom: 0;
+			height: 100%;
+			img {
+				position: absolute;
+				width: 100%;
+				// height: 100%;
+				top: 0;
+				left: 0;
+			}
+		}
 		h5 {
+			@include rfs(18px);
+			font-weight: 700;
 			text-transform: initial;
 			margin-bottom: rem(22);
 		}
@@ -110,8 +126,15 @@
 			}
 		}
 	}
+	&__footer-row {
+		--bs-gutter-x: #{rem(16)};
+		--bs-gutter-y: #{rem(32)};
+		@include media-breakpoint-up(lg) {
+			--bs-gutter-x: #{rem(56)};
+		}
+	}
 	&--list {
-		background-color: #f0f0f0;
+		background-color: $light;
 	}
 	@include media-breakpoint-up(xl) {} 
 	@include media-breakpoint-up(md) {}

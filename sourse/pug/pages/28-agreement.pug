@@ -22,8 +22,9 @@ block pagecontent
 	+header()
 	+page-head({
 		title, 
-		bg:'new-head.jpg'
-		} )
+		bg:'new-head.jpg',
+		nav3: true
+		} ).page-head--h
 			//- a.btn.btn--bgWhite(href="#") Связаться с нами
 	+breadcrumb(`Главная`,`Новости`,`Институт «Мосинжпроект» участвует в создании знакового проекта Урала — «Притяжение»`)
 	+sContent06
@@ -32,7 +33,7 @@ block pagecontent
 	+sImgBlock
 	+sInfoFooter
 	//- +sGoal
-	+sTestingContent2
+	//- +sTestingContent2
 	+sContact().sContact--2
 	+sForm
 	+footer

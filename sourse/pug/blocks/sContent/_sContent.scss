@@ -919,7 +919,7 @@
 .sContent--agreement {
 	padding-top: rem(24);
 	padding-bottom: rem(24);
-	background-color: $body-bg;
+	background-color: $light;
 	@include media-breakpoint-up(md) {
 		padding-top: rem(30);
 		padding-bottom: rem(30);

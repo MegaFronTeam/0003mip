@@ -895,6 +895,11 @@ iframe {
 			@extend .h2;
 			
 		}
+		&__back {
+			@include media-breakpoint-down(sm) {
+				top: -30px;
+			}
+		}
 		// .btn {
 		// 	&--bgWhite {
 		// 		&::after {
