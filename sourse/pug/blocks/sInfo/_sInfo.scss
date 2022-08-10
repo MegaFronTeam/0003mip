@@ -22,7 +22,7 @@
 	}
 	&__wrap {
 		margin-bottom: rem(20);
-		@include media-breakpoint-up(lg) {
+		@include media-breakpoint-between(lg, xl) {
 			margin-left: var(--spx);
 			margin-bottom: 0;
 		}

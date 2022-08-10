@@ -893,7 +893,12 @@ iframe {
 	.page-head {
 		h1 {
 			@extend .h2;
-			
+			text-shadow: none;
+			max-width: rem(850);
+			color: #fff;
+			&:before {
+				content: unset;
+			}
 		}
 		&__back {
 			@include media-breakpoint-down(sm) {
